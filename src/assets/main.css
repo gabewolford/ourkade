@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Holtwood+One+SC&family=Rowdies:wght@300;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Nano Pix";
+  src: url("../../public/fonts/NanoPix.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Retro Gaming";
+  src: url("../../public/fonts/RetroGaming.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Thabit";
+  src: url("../../public/fonts/Thabit.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Coin Ding Dong";
+  src: url("../../public/fonts/CoinDingDong.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Nano Pix";
+  color: #ffffff;
+  min-height: 100dvh;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-image: url("../assets/bg-image.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

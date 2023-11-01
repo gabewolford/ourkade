@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkmvp_auth_vue_ts"]=self["webpackChunkmvp_auth_vue_ts"]||[]).push([[949],{9949:function(e,n,r){r.r(n),r.d(n,{default:function(){return o}});var t=r(3396),u=r(7139);const i=(0,t._)("h1",{class:"text-3xl"},"Thanks for registering!",-1);function s(e,n){return(0,t.wg)(),(0,t.iD)("div",null,[i,(0,t._)("p",null," Please confirm your email to finishing registering: "+(0,u.zw)(e.$route.query.email),1)])}var a=r(89);const l={},c=(0,a.Z)(l,[["render",s]]);var o=c}}]);
+//# sourceMappingURL=949.bf14d3d2.js.map

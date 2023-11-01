@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkmvp_auth_vue_ts"]=self["webpackChunkmvp_auth_vue_ts"]||[]).push([[853],{4853:function(n,t,e){e.r(t),e.d(t,{default:function(){return k}});var u=e(3396);const r={class:"min-h-[400px]"},a=(0,u._)("br",null,null,-1);function s(n,t){return(0,u.wg)(),(0,u.iD)("p",r,[(0,u.Uk)(" You rock at retro games? "),a,(0,u.Uk)("Wanna bet? Get ready. ")])}var c=e(89);const l={},o=(0,c.Z)(l,[["render",s]]);var k=o}}]);
+//# sourceMappingURL=853.ce31dcf8.js.map

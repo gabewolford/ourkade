@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkmvp_auth_vue_ts"]=self["webpackChunkmvp_auth_vue_ts"]||[]).push([[840],{5840:function(e,t,n){n.r(t),n.d(t,{default:function(){return o}});var r=n(3396),u=n(7795),s=n(6252);const a={class:"w-full"},i=(0,r._)("iframe",{src:"https://ourkade-preview-kaderunner.netlify.app/",style:{height:"600px",width:"100%",border:"none"}},null,-1),l=[i];var p={__name:"Play",setup(e){(0,s.t)();const{axiosClient:t,getProfile:n}=(0,u.Z)();return(e,t)=>((0,r.wg)(),(0,r.iD)("div",a,l))}};const c=p;var o=c}}]);
+//# sourceMappingURL=840.f9fd9f78.js.map
