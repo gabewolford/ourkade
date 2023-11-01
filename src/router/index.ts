@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
-import { useAuthStore } from '@/stores/auth'
+import { useAuthStore } from "@/stores/auth";
 
 const routes: Array<any> = [
   {
@@ -11,6 +11,9 @@ const routes: Array<any> = [
     name: "Home",
     path: "/",
     component: () => import("@/pages/Home.vue"),
+    meta: {
+      requiresAuth: true,
+    },
   },
   {
     name: "Me",
@@ -67,14 +70,19 @@ const router = createRouter({
   routes,
 });
 
-router.beforeEach((to) => {
+router.beforeEach((to, from, next) => {
   const authStore = useAuthStore();
+
   if (
     !authStore.isLoggedIn() &&
     to.meta.requiresAuth &&
     !Object.keys(to.query).includes("fromEmail")
   ) {
-    return { name: "Login" };
+    // Use next to navigate to the Login route
+    next({ name: "Login" });
+  } else {
+    // Continue to the route
+    next();
   }
 });
 
