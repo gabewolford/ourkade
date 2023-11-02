@@ -23,14 +23,7 @@ const routes: Array<any> = [
     },
     component: () => import("@/pages/Me.vue"),
   },
-  {
-    name: "Play",
-    path: "/play",
-    meta: {
-      requiresAuth: false,
-    },
-    component: () => import("@/pages/Play.vue"),
-  },
+
   {
     name: "Leaderboard",
     path: "/leaderboard",
@@ -70,19 +63,14 @@ const router = createRouter({
   routes,
 });
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((to) => {
   const authStore = useAuthStore();
-
   if (
     !authStore.isLoggedIn() &&
     to.meta.requiresAuth &&
     !Object.keys(to.query).includes("fromEmail")
   ) {
-    // Use next to navigate to the Login route
-    next({ name: "Login" });
-  } else {
-    // Continue to the route
-    next();
+    return { name: "Login" };
   }
 });
 

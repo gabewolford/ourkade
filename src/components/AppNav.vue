@@ -7,14 +7,10 @@ const authStore = useAuthStore();
 
 <template>
   <nav
-    class="flex flex-col gap-10 lg:min-w-[275px] min-h-full text-center px-6 pb-10"
+    class="flex flex-col gap-6 lg:min-w-[275px] min-h-full text-center px-6 pb-6"
   >
     <div v-if="authStore.isLoggedIn()">
-      <router-link
-        :to="{ name: 'Home' }"
-        class="text-[32px] w-full flex justify-center"
-        >Hey Nick!</router-link
-      >
+      <h3 class="text-[32px] w-full flex justify-center">Hey Nick!</h3>
 
       <div class="flex flex-row gap-4 w-full">
         <div class="flex flex-col w-1/2 mx-auto items-end">
@@ -48,6 +44,7 @@ const authStore = useAuthStore();
         </div>
       </div>
     </div>
+
     <div v-else>
       <router-link
         :to="{ name: 'Home' }"
@@ -88,38 +85,38 @@ const authStore = useAuthStore();
       </div>
     </div>
 
-    <ul v-if="authStore.isLoggedIn()" class="flex flex-col gap-5 p-5">
+    <ul v-if="authStore.isLoggedIn()" class="flex flex-col gap-4 px-5">
       <li class="underline-on-hover w-fit mx-auto">
-        <router-link :to="{ name: 'Play' }" class="text-[30px]">
+        <router-link :to="{ name: 'Home' }" class="text-[26px]">
           Play
         </router-link>
       </li>
       <li class="underline-on-hover w-fit mx-auto">
-        <router-link :to="{ name: 'Leaderboard' }" class="text-[30px]">
+        <router-link :to="{ name: 'Leaderboard' }" class="text-[26px]">
           Leaderboard
         </router-link>
       </li>
       <li class="underline-on-hover w-fit mx-auto">
-        <router-link :to="{ name: 'Me' }" class="text-[30px]">
+        <router-link :to="{ name: 'Me' }" class="text-[26px]">
           Account
         </router-link>
       </li>
       <li class="underline-on-hover w-fit mx-auto">
-        <router-link :to="{ name: 'Me' }" class="text-[30px]">
+        <router-link :to="{ name: 'Me' }" class="text-[26px]">
           Learn More
         </router-link>
       </li>
     </ul>
 
-    <ul v-if="authStore.isLoggedIn()" class="flex flex-col gap-5 p-5">
-      <!-- <li>{{ authStore.user.email }}</li>
+    <!-- <ul v-if="authStore.isLoggedIn()" class="flex flex-col gap-5 p-5">
+      <li>{{ authStore.user.email }}</li>
       <li v-if="authStore.isAdmin()">
         <router-link :to="{ name: 'Me' }">Admin</router-link>
-      </li> -->
+      </li>
       <li><router-link :to="{ name: 'Logout' }">Logout</router-link></li>
-    </ul>
+    </ul> -->
 
-    <ul v-else class="flex flex-col gap-5 text-[30px] p-5">
+    <ul v-else class="flex flex-col gap-5 text-[26px] p-5">
       <li>
         <router-link :to="{ name: 'Login' }" class="underline-on-hover"
           >Login</router-link

@@ -8,7 +8,7 @@ import AppHeader from "@/components/AppHeader.vue";
   <AppHeader />
   <div class="flex flex-row pb-[100px] lg:pb-[200px]">
     <AppNav />
-    <div class="flex h-full min-h-[500px] w-full">
+    <div class="flex flex-col w-full lg:mr-6">
       <router-view />
     </div>
   </div>

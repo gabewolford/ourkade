@@ -9,10 +9,10 @@ const { axiosClient, getProfile } = useOurkadeApi();
 </script>
 
 <template>
-  <div class="w-full pr-12">
+  <div class="w-full h-full">
     <iframe
       src="https://ourkade-preview-kaderunner.netlify.app/"
-      style="height: 600px; width: 100%; border: none"
+      class="h-[550px] w-full border-none"
     ></iframe>
   </div>
 </template>
