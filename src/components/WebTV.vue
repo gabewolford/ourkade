@@ -1,11 +1,38 @@
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+import Compete from "@/components/Compete";
+
+const selectedComponent = ref("Menu");
+
+const showCompete = () => {
+  selectedComponent.value = "Compete";
+};
+
+const showChallenge = () => {
+  selectedComponent.value = "Challenge";
+};
+
+const showPractice = () => {
+  selectedComponent.value = "Practice";
+};
+
+const showMenu = () => {
+  selectedComponent.value = "Menu";
+};
+</script>
 
 <template>
   <div class="flex w-full lg:min-h-[350px]">
     <div
       class="flex items-center justify-around border-t-[20px] border-x-[20px] border-b-[2px] border-[#222f37] w-full h-[550px] rounded-t-[50px] rounded-b-[30px] relative shadow-custom"
     >
-      <!-- component should render here -->
+      <!-- Dynamic component rendering -->
+      <keep-alive>
+        <component :is="selectedComponent" />
+      </keep-alive>
+
+      <!-- <Compete /> -->
+
       <div
         class="absolute bottom-0 bg-[#222f37] h-[80px] w-full flex flex-row items-center justify-between"
       >
@@ -28,6 +55,7 @@
 
   <div class="grid grid-cols-4 justify-between gap-6">
     <button
+      @click="showCompete"
       class="flex flew-row flex-1 gap-2 items-center rounded-[50px] bg-[#3d4D7C] text-3xl 2xl:text-5xl min-w-fit p-4 h-[125px] shadow-custom4"
     >
       <img src="../assets/button-icons/compete-icon.svg" alt="compete icon" />
@@ -35,6 +63,7 @@
     </button>
 
     <button
+      @click="showChallenge"
       class="flex flew-row gap-2 items-center rounded-[50px] bg-[#386D9D] text-3xl 2xl:text-5xl min-w-fit p-4 h-[125px] shadow-custom4"
     >
       <img
@@ -45,6 +74,7 @@
     </button>
 
     <button
+      @click="showPractice"
       class="flex flew-row gap-2 items-center rounded-[50px] bg-[#067A5E] text-3xl 2xl:text-5xl min-w-fit p-4 h-[125px] shadow-custom4"
     >
       <img src="../assets/button-icons/practice-icon.svg" alt="practice icon" />
@@ -52,6 +82,7 @@
     </button>
 
     <button
+      @click="showMenu"
       class="flex flew-row gap-2 items-center rounded-[50px] bg-[#783B28] text-3xl 2xl:text-5xl min-w-fit p-4 h-[125px] shadow-custom4"
     >
       <img src="../assets/button-icons/menu-icon.svg" alt="menu icon" />
