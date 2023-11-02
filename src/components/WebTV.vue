@@ -24,14 +24,11 @@ const showMenu = () => {
 <template>
   <div class="flex w-full lg:min-h-[350px]">
     <div
-      class="flex items-center justify-around border-t-[20px] border-x-[20px] border-b-[2px] border-[#222f37] w-full h-[550px] rounded-t-[50px] rounded-b-[30px] relative shadow-custom"
+      class="flex items-center justify-around border-t-[20px] border-x-[20px] border-b-[2px] border-[#222f37] w-full h-[618px] rounded-t-[50px] rounded-b-[30px] relative shadow-custom"
     >
-      <!-- Dynamic component rendering -->
       <keep-alive>
         <component :is="selectedComponent" />
       </keep-alive>
-
-      <!-- <Compete /> -->
 
       <div
         class="absolute bottom-0 bg-[#222f37] h-[80px] w-full flex flex-row items-center justify-between"
