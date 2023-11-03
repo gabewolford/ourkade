@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col bg-[#8E7F47] rounded-[20px] h-[350px] py-6 justify-between shadow-custom"
+    class="flex flex-col gap-6 bg-[#8E7F47] rounded-[20px] min-h-[350px] py-6 justify-between shadow-custom"
   >
     <div class="flex flex-row gap-4 items-center ml-4">
       <svg
@@ -18,40 +18,46 @@
         </g>
       </svg>
       <div class="flex flex-col text-start">
-        <h5 class="mix-blend-overlay text-lg">kade runner</h5>
-        <h4 class="text-[40px] leading-8">Stats</h4>
+        <h5 class="mix-blend-overlay text-lg font-nano-pix">kade runner</h5>
+        <h4 class="text-[40px] leading-8 font-nano-pix">Stats</h4>
       </div>
     </div>
 
     <div class="flex flex-col space-y-2 mx-auto">
       <div class="flex flex-col items-start px-4">
-        <h5 class="uppercase text-black mix-blend-overlay opacity-50 text-lg">
+        <h5
+          class="uppercase text-black mix-blend-overlay opacity-50 text-lg font-bold"
+        >
           Top Score
         </h5>
         <div
-          class="bg-[#776639] flex items-center min-w-fit font-retro-gaming text-xl px-6 py-2 rounded-md"
+          class="bg-[#776639] flex items-center min-w-fit text-xl px-6 pb-2 pt-3 rounded-md w-[150px] justify-center"
         >
           1890pts
         </div>
       </div>
 
       <div class="flex flex-col items-start px-4">
-        <h5 class="uppercase text-black mix-blend-overlay opacity-50 text-lg">
+        <h5
+          class="uppercase text-black mix-blend-overlay opacity-50 text-lg font-bold"
+        >
           Avg. Score
         </h5>
         <div
-          class="bg-[#776639] flex items-center min-w-fit font-retro-gaming text-xl px-6 py-2 rounded-md"
+          class="bg-[#776639] flex items-center min-w-fit text-xl px-6 pb-2 pt-3 rounded-md w-[150px] justify-center"
         >
           1840pts
         </div>
       </div>
 
       <div class="flex flex-col items-start px-4">
-        <h5 class="uppercase text-black mix-blend-overlay opacity-50 text-lg">
+        <h5
+          class="uppercase text-black mix-blend-overlay opacity-50 text-lg font-bold"
+        >
           Total Kade
         </h5>
         <div
-          class="bg-[#776639] flex items-center min-w-fit w-[150px] font-retro-gaming text-xl px-6 py-2 rounded-md justify-center"
+          class="bg-[#776639] flex items-center min-w-fit w-[150px] text-xl px-6 pb-2 pt-3 rounded-md justify-center"
         >
           <h6 class="pr-2">49</h6>
           <svg

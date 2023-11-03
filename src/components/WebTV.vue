@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from "vue";
-import Compete from "@/components/Compete";
 
 const selectedComponent = ref("Menu");
 
@@ -53,7 +52,7 @@ const showMenu = () => {
   <div class="grid grid-cols-4 justify-between gap-6">
     <button
       @click="showCompete"
-      class="flex flew-row flex-1 gap-2 items-center rounded-[50px] bg-[#3d4D7C] text-3xl 2xl:text-5xl min-w-fit p-4 h-[125px] shadow-custom4"
+      class="flex flew-row flex-1 gap-2 items-center rounded-[50px] bg-[#3d4D7C] text-3xl 2xl:text-5xl min-w-fit p-4 h-[125px] shadow-custom4 font-nano-pix"
     >
       <img src="../assets/button-icons/compete-icon.svg" alt="compete icon" />
       <h3>Compete</h3>
@@ -61,7 +60,7 @@ const showMenu = () => {
 
     <button
       @click="showChallenge"
-      class="flex flew-row gap-2 items-center rounded-[50px] bg-[#386D9D] text-3xl 2xl:text-5xl min-w-fit p-4 h-[125px] shadow-custom4"
+      class="flex flew-row gap-2 items-center rounded-[50px] bg-[#386D9D] text-3xl 2xl:text-5xl min-w-fit p-4 h-[125px] shadow-custom4 font-nano-pix"
     >
       <img
         src="../assets/button-icons/challenge-icon.svg"
@@ -72,7 +71,7 @@ const showMenu = () => {
 
     <button
       @click="showPractice"
-      class="flex flew-row gap-2 items-center rounded-[50px] bg-[#067A5E] text-3xl 2xl:text-5xl min-w-fit p-4 h-[125px] shadow-custom4"
+      class="flex flew-row gap-2 items-center rounded-[50px] bg-[#067A5E] text-3xl 2xl:text-5xl min-w-fit p-4 h-[125px] shadow-custom4 font-nano-pix"
     >
       <img src="../assets/button-icons/practice-icon.svg" alt="practice icon" />
       <h3>Practice</h3>
@@ -80,7 +79,7 @@ const showMenu = () => {
 
     <button
       @click="showMenu"
-      class="flex flew-row gap-2 items-center rounded-[50px] bg-[#783B28] text-3xl 2xl:text-5xl min-w-fit p-4 h-[125px] shadow-custom4"
+      class="flex flew-row gap-2 items-center rounded-[50px] bg-[#783B28] text-3xl 2xl:text-5xl min-w-fit p-4 h-[125px] shadow-custom4 font-nano-pix"
     >
       <img src="../assets/button-icons/menu-icon.svg" alt="menu icon" />
       <h3>Menu</h3>

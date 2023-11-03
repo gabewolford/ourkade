@@ -39,14 +39,14 @@ const dummyData = [
         </g>
       </svg>
       <div class="flex flex-col text-start">
-        <h5 class="mix-blend-overlay text-lg">kade runner</h5>
-        <h4 class="text-[40px] leading-8">High Score</h4>
+        <h5 class="mix-blend-overlay text-lg font-nano-pix">kade runner</h5>
+        <h4 class="text-[40px] leading-8 font-nano-pix">High Score</h4>
       </div>
     </div>
 
     <div>
       <table class="w-full">
-        <tbody class="font-retro-gaming">
+        <tbody>
           <tr v-for="(data, index) in dummyData" :key="index" class="py-2">
             <td>{{ `#${data.rank}` }}</td>
             <td class="pl-2 py-2">{{ data.name }}</td>

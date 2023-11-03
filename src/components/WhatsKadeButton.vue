@@ -2,7 +2,7 @@
   <div
     class="flex flex-col rainbow rounded-[20px] h-[300px] py-8 justify-between shadow-custom"
   >
-    <h4 class="text-[50px] leading-[55px]">What's Kade?</h4>
+    <h4 class="text-[50px] leading-[55px] font-nano-pix">What's Kade?</h4>
     <button
       class="rainbow h-[100px] w-[150px] border rounded-full mx-auto flex justify-center items-center shadow-custom2 hover:shadow-custom2 hover:opacity-50"
     >

@@ -50,8 +50,8 @@
         </g>
       </svg>
       <div class="flex flex-col text-start">
-        <h5 class="mix-blend-overlay text-lg">kade runner</h5>
-        <h4 class="text-[40px] leading-8">Game Log</h4>
+        <h5 class="mix-blend-overlay text-lg font-nano-pix">kade runner</h5>
+        <h4 class="text-[40px] leading-8 font-nano-pix">Game Log</h4>
       </div>
     </div>
   </div>

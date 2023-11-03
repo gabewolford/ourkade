@@ -7,22 +7,18 @@ const authStore = useAuthStore();
 
 <template>
   <nav
-    class="flex flex-col gap-6 lg:min-w-[275px] min-h-full text-center px-6 pb-6"
+    class="hidden lg:flex flex-col gap-6 lg:min-w-[275px] min-h-full text-center px-6 pb-6"
   >
     <div v-if="authStore.isLoggedIn()">
-      <h3 class="text-[32px] w-full flex justify-center">Hey Nick!</h3>
+      <h3 class="text-[32px] w-full flex justify-center font-nano-pix">
+        Hey Nick!
+      </h3>
 
       <div class="flex flex-row gap-4 w-full">
         <div class="flex flex-col w-1/2 mx-auto items-end">
-          <div class="h-[55px] text-2xl font-retro-gaming flex items-center">
-            13
-          </div>
-          <div class="h-[55px] text-2xl font-retro-gaming flex items-center">
-            14.25
-          </div>
-          <div class="h-[55px] text-2xl font-retro-gaming flex items-center">
-            2
-          </div>
+          <div class="h-[55px] text-2xl flex items-center pt-1.5">13</div>
+          <div class="h-[55px] text-2xl flex items-center pt-1.5">14.25</div>
+          <div class="h-[55px] text-2xl flex items-center pt-1.5">2</div>
         </div>
 
         <div class="flex flex-col w-1/2 mx-auto items-start">
@@ -48,21 +44,15 @@ const authStore = useAuthStore();
     <div v-else>
       <router-link
         :to="{ name: 'Home' }"
-        class="text-[32px] w-full flex justify-center"
+        class="text-[32px] w-full flex justify-center font-nano-pix"
         >Get Started</router-link
       >
 
       <div class="flex flex-row gap-4 w-full">
         <div class="flex flex-col w-1/2 mx-auto items-end">
-          <div class="h-[55px] text-2xl font-retro-gaming flex items-center">
-            0
-          </div>
-          <div class="h-[55px] text-2xl font-retro-gaming flex items-center">
-            0
-          </div>
-          <div class="h-[55px] text-2xl font-retro-gaming flex items-center">
-            0
-          </div>
+          <div class="h-[55px] text-2xl flex items-center">0</div>
+          <div class="h-[55px] text-2xl flex items-center">0</div>
+          <div class="h-[55px] text-2xl flex items-center">0</div>
         </div>
 
         <div class="flex flex-col w-1/2 mx-auto items-start">
@@ -85,7 +75,10 @@ const authStore = useAuthStore();
       </div>
     </div>
 
-    <ul v-if="authStore.isLoggedIn()" class="flex flex-col gap-4 px-5">
+    <ul
+      v-if="authStore.isLoggedIn()"
+      class="flex flex-col gap-4 px-5 font-nano-pix"
+    >
       <li class="underline-on-hover w-fit mx-auto">
         <router-link :to="{ name: 'Home' }" class="text-[26px]">
           Play
