@@ -35,12 +35,12 @@ const showMenu = () => {
         <div class="flex flex-row gap-4">
           <img src="../assets/red-light.svg" alt="red light" />
           <button
-            class="text-[#939393] bg-[#151E23] px-10 py-1.5 rounded-full text-lg button-shadow"
+            class="text-[#939393] bg-[#151E23] px-10 py-1.5 rounded-full text-lg button-shadow font-nano-pix"
           >
             Power
           </button>
           <button
-            class="text-[#939393] bg-[#151E23] px-10 py-1.5 rounded-full text-lg button-shadow"
+            class="text-[#939393] bg-[#151E23] px-10 py-1.5 rounded-full text-lg button-shadow font-nano-pix"
           >
             Reset
           </button>
