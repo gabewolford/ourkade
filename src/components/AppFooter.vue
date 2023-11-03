@@ -9,10 +9,10 @@
         />
 
         <div class="flex flex-col justify-between h-full">
-          <div class="flex flex-col">
-            <h3 class="font-alfa-slab-one text-3xl">Ourkadians Insider Mag</h3>
+          <div class="flex flex-col gap-1">
+            <h3 class="font-alfa-slab-one text-4xl">Ourkadians Insider Mag</h3>
 
-            <ul class="flex flex-row justify-between text-xl">
+            <ul class="flex flex-row justify-between text-xl font-nano-pix">
               <li class="underline-on-hover">News</li>
               <span>-</span>
               <li class="underline-on-hover">Tips</li>
@@ -25,7 +25,7 @@
             </ul>
           </div>
 
-          <div class="flex flex-row gap-4">
+          <div class="flex flex-row gap-4 font-nano-pix">
             <div class="flex flex-row flex-1 relative">
               <div class="flex flex-row flex-1 bg-gradient-to-r">
                 <input
@@ -36,7 +36,7 @@
               </div>
             </div>
             <button
-              class="rainbow text-black text-2xl px-4 py-2 rounded-md backdrop-blur-lg"
+              class="rainbow text-black text-lg px-4 py-2 rounded-md backdrop-blur-lg min-w-[120px]"
             >
               Sign Up
             </button>
