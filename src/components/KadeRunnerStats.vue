@@ -57,9 +57,9 @@
           Total Kade
         </h5>
         <div
-          class="bg-[#776639] flex items-center min-w-fit w-[150px] text-xl px-6 pb-2 pt-3 rounded-md justify-center"
+          class="bg-[#776639] flex items-center min-w-fit w-[150px] text-xl px-6 pb-2 pt-2 rounded-md justify-center"
         >
-          <h6 class="pr-2">49</h6>
+          <h6 class="pr-2 pt-1">49</h6>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="18"
