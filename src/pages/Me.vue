@@ -32,5 +32,14 @@ onBeforeMount(async () => {
         <td style="border: 1px solid black">{{ field }}</td>
       </tr>
     </table>
+
+    <div v-if="authStore.isLoggedIn()" class="flex flex-col gap-5">
+      <div v-if="authStore.isAdmin()">
+        <router-link :to="{ name: 'Me' }">Admin</router-link>
+      </div>
+      <div>
+        <router-link :to="{ name: 'Logout' }">Logout</router-link>
+      </div>
+    </div>
   </div>
 </template>
