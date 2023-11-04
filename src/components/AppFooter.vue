@@ -1,16 +1,20 @@
 <template>
-  <footer class="absolute bottom-0 h-[100px] w-full lg:h-[200px] bg-[#101212]">
-    <div class="pt-4 px-4 lg:py-6 lg:px-6 flex flex-col h-full">
-      <div class="flex-1 flex flex-row items-center justify-between w-full">
+  <footer class="absolute bottom-0 h-[200px] w-full bg-[#101212] py-4 lg:py-6">
+    <div class="px-4 lg:px-6 flex flex-col h-full">
+      <div
+        class="flex-1 flex flex-col lg:flex-row items-center justify-between w-full"
+      >
         <img
           src="../assets/footer-control-pad.svg"
           alt="control pad image"
-          class="object-contain max-h-full max-w-full"
+          class="hidden lg:flex object-contain max-h-full max-w-full"
         />
 
         <div class="flex flex-col justify-between h-full">
           <div class="flex flex-col gap-1">
-            <h3 class="font-alfa-slab-one text-4xl">Ourkadians Insider Mag</h3>
+            <h3 class="font-alfa-slab-one text-xl lg:text-4xl">
+              Ourkadians Insider Mag
+            </h3>
 
             <ul class="flex flex-row justify-between text-xl font-nano-pix">
               <li class="underline-on-hover">News</li>
@@ -44,7 +48,7 @@
         </div>
 
         <div
-          class="bottom-right w-[200px] h-full flex flex-col justify-center items-center gap-2"
+          class="hidden lg:flex bottom-right w-[200px] h-full flex-col justify-center items-center gap-2"
         >
           <div class="flex flex-row w-full justify-end gap-2 pr-4">
             <img

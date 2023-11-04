@@ -23,7 +23,7 @@ const showMenu = () => {
 <template>
   <div class="flex w-full lg:min-h-[350px]">
     <div
-      class="flex items-center justify-around border-t-[20px] border-x-[20px] border-b-[2px] border-[#222f37] w-full h-[618px] rounded-t-[50px] rounded-b-[30px] relative shadow-custom"
+      class="flex items-center justify-around border-t-[20px] border-x-[20px] border-b-[2px] border-[#222f37] w-full h-[375px] lg:h-[618px] rounded-t-[50px] rounded-b-[30px] relative shadow-custom"
     >
       <keep-alive>
         <component :is="selectedComponent" />
@@ -35,12 +35,12 @@ const showMenu = () => {
         <div class="flex flex-row gap-4">
           <img src="../assets/red-light.svg" alt="red light" />
           <button
-            class="text-[#939393] bg-[#151E23] px-10 py-1.5 rounded-full text-lg button-shadow font-nano-pix"
+            class="text-[#939393] bg-[#151E23] px-4 lg:px-10 py-1.5 rounded-full lg:text-lg button-shadow font-nano-pix"
           >
             Power
           </button>
           <button
-            class="text-[#939393] bg-[#151E23] px-10 py-1.5 rounded-full text-lg button-shadow font-nano-pix"
+            class="text-[#939393] bg-[#151E23] px-4 lg:px-10 py-1.5 rounded-full lg:text-lg button-shadow font-nano-pix"
           >
             Reset
           </button>
@@ -49,10 +49,12 @@ const showMenu = () => {
     </div>
   </div>
 
-  <div class="grid grid-cols-4 justify-between gap-6">
+  <div
+    class="grid grid-cols-2 lg:grid-cols-4 justify-between gap-2 lg:gap-6 text-base lg:text-3xl 2xl:text-5xl"
+  >
     <button
       @click="showCompete"
-      class="flex flew-row flex-1 gap-2 items-center rounded-[50px] bg-[#3d4D7C] text-3xl 2xl:text-5xl min-w-fit p-4 h-[125px] shadow-custom4 font-nano-pix"
+      class="flex flew-row flex-1 gap-2 items-center rounded-[50px] bg-[#3d4D7C] min-w-fit p-2 lg:p-4 h-fit lg:h-[125px] shadow-custom4 font-nano-pix"
     >
       <img src="../assets/button-icons/compete-icon.svg" alt="compete icon" />
       <h3>Compete</h3>
@@ -60,7 +62,7 @@ const showMenu = () => {
 
     <button
       @click="showChallenge"
-      class="flex flew-row gap-2 items-center rounded-[50px] bg-[#386D9D] text-3xl 2xl:text-5xl min-w-fit p-4 h-[125px] shadow-custom4 font-nano-pix"
+      class="flex flew-row flex-1 gap-2 items-center rounded-[50px] bg-[#386D9D] min-w-fit p-2 lg:p-4 h-fit lg:h-[125px] shadow-custom4 font-nano-pix"
     >
       <img
         src="../assets/button-icons/challenge-icon.svg"
@@ -71,7 +73,7 @@ const showMenu = () => {
 
     <button
       @click="showPractice"
-      class="flex flew-row gap-2 items-center rounded-[50px] bg-[#067A5E] text-3xl 2xl:text-5xl min-w-fit p-4 h-[125px] shadow-custom4 font-nano-pix"
+      class="flex flew-row flex-1 gap-2 items-center rounded-[50px] bg-[#067A5E] min-w-fit p-2 lg:p-4 h-fit lg:h-[125px] shadow-custom4 font-nano-pix"
     >
       <img src="../assets/button-icons/practice-icon.svg" alt="practice icon" />
       <h3>Practice</h3>
@@ -79,7 +81,7 @@ const showMenu = () => {
 
     <button
       @click="showMenu"
-      class="flex flew-row gap-2 items-center rounded-[50px] bg-[#783B28] text-3xl 2xl:text-5xl min-w-fit p-4 h-[125px] shadow-custom4 font-nano-pix"
+      class="flex flew-row flex-1 gap-2 items-center rounded-[50px] bg-[#783B28] min-w-fit p-2 lg:p-4 h-fit lg:h-[125px] shadow-custom4 font-nano-pix"
     >
       <img src="../assets/button-icons/menu-icon.svg" alt="menu icon" />
       <h3>Menu</h3>

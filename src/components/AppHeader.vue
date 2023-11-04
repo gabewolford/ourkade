@@ -1,5 +1,5 @@
 <template>
-  <header class="px-6 py-6 lg:px-12 flex w-full">
+  <header class="pt-4 pb-2 flex w-full">
     <!-- Mobile header -->
     <router-link
       to="/"

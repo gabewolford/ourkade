@@ -7,7 +7,7 @@ const authStore = useAuthStore();
 
 <template>
   <nav
-    class="hidden lg:flex flex-col gap-6 lg:min-w-[275px] min-h-full text-center px-6 pb-6"
+    class="hidden lg:flex flex-col gap-6 lg:min-w-[275px] min-h-full text-center pb-6"
   >
     <div v-if="authStore.isLoggedIn()">
       <h3 class="text-[32px] w-full flex justify-center font-nano-pix">

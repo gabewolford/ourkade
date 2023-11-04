@@ -5,11 +5,13 @@ import AppHeader from "@/components/AppHeader.vue";
 </script>
 
 <template>
-  <AppHeader />
-  <div class="flex flex-row pb-[100px] lg:pb-[200px]">
-    <AppNav />
-    <div class="flex flex-col w-full lg:mr-6">
-      <router-view />
+  <div class="px-4 lg:px-6 2xl:px-12">
+    <AppHeader />
+    <div class="flex flex-row gap-4 lg:gap-6 pb-[200px]">
+      <AppNav />
+      <div class="flex flex-col w-full mb-4 lg:mb-6">
+        <router-view />
+      </div>
     </div>
   </div>
   <AppFooter />
