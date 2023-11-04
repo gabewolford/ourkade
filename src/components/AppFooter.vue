@@ -102,26 +102,6 @@
   );
 }
 
-.underline-on-hover {
-  position: relative;
-  overflow: hidden;
-}
-
-.underline-on-hover::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px; /* Adjust the thickness of the underline */
-  background-color: #fff; /* Adjust the color of the underline */
-  transition: width 0.3s ease; /* Adjust the transition duration and easing */
-}
-
-.underline-on-hover:hover::after {
-  width: 100%;
-}
-
 .bottom-right {
   border-radius: 125px 50px 50px 50px;
   background: #131313;

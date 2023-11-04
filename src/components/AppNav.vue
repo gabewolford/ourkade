@@ -7,11 +7,11 @@ const authStore = useAuthStore();
 
 <template>
   <nav
-    class="hidden lg:flex flex-col gap-6 lg:min-w-[275px] min-h-full text-center pb-6"
+    class="hidden lg:flex flex-col gap-6 lg:min-w-[275px] w-fit min-h-full text-center pb-6"
   >
     <div v-if="authStore.isLoggedIn()">
       <h3 class="text-[32px] w-full flex justify-center font-nano-pix">
-        Hey Nick!
+        Hey Gabe!
       </h3>
 
       <div class="flex flex-row gap-4 w-full">
@@ -119,37 +119,3 @@ const authStore = useAuthStore();
     <KadeRunnerStats />
   </nav>
 </template>
-
-<style scoped>
-.rainbow {
-  background: linear-gradient(
-    113deg,
-    #7d3a26 1.18%,
-    #806b1f 19.48%,
-    #1d835f 39.33%,
-    #1f3c86 58.37%,
-    #3b1885 74.84%,
-    #870a82 90.28%
-  );
-}
-
-.underline-on-hover {
-  position: relative;
-  overflow: hidden;
-}
-
-.underline-on-hover::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px; /* Adjust the thickness of the underline */
-  background-color: #fff; /* Adjust the color of the underline */
-  transition: width 0.3s ease; /* Adjust the transition duration and easing */
-}
-
-.underline-on-hover:hover::after {
-  width: 100%;
-}
-</style>
