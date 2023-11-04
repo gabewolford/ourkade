@@ -15,7 +15,7 @@ const dummyData = [
 
 <template>
   <div
-    class="flex flex-col gap-6 w-full lg:w-1/3 bg-[#0F0F0F]/60 px-4 py-6 rounded-[20px]"
+    class="flex flex-col gap-6 w-full lg:w-1/3 bg-[#0F0F0F]/60 px-4 py-4 lg:py-6 rounded-[20px]"
   >
     <div class="flex flex-row gap-4 items-center">
       <svg
