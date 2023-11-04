@@ -13,6 +13,31 @@ const routes: Array<any> = [
     component: () => import("@/pages/Home.vue"),
   },
   {
+    name: "Compete",
+    path: "/compete",
+    component: () => import("@/pages/Compete.vue"),
+  },
+  {
+    name: "Challenge",
+    path: "/challenge",
+    component: () => import("@/pages/Challenge.vue"),
+  },
+  {
+    name: "Practice",
+    path: "/practice",
+    component: () => import("@/pages/Practice.vue"),
+  },
+  {
+    name: "WhatsKade",
+    path: "/whatskade",
+    component: () => import("@/pages/WhatsKade.vue"),
+  },
+  {
+    name: "Compete",
+    path: "/compete",
+    component: () => import("@/pages/Compete.vue"),
+  },
+  {
     name: "Me",
     path: "/me",
     meta: {
