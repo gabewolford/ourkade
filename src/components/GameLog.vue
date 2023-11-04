@@ -1,6 +1,102 @@
+<script setup>
+const dummyData = [
+  {
+    date: "10.5.22",
+    myScore: 1702,
+    result: "1st",
+    topScore: 1802,
+    players: 12,
+  },
+  {
+    date: "10.5.22",
+    myScore: 1702,
+    result: "2nd",
+    topScore: 1802,
+    players: 12,
+  },
+  {
+    date: "10.5.22",
+    myScore: 1702,
+    result: "3rd",
+    topScore: 1802,
+    players: 12,
+  },
+  {
+    date: "10.5.22",
+    myScore: 1702,
+    result: "4th",
+    topScore: 1802,
+    players: 12,
+  },
+  {
+    date: "10.5.22",
+    myScore: 1702,
+    result: "5th",
+    topScore: 1802,
+    players: 12,
+  },
+  {
+    date: "10.5.22",
+    myScore: 1702,
+    result: "6th",
+    topScore: 1802,
+    players: 12,
+  },
+  {
+    date: "10.5.22",
+    myScore: 1702,
+    result: "7th",
+    topScore: 1802,
+    players: 12,
+  },
+  {
+    date: "10.5.22",
+    myScore: 1702,
+    result: "8th",
+    topScore: 1802,
+    players: 12,
+  },
+  {
+    date: "10.5.22",
+    myScore: 1702,
+    result: "9th",
+    topScore: 1802,
+    players: 12,
+  },
+  {
+    date: "10.5.22",
+    myScore: 1702,
+    result: "10th",
+    topScore: 1802,
+    players: 12,
+  },
+  {
+    date: "10.5.22",
+    myScore: 1702,
+    result: "11th",
+    topScore: 1802,
+    players: 12,
+  },
+  {
+    date: "10.5.22",
+    myScore: 1702,
+    result: "12th",
+    topScore: 1802,
+    players: 12,
+  },
+  {
+    date: "10.5.22",
+    myScore: 1702,
+    result: "13th",
+    topScore: 1802,
+    players: 12,
+  },
+];
+</script>
+
 <template>
   <div
-    class="flex flex-col gap-6 w-full lg:w-2/3 bg-[#0F0F0F]/60 px-4 py-4 lg:py-6 rounded-[20px]"
+    class="flex flex-col gap-7 w-full lg:w-2/3 bg-[#0F0F0F]/60 px-4 py-4 lg:py-6 rounded-[20px]"
   >
     <div class="flex flex-row gap-4 items-center">
       <svg
@@ -54,5 +150,69 @@
         <h4 class="text-[40px] leading-8 font-nano-pix">Game Log</h4>
       </div>
     </div>
+    <div>
+      <div class="table-container h-[400px] overflow-y-auto">
+        <table class="w-full">
+          <thead>
+            <tr>
+              <th class="uppercase text-left sticky top-0 w-1/5">Date</th>
+              <th class="uppercase text-left sticky top-0 w-1/5">My Score</th>
+              <th class="uppercase text-left sticky top-0 w-1/5 lg:pl-4">
+                Result
+              </th>
+              <th class="uppercase text-left sticky top-0 w-1/5">Top Score</th>
+              <th class="uppercase text-left sticky top-0 w-1/5">Players</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(data, index) in dummyData" :key="index" class="py-2">
+              <td class="text-left w-1/5 py-4">{{ data.date }}</td>
+              <td class="text-left w-1/5 py-4">
+                {{ `${data.myScore}pts` }}
+              </td>
+              <td class="text-left w-1/5 py-4 lg:pl-4">
+                <span
+                  :class="{
+                    'text-[#E3BA24]': index === 0,
+                    'text-[#C0BCBC]': index === 1,
+                    'text-[#B98A2C]': index === 2,
+                  }"
+                >
+                  {{ data.result }}</span
+                >
+              </td>
+              <td class="text-left w-1/5 py-4">
+                {{ `${data.topScore}pts` }}
+              </td>
+              <td class="text-left w-1/5 py-4">
+                {{ `${data.players} players` }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </template>
+
+<style scoped>
+.table-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background-color: none;
+  mix-blend-mode: overlay;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background-color: #caa8a8;
+  border-radius: 6px;
+  mix-blend-mode: overlay;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+  background-color: #d8b8b8;
+  mix-blend-mode: overlay;
+}
+</style>
