@@ -28,7 +28,7 @@ const handleLogin = async (provider) => {
 </script>
 <template>
   <section
-    class="flex flex-col w-full m-auto bg-[#603961] rounded-[20px] lg:h-[350px] text-white"
+    class="flex flex-col w-full bg-[#603961] rounded-[20px] lg:h-[350px] text-white"
   >
     <h1 class="text-3xl font-holtwood-one-sc">Login</h1>
     <div class="flex flex-row items-center">
