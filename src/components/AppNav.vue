@@ -44,32 +44,32 @@ const authStore = useAuthStore();
     <div v-else>
       <router-link
         :to="{ name: 'Home' }"
-        class="text-[32px] w-full flex justify-center font-nano-pix"
+        class="text-[32px] w-full flex justify-center text-center font-nano-pix"
         >Get Started</router-link
       >
 
       <div class="flex flex-row gap-4 w-full">
         <div class="flex flex-col w-1/2 mx-auto items-end">
-          <div class="h-[55px] text-2xl flex items-center">0</div>
-          <div class="h-[55px] text-2xl flex items-center">0</div>
-          <div class="h-[55px] text-2xl flex items-center">0</div>
+          <div class="h-[55px] text-2xl flex items-center pt-1.5">0</div>
+          <div class="h-[55px] text-2xl flex items-center pt-1.5">0</div>
+          <div class="h-[55px] text-2xl flex items-center pt-1.5">0</div>
         </div>
 
         <div class="flex flex-col w-1/2 mx-auto items-start">
           <div class="h-[55px] w-[72px] items-center flex relative">
             <img src="../assets/ticket-icon.svg" alt="ticket icon" />
-            <div class="absolute top-0 right-0" title="Tooltip goes here">
+            <!-- <div class="absolute top-0 right-0" title="Tooltip goes here">
               <img src="../assets/info.svg" alt="info icon" />
-            </div>
+            </div> -->
           </div>
           <div class="h-[55px] items-center flex">
             <img src="../assets/fox-icon.svg" alt="fox icon" />
           </div>
           <div class="h-[55px] w-[65px] items-center flex relative">
             <img src="../assets/swords-icon.svg" alt="swords icon" />
-            <div class="absolute top-0 right-0" title="Tooltip goes here">
+            <!-- <div class="absolute top-0 right-0" title="Tooltip goes here">
               <img src="../assets/info.svg" alt="info icon" />
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -100,14 +100,6 @@ const authStore = useAuthStore();
         </router-link>
       </li>
     </ul>
-
-    <!-- <ul v-if="authStore.isLoggedIn()" class="flex flex-col gap-5 p-5">
-      <li>{{ authStore.user.email }}</li>
-      <li v-if="authStore.isAdmin()">
-        <router-link :to="{ name: 'Me' }">Admin</router-link>
-      </li>
-      <li><router-link :to="{ name: 'Logout' }">Logout</router-link></li>
-    </ul> -->
 
     <ul v-else class="flex flex-col gap-5 text-[26px] p-5">
       <li>
