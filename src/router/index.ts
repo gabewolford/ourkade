@@ -11,9 +11,6 @@ const routes: Array<any> = [
     name: "Home",
     path: "/",
     component: () => import("@/pages/Home.vue"),
-    meta: {
-      requiresAuth: true,
-    },
   },
   {
     name: "Me",
