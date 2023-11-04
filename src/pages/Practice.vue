@@ -1,10 +1,10 @@
 <script setup>
 import PrimaryLayout from "@/components/PrimaryLayout";
-import MenuScreen from "@/components/MenuScreen";
+import PracticeScreen from "@/components/PracticeScreen";
 </script>
 
 <template>
   <PrimaryLayout>
-    <MenuScreen />
+    <PracticeScreen />
   </PrimaryLayout>
 </template>

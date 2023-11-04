@@ -1,10 +1,10 @@
 <script setup>
 import PrimaryLayout from "@/components/PrimaryLayout";
-import MenuScreen from "@/components/MenuScreen";
+import WhatsKadeScreen from "@/components/WhatsKadeScreen";
 </script>
 
 <template>
   <PrimaryLayout>
-    <MenuScreen />
+    <WhatsKadeScreen />
   </PrimaryLayout>
 </template>

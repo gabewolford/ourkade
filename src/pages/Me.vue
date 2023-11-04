@@ -15,30 +15,32 @@ onBeforeMount(async () => {
 </script>
 
 <template>
-  <div v-if="profile" class="font-retro-gaming">
-    <table style="border: 1px solid black">
-      <thead>
-        <tr style="border: 1px solid black">
-          <td style="border: 1px solid black">Field</td>
-          <td style="border: 1px solid black">Value</td>
+  <div class="flex flex-col w-full mb-4 lg:mb-6">
+    <div v-if="profile" class="font-retro-gaming">
+      <table style="border: 1px solid black">
+        <thead>
+          <tr style="border: 1px solid black">
+            <td style="border: 1px solid black">Field</td>
+            <td style="border: 1px solid black">Value</td>
+          </tr>
+        </thead>
+        <tr
+          v-for="(field, index) in authStore.user"
+          :key="index"
+          style="border: 1px solid black"
+        >
+          <td style="border: 1px solid black">{{ index }}</td>
+          <td style="border: 1px solid black">{{ field }}</td>
         </tr>
-      </thead>
-      <tr
-        v-for="(field, index) in authStore.user"
-        :key="index"
-        style="border: 1px solid black"
-      >
-        <td style="border: 1px solid black">{{ index }}</td>
-        <td style="border: 1px solid black">{{ field }}</td>
-      </tr>
-    </table>
+      </table>
 
-    <div v-if="authStore.isLoggedIn()" class="flex flex-col gap-5">
-      <div v-if="authStore.isAdmin()">
-        <router-link :to="{ name: 'Me' }">Admin</router-link>
-      </div>
-      <div>
-        <router-link :to="{ name: 'Logout' }">Logout</router-link>
+      <div v-if="authStore.isLoggedIn()" class="flex flex-col gap-5">
+        <div v-if="authStore.isAdmin()">
+          <router-link :to="{ name: 'Me' }">Admin</router-link>
+        </div>
+        <div>
+          <router-link :to="{ name: 'Logout' }">Logout</router-link>
+        </div>
       </div>
     </div>
   </div>

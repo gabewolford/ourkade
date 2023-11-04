@@ -1,5 +1,5 @@
 <script setup></script>
 
 <template>
-  <h1>Challenge component</h1>
+  <h1>Challenge Screen</h1>
 </template>

@@ -1,10 +1,10 @@
 <script setup>
 import PrimaryLayout from "@/components/PrimaryLayout";
-import MenuScreen from "@/components/MenuScreen";
+import ChallengeScreen from "@/components/ChallengeScreen";
 </script>
 
 <template>
   <PrimaryLayout>
-    <MenuScreen />
+    <ChallengeScreen />
   </PrimaryLayout>
 </template>

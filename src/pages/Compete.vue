@@ -1,10 +1,10 @@
 <script setup>
 import PrimaryLayout from "@/components/PrimaryLayout";
-import MenuScreen from "@/components/MenuScreen";
+import CompeteScreen from "@/components/CompeteScreen";
 </script>
 
 <template>
   <PrimaryLayout>
-    <MenuScreen />
+    <CompeteScreen />
   </PrimaryLayout>
 </template>

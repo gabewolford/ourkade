@@ -1,5 +1,5 @@
 <script setup></script>
 
 <template>
-  <h1>Main menu component</h1>
+  <h1>What's Kade Screen</h1>
 </template>
