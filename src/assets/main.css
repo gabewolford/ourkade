@@ -32,6 +32,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Rowdies";
+  src: url("../../public/fonts/Rowdies.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: "Coin Ding Dong";
   color: #ffffff;
