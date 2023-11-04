@@ -75,10 +75,18 @@ export default {
           >
             Per&nbsp;Day&nbsp;For&nbsp;Free
           </h2>
+          <div>
+            <p class="mix-blend-overlay font-rowdies lg:text-3xl mb-2">
+              Win it in alpha-exclusive Kade contests and get rewarded with it
+              whenever you compete in Tix-entry games.
+            </p>
+          </div>
           <router-link :to="{ name: 'WhatsKade' }">
-            <button class="bg-blend-overlay border px-10 py-4 rounded-full">
+            <div
+              class="bg-[#8cb2f4] px-8 py-4 rounded-full font-nano-pix text-3xl w-fit mx-auto"
+            >
               What's Kade?
-            </button>
+            </div>
           </router-link>
         </div>
       </div>
@@ -110,12 +118,18 @@ export default {
           >
             Learn&nbsp;More&nbsp;About
           </h2>
-          <h2 class="lg:text-6xl 2xl:text-[86px] font-holtwood-one-sc">
-            Ourkade
-          </h2>
-          <button class="bg-blend-overlay border px-10 py-4 rounded-full">
-            Lets Go
-          </button>
+          <div class="flex flex-row gap-4">
+            <img
+              src="../assets/large-logo.svg"
+              alt="Ourkade"
+              class="lg:max-w-[75%] 2xl:max-w[90%]"
+            />
+            <a
+              class="bg-[#D751FF] text-[#FF9FFF] rounded-[20px] font-nano-pix px-8 py-2 2xl:py-3 lg:text-4xl 2xl:text-6xl min-w-fit h-fit mt-auto"
+            >
+              Let's go!
+            </a>
+          </div>
         </div>
       </div>
       <button
