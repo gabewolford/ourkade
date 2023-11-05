@@ -80,12 +80,11 @@ export default {
             whenever you compete in Tix-entry games.
           </p>
         </div>
-        <router-link :to="{ name: 'WhatsKade' }">
-          <div
-            class="bg-[#8cb2f4] px-8 py-4 rounded-full font-nano-pix text-lg md:text-xl lg:text-2xl w-fit mx-auto"
-          >
-            What's Kade?
-          </div>
+        <router-link
+          :to="{ name: 'WhatsKade' }"
+          class="bg-[#8cb2f4] px-8 py-4 rounded-full font-nano-pix text-lg md:text-xl lg:text-2xl w-fit mx-auto"
+        >
+          What's Kade?
         </router-link>
       </div>
     </div>
