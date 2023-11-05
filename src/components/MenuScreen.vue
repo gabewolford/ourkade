@@ -38,7 +38,7 @@ export default {
     <img
       src="../assets/classic-games-logo.png"
       alt="compete in classic games"
-      class="w-8/12 h-auto object-contain"
+      class="w-8/12 h-auto object-contain 2xl:py-8"
     />
     <button @click="nextSlide" class="flex justify-center items-center w-2/12">
       <img src="../assets/right-arrow.svg" alt="" class="mix-blend-overlay" />
