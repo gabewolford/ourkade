@@ -5,7 +5,7 @@
     <h4 class="text-[50px] leading-[55px] font-nano-pix">What's Kade?</h4>
     <router-link :to="{ name: 'WhatsKade' }">
       <button
-        class="rainbow h-[100px] w-[150px] border rounded-full mx-auto flex justify-center items-center shadow-custom2 hover:shadow-custom2 hover:opacity-50"
+        class="rainbow h-[100px] w-[150px] border rounded-full mx-auto flex justify-center items-center shadow-custom2 hover:shadow-custom2 hover:opacity-80"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
