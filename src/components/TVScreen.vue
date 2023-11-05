@@ -3,9 +3,11 @@
 <template>
   <div class="flex w-full lg:min-h-[350px]">
     <div
-      class="flex items-start justify-around border-t-[10px] lg:border-t-[20px] border-x-[10px] lg:border-x-[20px] border-b-[2px] border-[#222f37] w-full h-[375px] lg:h-[618px] rounded-t-[50px] rounded-b-[30px] relative shadow-custom"
+      class="flex items-start justify-around border-t-[10px] lg:border-t-[20px] border-x-[10px] lg:border-x-[20px] border-b-[2px] border-[#222f37] w-full h-[400px] lg:h-[570px] rounded-t-[50px] rounded-b-[30px] relative shadow-custom"
     >
-      <slot></slot>
+      <div class="flex w-full h-[338px] lg:h-[468px] border-red-500">
+        <slot></slot>
+      </div>
       <div
         class="absolute bottom-0 bg-[#222f37] h-[50px] lg:h-[80px] w-full flex flex-row items-center justify-between rounded-b-2xl lg:rounded-b-none"
       >
