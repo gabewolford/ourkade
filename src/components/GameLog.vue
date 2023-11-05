@@ -96,7 +96,7 @@ const dummyData = [
 
 <template>
   <div
-    class="flex flex-col gap-7 w-full lg:w-2/3 bg-[#0F0F0F]/60 px-4 py-4 lg:py-6 rounded-[20px]"
+    class="hidden lg:flex flex-col gap-7 w-full lg:w-2/3 bg-[#0F0F0F]/60 px-4 py-4 lg:py-6 rounded-[20px]"
   >
     <div class="flex flex-row gap-4 items-center">
       <svg
@@ -149,7 +149,23 @@ const dummyData = [
         <h5 class="mix-blend-overlay text-lg font-nano-pix">kade runner</h5>
         <h4 class="text-[40px] leading-8 font-nano-pix">Game Log</h4>
       </div>
+      <div
+        class="flex flex-row gap-2 h-full items-end flex-1 2xl:pr-28 justify-between"
+      >
+        <button
+          class="bg-white/30 shadow-custom5 flex flex-1 font-nano-pix text-xl px-6 py-2 justify-center rounded-full"
+        >
+          Contests
+        </button>
+        <button
+          class="bg-white/5 shadow-custom5 flex flex-1 font-nano-pix text-xl px-6 py-2 justify-center rounded-full"
+        >
+          Challenges
+        </button>
+      </div>
     </div>
+
+    <!-- Contests -->
     <div>
       <div class="table-container h-[400px] overflow-y-auto">
         <table class="w-full">
