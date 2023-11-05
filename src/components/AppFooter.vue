@@ -1,22 +1,24 @@
 <template>
-  <footer class="absolute bottom-0 h-[200px] w-full bg-[#101212] py-4 lg:py-6">
+  <footer
+    class="absolute bottom-0 h-[150px] md:h-[200px] w-full bg-[#101212] py-4 lg:py-6"
+  >
     <div class="px-4 lg:px-6 flex flex-col h-full">
       <div
-        class="flex-1 flex flex-col lg:flex-row items-center justify-between w-full"
+        class="flex-1 flex flex-col md:flex-row items-center justify-between w-full"
       >
         <img
           src="../assets/footer-control-pad.svg"
           alt="control pad image"
-          class="hidden lg:flex object-contain max-h-full max-w-full"
+          class="hidden md:flex object-contain max-h-full max-w-full"
         />
 
-        <div class="flex flex-col justify-between h-full">
+        <div class="flex flex-col justify-around lg:justify-between h-full">
           <div class="flex flex-col gap-1">
-            <h3 class="font-alfa-slab-one text-xl lg:text-4xl">
+            <h3 class="font-alfa-slab-one text-center text-xl lg:text-4xl">
               Ourkadians Insider Mag
             </h3>
 
-            <ul class="flex flex-row justify-between text-xl font-nano-pix">
+            <ul class="flex flex-row justify-between lg:text-xl font-nano-pix">
               <li class="underline-on-hover">News</li>
               <span>-</span>
               <li class="underline-on-hover">Tips</li>
@@ -35,7 +37,7 @@
                 <input
                   type="text"
                   placeholder="email address"
-                  class="bg-transparent text-gray-500 text-2xl flex-1"
+                  class="bg-transparent text-gray-500 lg:text-2xl flex-1"
                 />
               </div>
             </div>
@@ -48,7 +50,7 @@
         </div>
 
         <div
-          class="hidden lg:flex bottom-right w-[200px] h-full flex-col justify-center items-center gap-2"
+          class="hidden md:flex bottom-right w-[200px] h-full flex-col justify-center items-center gap-2"
         >
           <div class="flex flex-row w-full justify-end gap-2 pr-4">
             <img
