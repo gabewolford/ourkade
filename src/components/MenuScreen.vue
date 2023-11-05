@@ -38,7 +38,7 @@ export default {
     <img
       src="../assets/classic-games-logo.png"
       alt="compete in classic games"
-      class="w-8/12 h-auto object-contain 2xl:py-8"
+      class="w-8/12 h-auto object-contain md:py-4 lg:py-6 2xl:py-8"
     />
     <button @click="nextSlide" class="flex justify-center items-center w-2/12">
       <img src="../assets/right-arrow.svg" alt="" class="mix-blend-overlay" />
@@ -56,25 +56,33 @@ export default {
     <button @click="prevSlide" class="flex justify-center items-center w-2/12">
       <img src="../assets/left-arrow.svg" alt="" class="mix-blend-overlay" />
     </button>
-    <div class="flex flex-col gap-6 flex-1 items-center justify-center">
+    <div
+      class="flex flex-col gap-6 flex-1 items-start justify-center text-left"
+    >
       <div
         class="flex flex-col w-full max-w-screen-lg mx-auto gap-2 text-center"
       >
-        <h3 class="flex-1 lg:text-4xl 2xl:text-[56px] font-holtwood-one-sc">
+        <h3
+          class="flex-1 text-lg md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-holtwood-one-sc"
+        >
           Collect&nbsp;Up&nbsp;to&nbsp;10x&nbsp;Kade
         </h3>
-        <h2 class="uppercase lg:text-5xl 2xl:text-[74px] font-holtwood-one-sc">
+        <h2
+          class="uppercase text-2xl md:text-4xl lg:text-4xl xl:text-5xl font-holtwood-one-sc"
+        >
           Per&nbsp;Day&nbsp;For&nbsp;Free
         </h2>
         <div>
-          <p class="mix-blend-overlay font-rowdies lg:text-3xl mb-2">
+          <p
+            class="mix-blend-overlay font-rowdies md:mb-4 md:text-xl lg:text-2xl"
+          >
             Win it in alpha-exclusive Kade contests and get rewarded with it
             whenever you compete in Tix-entry games.
           </p>
         </div>
         <router-link :to="{ name: 'WhatsKade' }">
           <div
-            class="bg-[#8cb2f4] px-8 py-4 rounded-full font-nano-pix text-3xl w-fit mx-auto"
+            class="bg-[#8cb2f4] px-8 py-4 rounded-full font-nano-pix text-lg md:text-xl lg:text-2xl w-fit mx-auto"
           >
             What's Kade?
           </div>
@@ -95,23 +103,23 @@ export default {
       <img src="../assets/left-arrow.svg" alt="" class="mix-blend-overlay" />
     </button>
     <div class="flex flex-col gap-6 flex-1 items-center justify-center">
-      <div
-        class="flex flex-col w-full max-w-screen-lg mx-auto gap-2 text-center"
-      >
-        <h2 class="uppercase lg:text-5xl 2xl:text-[74px] font-holtwood-one-sc">
+      <div class="flex flex-col w-full max-w-screen-lg mx-auto gap-2">
+        <h2
+          class="uppercase text-lg lg:text-5xl 2xl:text-[74px] font-holtwood-one-sc"
+        >
           Learn&nbsp;More&nbsp;About
         </h2>
-        <div class="flex flex-col lg:flex-row gap-4">
+        <div class="flex flex-col lg:flex-row gap-8 lg:gap-4">
           <img
             src="../assets/large-logo.svg"
             alt="Ourkade"
             class="lg:max-w-[75%] 2xl:max-w[90%]"
           />
-          <a
-            class="bg-[#D751FF] text-[#FF9FFF] rounded-[20px] font-nano-pix px-8 py-2 2xl:py-3 lg:text-4xl 2xl:text-6xl min-w-fit h-fit mt-auto"
+          <button
+            class="bg-[#D751FF] text-[#FF9FFF] rounded-[20px] font-nano-pix px-8 py-2 2xl:py-3 text-xl lg:text-4xl 2xl:text-6xl min-w-fit max-w-fit h-fit mt-auto text-center ml-auto mr-auto md:ml-auto md:mr-0"
           >
             Let's go!
-          </a>
+          </button>
         </div>
       </div>
     </div>
