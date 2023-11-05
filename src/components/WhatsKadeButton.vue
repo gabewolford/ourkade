@@ -1,8 +1,8 @@
 <template>
   <div
-    class="flex flex-col rainbow rounded-[20px] h-[300px] py-8 justify-between shadow-custom"
+    class="flex flex-col rainbow rounded-[20px] h-fit py-8 gap-4 justify-between shadow-custom"
   >
-    <h4 class="text-[50px] leading-[55px] font-nano-pix">What's Kade?</h4>
+    <h4 class="text-4xl leading-[55px] font-nano-pix">What's&nbsp;Kade?</h4>
     <router-link :to="{ name: 'WhatsKade' }">
       <button
         class="rainbow h-[100px] w-[150px] border rounded-full mx-auto flex justify-center items-center shadow-custom2 hover:shadow-custom2 hover:opacity-80"
