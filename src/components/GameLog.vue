@@ -149,16 +149,14 @@ const dummyData = [
         <h5 class="mix-blend-overlay text-lg font-nano-pix">kade runner</h5>
         <h4 class="text-[40px] leading-8 font-nano-pix">Game Log</h4>
       </div>
-      <div
-        class="flex flex-row gap-2 h-full items-end flex-1 2xl:pr-28 justify-between"
-      >
+      <div class="flex flex-row gap-2 h-full items-end flex-1 2xl:pr-28">
         <button
-          class="bg-white/30 shadow-custom5 flex flex-1 font-nano-pix text-xl px-6 py-2 justify-center rounded-full"
+          class="bg-white/30 shadow-custom5 flex font-nano-pix text-xl px-10 py-2 justify-center rounded-full"
         >
           Contests
         </button>
         <button
-          class="bg-white/5 shadow-custom5 flex flex-1 font-nano-pix text-xl px-6 py-2 justify-center rounded-full"
+          class="bg-white/5 shadow-custom5 flex font-nano-pix text-xl px-10 py-2 justify-center rounded-full"
         >
           Challenges
         </button>
