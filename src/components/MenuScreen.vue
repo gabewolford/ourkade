@@ -22,7 +22,7 @@ export default {
 <template>
   <div
     v-show="currentSlide === 1"
-    class="flex flex-row gradient1 w-full h-full rounded-t-[40px] lg:rounded-[30px] carousel-slide tv-shadow"
+    class="flex flex-row gradient1 w-full h-full rounded-[30px] carousel-slide tv-shadow"
     id="slide1"
   >
     <button
@@ -47,7 +47,7 @@ export default {
 
   <div
     v-show="currentSlide === 2"
-    class="flex flex-row gradient2 w-full h-full rounded-t-[40px] lg:rounded-t-[30px] relative carousel-slide tv-shadow"
+    class="flex flex-row gradient2 w-full h-full rounded-[30px] relative carousel-slide tv-shadow"
     id="slide2"
   >
     <div class="absolute top-8 right-11 lg:top-24 lg:right-32">
@@ -95,7 +95,7 @@ export default {
 
   <div
     v-show="currentSlide === 3"
-    class="flex flex-row gradient3 w-full h-full rounded-t-[40px] lg:rounded-t-[30px] carousel-slide tv-shadow"
+    class="flex flex-row gradient3 w-full h-full rounded-[30px] carousel-slide tv-shadow"
     id="slide3"
   >
     <button @click="prevSlide" class="flex justify-center items-center w-2/12">
