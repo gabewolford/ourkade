@@ -69,10 +69,7 @@ const authStore = useAuthStore();
       </div>
     </div>
 
-    <ul
-      v-if="authStore.isLoggedIn()"
-      class="flex flex-col gap-4 px-5 font-nano-pix"
-    >
+    <ul v-if="authStore.isLoggedIn()" class="flex flex-col gap-4 font-nano-pix">
       <li class="underline-on-hover w-fit mx-auto">
         <router-link :to="{ name: 'Home' }" class="text-[26px]">
           Play
@@ -95,14 +92,14 @@ const authStore = useAuthStore();
       </li>
     </ul>
 
-    <ul v-else class="flex flex-col gap-5 text-[26px] p-5">
-      <li>
-        <router-link :to="{ name: 'Login' }" class="underline-on-hover"
+    <ul v-else class="flex flex-col gap-4 px-5 font-nano-pix">
+      <li class="underline-on-hover w-fit mx-auto">
+        <router-link :to="{ name: 'Login' }" class="text-[26px]"
           >Login</router-link
         >
       </li>
-      <li>
-        <router-link :to="{ name: 'Register' }" class="underline-on-hover"
+      <li class="underline-on-hover w-fit mx-auto">
+        <router-link :to="{ name: 'Register' }" class="text-[26px]"
           >Register</router-link
         >
       </li>
