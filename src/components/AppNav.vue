@@ -7,7 +7,7 @@ const authStore = useAuthStore();
 
 <template>
   <nav
-    class="hidden lg:flex flex-col gap-6 lg:min-w-[275px] w-fit min-h-full text-center pb-6"
+    class="hidden lg:flex flex-col gap-6 lg:w-1/5 w-fit min-h-full text-center pb-6"
   >
     <div v-if="authStore.isLoggedIn()">
       <h3 class="text-[32px] w-full flex justify-center font-nano-pix">
@@ -45,7 +45,7 @@ const authStore = useAuthStore();
       <router-link
         :to="{ name: 'Home' }"
         class="text-[32px] w-full flex justify-center text-center font-nano-pix"
-        >Get Started</router-link
+        >Welcome</router-link
       >
 
       <div class="flex flex-row gap-4 w-full">
@@ -58,18 +58,12 @@ const authStore = useAuthStore();
         <div class="flex flex-col w-1/2 mx-auto items-start">
           <div class="h-[55px] w-[72px] items-center flex relative">
             <img src="../assets/ticket-icon.svg" alt="ticket icon" />
-            <!-- <div class="absolute top-0 right-0" title="Tooltip goes here">
-              <img src="../assets/info.svg" alt="info icon" />
-            </div> -->
           </div>
           <div class="h-[55px] items-center flex">
             <img src="../assets/fox-icon.svg" alt="fox icon" />
           </div>
           <div class="h-[55px] w-[65px] items-center flex relative">
             <img src="../assets/swords-icon.svg" alt="swords icon" />
-            <!-- <div class="absolute top-0 right-0" title="Tooltip goes here">
-              <img src="../assets/info.svg" alt="info icon" />
-            </div> -->
           </div>
         </div>
       </div>
