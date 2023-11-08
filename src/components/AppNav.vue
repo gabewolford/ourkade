@@ -105,15 +105,21 @@ const $route = useRoute();
     </ul>
 
     <ul v-else class="flex flex-col gap-4 px-5 font-nano-pix">
-      <li class="underline-on-hover w-fit mx-auto">
-        <router-link :to="{ name: 'Login' }" class="text-[26px]"
-          >Login</router-link
-        >
+      <li
+        :class="{ 'active-link': $route.name === 'Login' }"
+        class="underline-on-hover w-fit mx-auto"
+      >
+        <router-link :to="{ name: 'Login' }" class="text-[26px]">
+          Login
+        </router-link>
       </li>
-      <li class="underline-on-hover w-fit mx-auto">
-        <router-link :to="{ name: 'Register' }" class="text-[26px]"
-          >Register</router-link
-        >
+      <li
+        :class="{ 'active-link': $route.name === 'Register' }"
+        class="underline-on-hover w-fit mx-auto"
+      >
+        <router-link :to="{ name: 'Register' }" class="text-[26px]">
+          Register
+        </router-link>
       </li>
     </ul>
 
