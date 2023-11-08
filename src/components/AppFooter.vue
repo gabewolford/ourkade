@@ -9,11 +9,11 @@
         <div
           class="flex flex-col-reverse lg:flex-row items-center justify-between w-full h-full lg:h-fit"
         >
-          <div class="flex flex-col gap-1">
+          <div class="flex flex-col">
             <h3
-              class="font-alfa-slab-one text-center lg:text-left xl:text-[30px]"
+              class="font-alfa-slab-one text-center lg:text-left text-lg lg:text-[30px]"
             >
-              Ourkade Inc.
+              Ourkade, Inc.
             </h3>
 
             <ul
@@ -21,33 +21,35 @@
             >
               <a class="underline-on-hover">Terms of Service</a>
               <a class="underline-on-hover">Privacy Policy</a>
-              <a class="underline-on-hover">Get in Touch</a>
+              <a class="underline-on-hover">Get In Touch</a>
             </ul>
           </div>
           <div class="flex flex-col lg:flex-row gap-3 lg:gap-6">
-            <div class="flex flex-col gap-1">
-              <h3 class="font-alfa-slab-one text-center xl:text-[30px]">
+            <div class="flex flex-col">
+              <h3
+                class="hidden lg:flex font-alfa-slab-one text-center text-2xl lg:text-[30px]"
+              >
+                Ourkadians
+              </h3>
+
+              <h3
+                class="flex font-alfa-slab-one text-center text-2xl lg:hidden"
+              >
                 Ourkadians Insider Mag
               </h3>
 
-              <ul
-                class="flex flex-row space-x-2 justify-center font-nano-pix text-xs lg:text-base"
+              <h4
+                class="hidden lg:flex flex-row space-x-2 justify-center lg:justify-end text-base lg:text-lg font-alfa-slab-one"
               >
-                <li>News</li>
-                <span>-</span>
-                <li>Tips</li>
-                <span>-</span>
-                <li>Tactics</li>
-                <span>-</span>
-                <li>Treats</li>
-                <span>-</span>
-                <li>Cheats</li>
-              </ul>
+                Insider Mag
+              </h4>
             </div>
 
             <div class="flex flex-row gap-4 font-nano-pix items-end">
               <div class="flex flex-row flex-1 relative">
-                <div class="flex flex-row flex-1 bg-gradient-to-r">
+                <div
+                  class="flex flex-row flex-1 w-full lg:min-w-[250px] bg-gradient-to-r"
+                >
                   <input
                     type="text"
                     placeholder="email address"
