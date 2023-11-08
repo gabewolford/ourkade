@@ -3,6 +3,9 @@ import WhatsKadeButton from "@/components/WhatsKadeButton";
 import KadeRunnerStats from "@/components/KadeRunnerStats";
 import { useAuthStore } from "@/stores/auth";
 const authStore = useAuthStore();
+import { useRoute } from "vue-router";
+
+const $route = useRoute();
 </script>
 
 <template>
@@ -70,17 +73,26 @@ const authStore = useAuthStore();
     </div>
 
     <ul v-if="authStore.isLoggedIn()" class="flex flex-col gap-4 font-nano-pix">
-      <li class="underline-on-hover w-fit mx-auto">
+      <li
+        :class="{ 'active-link': $route.name === 'Home' }"
+        class="underline-on-hover w-fit mx-auto"
+      >
         <router-link :to="{ name: 'Home' }" class="text-[26px]">
           Play
         </router-link>
       </li>
-      <li class="underline-on-hover w-fit mx-auto">
+      <li
+        :class="{ 'active-link': $route.name === 'Leaderboard' }"
+        class="underline-on-hover w-fit mx-auto"
+      >
         <router-link :to="{ name: 'Leaderboard' }" class="text-[26px]">
           Leaderboard
         </router-link>
       </li>
-      <li class="underline-on-hover w-fit mx-auto">
+      <li
+        :class="{ 'active-link': $route.name === 'Me' }"
+        class="underline-on-hover w-fit mx-auto"
+      >
         <router-link :to="{ name: 'Me' }" class="text-[26px]">
           Account
         </router-link>
@@ -110,3 +122,25 @@ const authStore = useAuthStore();
     <KadeRunnerStats />
   </nav>
 </template>
+
+<style scoped>
+.active-link::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-image: linear-gradient(
+    to right,
+    #ff7246,
+    #ffd646,
+    #46ffbc,
+    #467aff,
+    #9e71ff,
+    #fc54ff
+  );
+  border-radius: 5px;
+}
+</style>
