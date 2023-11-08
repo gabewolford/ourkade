@@ -147,7 +147,7 @@ const dummyData = [
       </svg>
       <div class="flex flex-col text-start">
         <h5 class="mix-blend-overlay text-lg font-nano-pix">kade runner</h5>
-        <h4 class="text-[40px] leading-8 font-nano-pix">Game Log</h4>
+        <h4 class="text-[40px] leading-8 font-nano-pix">Game&nbsp;Log</h4>
       </div>
       <div class="flex flex-row gap-2 h-full items-end flex-1 2xl:pr-28">
         <button

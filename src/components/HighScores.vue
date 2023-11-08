@@ -40,7 +40,7 @@ const dummyData = [
       </svg>
       <div class="flex flex-col text-start">
         <h5 class="mix-blend-overlay text-lg font-nano-pix">kade runner</h5>
-        <h4 class="text-[40px] leading-8 font-nano-pix">High Score</h4>
+        <h4 class="text-[40px] leading-8 font-nano-pix">High&nbsp;Score</h4>
       </div>
     </div>
 
