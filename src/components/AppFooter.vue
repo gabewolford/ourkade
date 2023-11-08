@@ -45,18 +45,18 @@
               </ul>
             </div>
 
-            <div class="flex flex-row gap-4 font-nano-pix">
+            <div class="flex flex-row gap-4 font-nano-pix items-end">
               <div class="flex flex-row flex-1 relative">
                 <div class="flex flex-row flex-1 bg-gradient-to-r">
                   <input
                     type="text"
                     placeholder="email address"
-                    class="bg-transparent text-gray-500 flex-1"
+                    class="bg-transparent text-gray-500 flex-1 pb-2"
                   />
                 </div>
               </div>
               <button
-                class="rainbow text-black lg:text-lg lg:px-4 lg:py-2 rounded-md backdrop-blur-lg min-w-[120px] hover:shadow-customWhite transition duration-300"
+                class="rainbow text-black lg:text-lg lg:px-4 py-2 lg:py-3 rounded-md backdrop-blur-lg min-w-[120px] xl:min-w-[150px] hover:shadow-customWhite transition duration-300 h-fit"
               >
                 Sign Up
               </button>
