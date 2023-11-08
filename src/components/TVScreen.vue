@@ -9,7 +9,7 @@
         <slot></slot>
       </div>
       <div
-        class="absolute bottom-0 bg-[#222f37] h-[50px] lg:h-[80px] w-full flex flex-row items-center justify-between rounded-b-2xl lg:rounded-b-none"
+        class="absolute bottom-0 bg-[#222f37] h-[50px] lg:h-[80px] w-full flex flex-row items-center lg:items-end lg:pb-3 justify-between rounded-b-2xl lg:rounded-b-none"
       >
         <div class="flex flex-row gap-2 lg:gap-4">
           <img src="../assets/red-light.svg" alt="red light" />
@@ -24,6 +24,11 @@
             Reset
           </button>
         </div>
+        <img
+          src="../assets/cartridge.png"
+          alt="cartridge goes here"
+          class="hidden lg:flex lg:pr-12"
+        />
       </div>
     </div>
   </div>
