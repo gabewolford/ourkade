@@ -1,6 +1,6 @@
 <template>
   <div
-    class="grid grid-cols-2 lg:grid-cols-4 justify-between gap-2 lg:gap-6 text-lg lg:text-xl xl:text-3xl 2xl:text-5xl"
+    class="grid grid-cols-2 lg:grid-cols-4 justify-between gap-2 lg:gap-6 text-lg lg:text-xl xl:text-3xl 2xl:text-4xl"
   >
     <router-link :to="{ name: 'Compete' }">
       <button
@@ -25,7 +25,7 @@
 
     <router-link :to="{ name: 'Practice' }">
       <button
-        class="flex flew-row flex-1 gap-2 items-center rounded-full 2xl:rounded-[50px] bg-[#067A5E] hover:bg-[#086] w-full min-w-fit p-2 lg:p-4 h-fit h-fit lg:h-[75px] xl:h-[100px] 2xl:h-[125px] shadow-custom4 font-nano-pix"
+        class="flex flew-row flex-1 gap-2 items-center rounded-full 2xl:rounded-[50px] bg-[#067A5E] hover:bg-[#086] w-full min-w-fit p-2 lg:p-4 h-fit lg:h-[75px] xl:h-[100px] 2xl:h-[125px] shadow-custom4 font-nano-pix"
       >
         <img
           src="../assets/button-icons/practice-icon.svg"
