@@ -13,14 +13,14 @@
     <!-- Desktop header -->
     <div class="hidden lg:flex flex-row w-full">
       <div class="flex items-center m-0 flex-row justify-between">
-        <div class="lg:w-2/5">
+        <div class="lg:w-5/12">
           <img src="../assets/left-line.png" alt="left line" />
         </div>
-        <router-link to="/" class="flex items-center lg:max-w-1/5">
+        <router-link to="/" class="flex items-center lg:max-w-2/12">
           <img src="../assets/logo.png" alt="Ourkade logo" class="min-w-fit" />
           <h4 class="text-shadow text-[#418dd5] text-[28px] pt-2">v1</h4>
         </router-link>
-        <div class="lg:w-2/5">
+        <div class="lg:w-5/12">
           <img src="../assets/right-line.png" alt="right line" />
         </div>
       </div>
