@@ -16,9 +16,9 @@
         <div class="lg:w-5/12">
           <img src="../assets/left-line.png" alt="left line" />
         </div>
-        <router-link to="/" class="flex items-center lg:max-w-2/12">
+        <router-link to="/" class="flex items-center lg:max-w-2/12 lg:gap-1">
           <img src="../assets/logo.png" alt="Ourkade logo" class="min-w-fit" />
-          <h4 class="text-shadow text-[#418dd5] text-[28px] pt-2">v1</h4>
+          <h4 class="text-shadow text-[#3e8ad2] text-[28px] pt-2">v1</h4>
         </router-link>
         <div class="lg:w-5/12">
           <img src="../assets/right-line.png" alt="right line" />
@@ -30,6 +30,10 @@
 
 <style scoped>
 .text-shadow {
-  text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.5);
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.35);
+}
+
+.drop-shadow {
+  drop-shadow: (0px 0px 5px rgba(255, 255, 255, 0.8));
 }
 </style>
