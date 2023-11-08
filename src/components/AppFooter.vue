@@ -19,15 +19,15 @@
             </h3>
 
             <ul class="flex flex-row justify-between lg:text-xl font-nano-pix">
-              <li class="underline-on-hover">News</li>
+              <li>News</li>
               <span>-</span>
-              <li class="underline-on-hover">Tips</li>
+              <li>Tips</li>
               <span>-</span>
-              <li class="underline-on-hover">Tactics</li>
+              <li>Tactics</li>
               <span>-</span>
-              <li class="underline-on-hover">Treats</li>
+              <li>Treats</li>
               <span>-</span>
-              <li class="underline-on-hover">Cheats</li>
+              <li>Cheats</li>
             </ul>
           </div>
 
