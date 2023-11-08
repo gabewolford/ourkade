@@ -1,71 +1,66 @@
 <template>
   <footer
-    class="absolute bottom-0 h-[150px] md:h-[200px] w-full bg-[#101212] py-4 lg:py-6"
+    class="absolute bottom-0 h-[200px] w-full text-[#B0B0B0] bg-[#101212] py-4 lg:py-6"
   >
     <div class="px-4 lg:px-6 flex flex-col h-full">
       <div
         class="flex-1 flex flex-col md:flex-row items-center justify-between w-full"
       >
-        <img
-          src="../assets/footer-control-pad.svg"
-          alt="control pad image"
-          class="hidden md:flex object-contain max-h-full max-w-full"
-        />
-
-        <div class="flex flex-col justify-around lg:justify-between h-full">
+        <div
+          class="flex flex-col-reverse lg:flex-row items-center justify-between w-full h-full lg:h-fit"
+        >
           <div class="flex flex-col gap-1">
-            <h3 class="font-alfa-slab-one text-center text-xl lg:text-4xl">
-              Ourkadians Insider Mag
+            <h3
+              class="font-alfa-slab-one text-center lg:text-left xl:text-[30px]"
+            >
+              Ourkade Inc.
             </h3>
 
-            <ul class="flex flex-row justify-between lg:text-xl font-nano-pix">
-              <li>News</li>
-              <span>-</span>
-              <li>Tips</li>
-              <span>-</span>
-              <li>Tactics</li>
-              <span>-</span>
-              <li>Treats</li>
-              <span>-</span>
-              <li>Cheats</li>
+            <ul
+              class="flex flex-row flex-wrap space-x-4 justify-center font-nano-pix text-xs lg:text-base"
+            >
+              <a class="underline-on-hover">Terms of Service</a>
+              <a class="underline-on-hover">Privacy Policy</a>
+              <a class="underline-on-hover">Get in Touch</a>
             </ul>
           </div>
+          <div class="flex flex-col lg:flex-row gap-3 lg:gap-6">
+            <div class="flex flex-col gap-1">
+              <h3 class="font-alfa-slab-one text-center xl:text-[30px]">
+                Ourkadians Insider Mag
+              </h3>
 
-          <div class="flex flex-row gap-4 font-nano-pix">
-            <div class="flex flex-row flex-1 relative">
-              <div class="flex flex-row flex-1 bg-gradient-to-r">
-                <input
-                  type="text"
-                  placeholder="email address"
-                  class="bg-transparent text-gray-500 lg:text-2xl flex-1"
-                />
-              </div>
+              <ul
+                class="flex flex-row space-x-2 justify-center font-nano-pix text-xs lg:text-base"
+              >
+                <li>News</li>
+                <span>-</span>
+                <li>Tips</li>
+                <span>-</span>
+                <li>Tactics</li>
+                <span>-</span>
+                <li>Treats</li>
+                <span>-</span>
+                <li>Cheats</li>
+              </ul>
             </div>
-            <button
-              class="rainbow text-black text-lg px-4 py-2 rounded-md backdrop-blur-lg min-w-[120px]"
-            >
-              Sign Up
-            </button>
-          </div>
-        </div>
 
-        <div
-          class="hidden md:flex bottom-right w-[200px] h-full flex-col justify-center items-center gap-2"
-        >
-          <div class="flex flex-row w-full justify-end gap-2 pr-4">
-            <img
-              src="../assets/kade-genie-key-icon.svg"
-              alt="Kade Genie"
-              class="w-fit h-fit"
-            />
-            <img src="../assets/get-in-touch-icon.svg" alt="Get In Touch" />
-          </div>
-          <div class="flex flex-row w-full justify-start gap-2 pl-8">
-            <img src="../assets/privacy-policy-icon.svg" alt="Privacy Policy" />
-            <img
-              src="../assets/terms-of-service-icon.svg"
-              alt="Terms Of Service"
-            />
+            <div class="flex flex-row gap-4 font-nano-pix">
+              <div class="flex flex-row flex-1 relative">
+                <div class="flex flex-row flex-1 bg-gradient-to-r">
+                  <input
+                    type="text"
+                    placeholder="email address"
+                    class="bg-transparent text-gray-500 flex-1"
+                  />
+                </div>
+              </div>
+              <button
+                class="rainbow text-black lg:text-lg lg:px-4 lg:py-2 rounded-md backdrop-blur-lg min-w-[120px] hover:shadow-customWhite transition duration-300"
+              >
+                Sign Up
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -102,11 +97,5 @@
     #3b1885 74.84%,
     #870a82 90.28%
   );
-}
-
-.bottom-right {
-  border-radius: 125px 50px 50px 50px;
-  background: #131313;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5) inset;
 }
 </style>
