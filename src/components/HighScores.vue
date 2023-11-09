@@ -15,7 +15,7 @@ const dummyData = [
 
 <template>
   <div
-    class="flex flex-col gap-6 w-full lg:w-1/3 bg-[#0F0F0F]/60 px-4 py-4 lg:py-6 rounded-[20px]"
+    class="flex flex-col gap-6 w-full lg:w-1/3 bg-[#0F0F0F]/60 px-4 py-4 lg:py-6 rounded-[20px] max-h-fit"
   >
     <div class="flex flex-row gap-4 items-center">
       <svg
@@ -40,14 +40,20 @@ const dummyData = [
       </svg>
       <div class="flex flex-col text-start">
         <h5 class="mix-blend-overlay text-lg font-nano-pix">kade runner</h5>
-        <h4 class="text-[40px] leading-8 font-nano-pix">High&nbsp;Score</h4>
+        <h4 class="text-[34px] xl:text-[40px] leading-8 font-nano-pix">
+          High&nbsp;Score
+        </h4>
       </div>
     </div>
 
     <div>
-      <table class="w-full">
+      <table class="w-full h-fit">
         <tbody>
-          <tr v-for="(data, index) in dummyData" :key="index" class="py-2">
+          <tr
+            v-for="(data, index) in dummyData"
+            :key="index"
+            class="py-2 text-sm xl:text-base"
+          >
             <td>{{ `#${data.rank}` }}</td>
             <td class="pl-2 py-2">{{ data.name }}</td>
             <td class="text-right py-2">{{ `${data.score}pts` }}</td>
