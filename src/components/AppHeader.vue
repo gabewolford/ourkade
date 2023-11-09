@@ -1,5 +1,5 @@
 <template>
-  <header class="pt-4 pb-2 flex w-full">
+  <header class="pt-4 pb-2 flex">
     <!-- Mobile header -->
     <router-link
       to="/"
