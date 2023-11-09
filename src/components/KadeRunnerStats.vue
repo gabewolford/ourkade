@@ -19,7 +19,9 @@
       </svg>
       <div class="flex flex-col text-start">
         <h5 class="mix-blend-overlay text-lg font-nano-pix">kade runner</h5>
-        <h4 class="text-[40px] leading-8 font-nano-pix">Stats</h4>
+        <h4 class="text-[34px] xl:text-[40px] leading-8 font-nano-pix">
+          Stats
+        </h4>
       </div>
     </div>
 
