@@ -63,5 +63,9 @@
 <style scoped>
 .background-image {
   background-image: url("../assets/kaderunner-bg.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 </style>
