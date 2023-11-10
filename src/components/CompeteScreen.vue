@@ -16,11 +16,13 @@
           alt="Kade Runner logo green"
           class="h-fit w-[160px] md:w-auto md:h-fit lg:w-auto"
         />
-        <h3 class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
+        <h3
+          class="hidden md:flex text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl"
+        >
           Avoid obstacles and keep running!
         </h3>
         <h3
-          class="hidden md:flex text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl -mt-2"
+          class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl md:-mt-2 mt-0"
         >
           Compete in contests for kade.
         </h3>
@@ -40,7 +42,9 @@
             </h1>
           </div>
         </button>
-        <h2 class="uppercase text-sm md:text-xl xl:text-2xl pt-4">My Stats</h2>
+        <h2 class="uppercase text-sm md:text-xl xl:text-2xl pt-4">
+          Active Contests
+        </h2>
         <p class="text-xs md:text-base lg:text-lg xl:text-xl text-[#46FFBC]">
           best: <span class="text-white">1800pts</span>
         </p>
