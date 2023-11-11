@@ -17,12 +17,7 @@
           class="h-fit w-[160px] md:w-auto md:h-fit lg:w-auto"
         />
         <h3 class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
-          Avoid obstacles and keep running!
-        </h3>
-        <h3
-          class="hidden md:flex text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl -mt-2"
-        >
-          Hone your skills, young kadawan.
+          Hone your skills...
         </h3>
       </div>
       <div class="flex flex-col md:w-5/12 gap-2">
