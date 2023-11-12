@@ -35,7 +35,13 @@ const switchToNextScreen = () => {
     <h2 class="uppercase text-sm md:text-lg lg:text-xl xl:text-2xl pt-4">
       Sample Challenge
     </h2>
-    <ChallengeTable1 color="#7988AF" />
+    <ChallengeTable1
+      color="#7988AF"
+      tix="1"
+      players="3"
+      time="11:02"
+      prize="2"
+    />
   </SubscreenLayout>
 </template>
 

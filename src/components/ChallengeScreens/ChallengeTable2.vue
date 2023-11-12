@@ -23,7 +23,7 @@ defineProps({
     type: String,
     required: true,
   },
-  tix: {
+  prize: {
     type: String,
     required: true,
   },
@@ -84,8 +84,8 @@ defineProps({
       <td :style="{ borderColor: color }">
         <div class="flex flex-row gap-0.5 justify-center">
           <div class="center-this">
-            <p class="text-[#E3BA24] text-base leading-none mt-1">
-              {{ tix }}
+            <p class="text-[#E3BA24] leading-none mt-1">
+              {{ prize }}
             </p>
           </div>
 

@@ -26,7 +26,7 @@ defineProps({
     <div
       class="flex flex-col md:flex-row mx-auto gap-2 md:gap-8 lg:gap-10 xl:gap-20 md:w-full"
     >
-      <div class="flex flex-col md:w-6/12 gap-2">
+      <div class="flex flex-col md:w-6/12 gap-1 lg:gap-2">
         <h2 class="uppercase text-sm md:text-lg lg:text-xl xl:text-2xl">
           {{ gameTitle }} Game
         </h2>

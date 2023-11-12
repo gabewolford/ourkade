@@ -8,7 +8,27 @@ import LargeTicket from "@/components/TableIcons/LargeTicket.vue";
 defineProps({
   color: {
     type: String,
-    required: false,
+    required: true,
+  },
+  tix: {
+    type: String,
+    required: true,
+  },
+  players: {
+    type: String,
+    required: true,
+  },
+  players: {
+    type: String,
+    required: true,
+  },
+  time: {
+    type: String,
+    required: true,
+  },
+  prize: {
+    type: String,
+    required: true,
   },
 });
 </script>
@@ -25,7 +45,9 @@ defineProps({
       </td>
 
       <td :style="{ borderColor: color }">
-        <div class="center-this mt-1">1</div>
+        <div class="center-this mt-1">
+          {{ tix }}
+        </div>
       </td>
 
       <td :style="{ borderColor: color }">
@@ -35,15 +57,21 @@ defineProps({
       </td>
 
       <td :style="{ borderColor: color }">
-        <div class="center-this mt-1">3</div>
+        <div class="center-this mt-1">
+          {{ players }}
+        </div>
       </td>
 
       <td :style="{ borderColor: color }">
-        <div class="center-this"><Time :color="`${color}`" /></div>
+        <div class="center-this">
+          <Time :color="`${color}`" />
+        </div>
       </td>
 
       <td :style="{ borderColor: color }">
-        <div class="center-this mt-1">24.00</div>
+        <div class="center-this mt-1">
+          {{ time }}
+        </div>
       </td>
 
       <td :style="{ borderColor: color }">
@@ -53,9 +81,11 @@ defineProps({
       </td>
 
       <td :style="{ borderColor: color }">
-        <div class="flex flex-row gap-0.5">
+        <div class="flex flex-row gap-0.5 justify-center">
           <div class="center-this">
-            <p class="text-[#E3BA24] text-base leading-none mt-1">2</p>
+            <p class="text-[#E3BA24] leading-none mt-1">
+              {{ prize }}
+            </p>
           </div>
 
           <div class="center-this">
