@@ -7,9 +7,9 @@ import SubscreenLayout from "@/components/SubscreenLayout.vue";
 const props = defineProps([]);
 const emits = defineEmits();
 
-const switchToNextScreen = () => {
+const switchToScreen2 = () => {
   // Emit an event to the parent component
-  emits("switch-screen", 2);
+  emits("switch-to-screen", 2);
 };
 </script>
 
@@ -21,12 +21,12 @@ const switchToNextScreen = () => {
       Challenge Mode
     </h2>
     <button
-      @click="switchToNextScreen"
+      @click="switchToScreen2()"
       class="flex flex-row items-center max-w-[250px] md:max-w-full md:w-full relative"
     >
       <div class="flex items-center w-full">
         <h1
-          class="font-nano-pix text-3xl md:text-4xl lg:text-5xl text-black rainbow-gradient hover:bg-[#4bd3a1] rounded-3xl py-2 justify-center flex w-full text-left"
+          class="font-nano-pix text-3xl md:text-4xl lg:text-5xl text-black rainbow-gradient rounded-2xl py-2 justify-center flex w-full text-left"
         >
           Sign up!
         </h1>

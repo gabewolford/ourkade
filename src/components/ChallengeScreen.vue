@@ -29,7 +29,7 @@ const getActiveScreenComponent = computed(() => {
     case 7:
       return Challenge7;
     default:
-      return Compete1;
+      return Challenge1;
   }
 });
 
@@ -45,6 +45,9 @@ const switchToScreen = (screenNumber) => {
     secondaryText="Avoid obstacles and keep running!"
     mainText="Challenge up to 3 friends to win tix."
   >
-    <component :is="getActiveScreenComponent" @switch-screen="switchToScreen" />
+    <component
+      :is="getActiveScreenComponent"
+      @switch-to-screen="switchToScreen"
+    />
   </ScreenLayout>
 </template>

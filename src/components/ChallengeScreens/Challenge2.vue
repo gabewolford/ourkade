@@ -7,21 +7,31 @@ import ChallengeTable2 from "@/components/ChallengeScreens/ChallengeTable2.vue";
 const props = defineProps([]);
 const emits = defineEmits();
 
-const switchToNextScreen = () => {
+const switchToScreen3 = () => {
   // Emit an event to the parent component
-  emits("switch-screen", 3);
+  emits("switch-to-screen", 3);
+};
+
+const switchToScreen4 = () => {
+  // Emit an event to the parent component
+  emits("switch-to-screen", 4);
+};
+
+const switchToScreen5 = () => {
+  // Emit an event to the parent component
+  emits("switch-to-screen", 5);
 };
 </script>
 
 <template>
   <SubscreenLayout>
     <h2 class="hidden md:flex uppercase text-sm md:text-xl xl:text-2xl">
-      Challenge Mode
+      Challenge Mode 2
     </h2>
     <div class="flex flex-row gap-1 lg:gap-2 w-full">
       <div class="w-3/5">
         <button
-          @click="switchToNextScreen"
+          @click="switchToScreen3()"
           class="flex flex-row items-center w-full max-w-[250px] md:max-w-full md:w-full relative"
         >
           <div class="flex items-center w-full">
@@ -41,7 +51,7 @@ const switchToNextScreen = () => {
 
       <div class="w-1/5">
         <button
-          @click="switchToNextScreen"
+          @click="switchToScreen4()"
           class="flex flex-row items-center w-full max-w-[250px] md:max-w-full md:w-full relative"
         >
           <div class="flex items-center w-full">
@@ -56,8 +66,8 @@ const switchToNextScreen = () => {
 
       <div class="w-1/5">
         <button
-          @click="switchToNextScreen"
-          class="flex flex-row items-center w-full max-w-[250px] md:max-w-full md:w-full relative"
+          @click="switchToScreen5()"
+          class="flex flex-row items-center w-full max-w-[250px] md:max-w-full md:w-full relative disabled"
         >
           <div class="flex items-center w-full">
             <h1
@@ -96,7 +106,7 @@ const switchToNextScreen = () => {
         @click="switchToNextScreen"
         class="text-left uppercase text-sm text-[#608CFF]"
       >
-        <div class="flex flex-row gap-2 text-xs lg:text-base">
+        <div class="flex flex-row gap-2 text-xs">
           <p>View Past Challenges</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
