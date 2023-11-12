@@ -1,0 +1,82 @@
+<script setup>
+import SmallTicket from "@/components/TableIcons/SmallTicket.vue";
+import Players from "@/components/TableIcons/Players.vue";
+import Time from "@/components/TableIcons/Time.vue";
+import Trophy from "@/components/TableIcons/Trophy.vue";
+import LargeTicket from "@/components/TableIcons/LargeTicket.vue";
+
+defineProps({
+  color: {
+    type: String,
+    required: false,
+  },
+});
+</script>
+
+<template>
+  <table
+    :class="`table-auto h-fit border border-collapse border-[${color}] w-fit text-xs md:text-sm lg:text-base xl:text-lg`"
+  >
+    <tr>
+      <td :class="`border border-[${color}]`">
+        <div class="center-this">
+          <SmallTicket :color="`${color}`" />
+        </div>
+      </td>
+
+      <td :class="`border border-[${color}]`">
+        <div class="center-this mt-1">1</div>
+      </td>
+
+      <td :class="`border border-[${color}]`">
+        <div class="center-this">
+          <Players :color="`${color}`" />
+        </div>
+      </td>
+
+      <td :class="`border border-[${color}]`">
+        <div class="center-this mt-1">3</div>
+      </td>
+
+      <td :class="`border border-[${color}]`">
+        <div class="center-this"><Time :color="`${color}`" /></div>
+      </td>
+
+      <td :class="`border border-[${color}]`">
+        <div class="center-this mt-1">24.00</div>
+      </td>
+
+      <td :class="`border border-[${color}]`">
+        <div class="center-this">
+          <Trophy :color="`${color}`" />
+        </div>
+      </td>
+
+      <td :class="`border border-[${color}]`">
+        <div class="flex flex-row gap-0.5">
+          <div class="center-this">
+            <p class="text-[#E3BA24] text-base leading-none mt-1">2</p>
+          </div>
+
+          <div class="center-this">
+            <LargeTicket color="#E3BA24" />
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</template>
+
+<style scoped>
+td {
+  height: 100%;
+}
+
+div.center-this {
+  display: flex;
+  padding: 2px 2px 2px 2px;
+  justify-content: center;
+  align-items: center;
+  line-height: none;
+}
+</style>

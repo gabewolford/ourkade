@@ -1,5 +1,7 @@
 <script setup>
 import { ref, defineProps, defineEmits } from "vue";
+import SubscreenLayout from "@/components/SubscreenLayout.vue";
+import ChallengeTable2 from "@/components/ChallengeScreens/ChallengeTable2.vue";
 
 // Define props and emits explicitly
 const props = defineProps([]);
@@ -12,55 +14,92 @@ const switchToNextScreen = () => {
 </script>
 
 <template>
-  <div class="flex flex-col md:w-5/12 gap-2">
+  <SubscreenLayout>
     <h2 class="hidden md:flex uppercase text-sm md:text-xl xl:text-2xl">
       Challenge Mode 2
     </h2>
-    <button
-      @click="switchToNextScreen"
-      class="flex flex-row items-center max-w-[250px] md:max-w-full md:w-full relative"
-    >
-      <div class="flex items-center w-full">
-        <h1
-          class="font-nano-pix text-3xl md:text-4xl lg:text-5xl text-black rainbow-gradient hover:bg-[#4bd3a1] rounded-3xl py-2 justify-center flex w-full text-left"
+    <div class="flex flex-row gap-1 w-full">
+      <div class="w-3/5">
+        <button
+          @click="switchToNextScreen"
+          class="flex flex-row items-center max-w-[250px] md:max-w-full md:w-full relative"
         >
-          Sign up!
-        </h1>
+          <div class="flex items-center w-full">
+            <h1
+              class="font-nano-pix text-3xl text-black bg-[#7988AF] rounded-2xl py-2 lg:pl-4 2xl:pl-16 w-full relative text-left"
+            >
+              create
+            </h1>
+            <img
+              src="../../assets/ticket-icon-black-1.png"
+              alt="ticket"
+              class="absolute right-[8%] top-3.5 lg:top-3.5 h-[25px] w-auto ml-2 z-50"
+            />
+          </div>
+        </button>
       </div>
-    </button>
+
+      <div class="w-1/5">
+        <button
+          @click="switchToNextScreen"
+          class="flex flex-row items-center max-w-[250px] md:max-w-full md:w-full relative"
+        >
+          <div class="flex items-center w-full">
+            <h1
+              class="font-nano-pix text-3xl text-black bg-[#7988AF] rounded-2xl py-2 justify-center flex w-full text-left"
+            >
+              run!
+            </h1>
+          </div>
+        </button>
+      </div>
+
+      <div class="w-1/5">
+        <button
+          @click="switchToNextScreen"
+          class="flex flex-row items-center max-w-[250px] md:max-w-full md:w-full relative"
+        >
+          <div class="flex items-center w-full">
+            <h1
+              class="font-nano-pix text-3xl text-black bg-[#608CFF] rounded-2xl py-2 justify-center flex w-full text-left"
+            >
+              info
+            </h1>
+          </div>
+        </button>
+      </div>
+    </div>
+
     <h2 class="uppercase text-sm md:text-xl xl:text-2xl pt-4">
-      Active Contests
+      Active Challenges
     </h2>
-    <table class="flex items-center border border-[#7988AF] w-fit">
-      <td class="border-r border-[#7988AF] px-2.5">
-        <img src="../../assets/table-icons/gray-tix.svg" alt="tix" />
-      </td>
-      <td class="border-r border-[#7988AF] px-2.5 pt-1.5">1</td>
-      <td class="border-r border-[#7988AF] px-2.5">
-        <img
-          src="../../assets/table-icons/gray-players.svg"
-          alt="players"
-          class="py-1"
-        />
-      </td>
-      <td class="border-r border-[#7988AF] px-2.5 pt-1.5">3</td>
-      <td class="border-r border-[#7988AF] px-2.5 pt-0.5">
-        <img src="../../assets/table-icons/gray-time.svg" alt="time" />
-      </td>
-      <td class="border-r border-[#7988AF] px-2.5 pt-1.5">24:00</td>
-      <td class="border-r border-[#7988AF] px-2.5">
-        <img src="../../assets/table-icons/gray-trophy.svg" alt="trophy" />
-      </td>
-      <td class="px-2.5 pt-0.5 flex flex-row items-center h-full gap-2">
-        <p class="text-[#E3BA24] pt-1">2</p>
-        <img
-          src="../../assets/table-icons/gold-ticket.svg"
-          alt="tix"
-          class="pr-2.5"
-        />
-      </td>
-    </table>
-  </div>
+    <div class="flex flex-col gap-2">
+      <ChallengeTable2
+        color="#7988AF"
+        players="2"
+        time="19:02"
+        tix="2"
+        runOrFin="run!"
+      />
+
+      <ChallengeTable2
+        color="#608CFF"
+        players="3"
+        time="11:02"
+        tix="2"
+        runOrFin="fin."
+      />
+    </div>
+
+    <div class="mt-4">
+      <button
+        @click="switchToNextScreen"
+        class="text-left uppercase text-sm text-[#608CFF]"
+      >
+        <div class="flex flex-row gap-2">View Past Challenges</div>
+      </button>
+    </div>
+  </SubscreenLayout>
 </template>
 
 <style scoped>
