@@ -16,7 +16,7 @@ const switchToNextScreen = () => {
 <template>
   <SubscreenLayout>
     <h2 class="hidden md:flex uppercase text-sm md:text-xl xl:text-2xl">
-      Challenge Mode 2
+      Challenge Mode
     </h2>
     <div class="flex flex-row gap-1 lg:gap-2 w-full">
       <div class="w-3/5">
