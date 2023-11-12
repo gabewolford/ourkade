@@ -15,44 +15,44 @@ defineProps({
 
 <template>
   <table
-    :class="`table-auto h-fit border border-collapse border-[${color}] w-fit text-xs md:text-sm lg:text-base xl:text-lg`"
+    :class="`table-auto h-fit w-full text-xs md:text-sm lg:text-base xl:text-lg`"
   >
     <tr>
-      <td :class="`border border-[${color}]`">
+      <td :style="{ borderColor: color }">
         <div class="center-this">
           <SmallTicket :color="`${color}`" />
         </div>
       </td>
 
-      <td :class="`border border-[${color}]`">
+      <td :style="{ borderColor: color }">
         <div class="center-this mt-1">1</div>
       </td>
 
-      <td :class="`border border-[${color}]`">
+      <td :style="{ borderColor: color }">
         <div class="center-this">
           <Players :color="`${color}`" />
         </div>
       </td>
 
-      <td :class="`border border-[${color}]`">
+      <td :style="{ borderColor: color }">
         <div class="center-this mt-1">3</div>
       </td>
 
-      <td :class="`border border-[${color}]`">
+      <td :style="{ borderColor: color }">
         <div class="center-this"><Time :color="`${color}`" /></div>
       </td>
 
-      <td :class="`border border-[${color}]`">
+      <td :style="{ borderColor: color }">
         <div class="center-this mt-1">24.00</div>
       </td>
 
-      <td :class="`border border-[${color}]`">
+      <td :style="{ borderColor: color }">
         <div class="center-this">
           <Trophy :color="`${color}`" />
         </div>
       </td>
 
-      <td :class="`border border-[${color}]`">
+      <td :style="{ borderColor: color }">
         <div class="flex flex-row gap-0.5">
           <div class="center-this">
             <p class="text-[#E3BA24] text-base leading-none mt-1">2</p>
@@ -78,5 +78,9 @@ div.center-this {
   justify-content: center;
   align-items: center;
   line-height: none;
+}
+
+td {
+  border-width: 1px;
 }
 </style>
