@@ -3,6 +3,7 @@ import TVScreen from "@/components/TVScreen";
 import HighScores from "@/components/HighScores";
 import GameLog from "@/components/GameLog";
 import Buttons from "@/components/Buttons";
+import WhatsKadeSection from "@/components/WhatsKadeSection";
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import Buttons from "@/components/Buttons";
         <slot></slot>
       </TVScreen>
       <Buttons />
+      <WhatsKadeSection />
       <div class="flex flex-col lg:flex-row gap-4 lg:gap-6">
         <HighScores />
         <GameLog />
