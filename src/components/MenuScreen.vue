@@ -114,11 +114,13 @@ export default {
             alt="Ourkade"
             class="lg:max-w-[75%] 2xl:max-w[90%]"
           />
-          <button
+          <a
+            href="https://ourkade.io"
+            target="_blank"
             class="bg-[#D751FF] hover:bg-[#b745da] text-[#FF9FFF] rounded-[20px] font-nano-pix px-8 py-2 2xl:py-3 text-xl lg:text-3xl 2xl:text-6xl min-w-fit max-w-fit h-fit mt-auto text-center ml-auto mr-auto md:ml-auto md:mr-0"
           >
             Let's go!
-          </button>
+          </a>
         </div>
       </div>
     </div>
