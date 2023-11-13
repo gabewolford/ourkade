@@ -33,6 +33,11 @@ const routes: Array<any> = [
     component: () => import("@/pages/WhatsKade.vue"),
   },
   {
+    name: "CheatCodes",
+    path: "/cheatcodes",
+    component: () => import("@/pages/CheatCodes.vue"),
+  },
+  {
     name: "Compete",
     path: "/compete",
     component: () => import("@/pages/Compete.vue"),

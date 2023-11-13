@@ -1,14 +1,48 @@
+<script setup>
+import { ref, watchEffect } from "vue";
+
+const mobileMenuOpen = ref(false);
+
+const toggleMobileMenu = () => {
+  mobileMenuOpen.value = !mobileMenuOpen.value;
+};
+
+// Watch for changes in mobileMenuOpen and update body class accordingly
+watchEffect(() => {
+  if (mobileMenuOpen.value) {
+    document.body.classList.add("mobile-menu-open");
+  } else {
+    document.body.classList.remove("mobile-menu-open");
+  }
+});
+</script>
+
 <template>
   <header class="pt-4 pb-2 flex">
     <!-- Mobile header -->
     <router-link
       to="/"
-      class="flex flex-row justify-between items-center w-full lg:hidden"
+      class="flex flex-row justify-between items-center w-full lg:hidden relative"
+      @click="toggleMobileMenu"
     >
       <img src="../assets/menu-icon.svg" />
       <img src="../assets/mobile-logo.svg" />
       <h4 class="font-alfa-slab-one text-[#386D9D] text-xl">v1</h4>
     </router-link>
+
+    <div
+      v-if="mobileMenuOpen"
+      class="fixed top-0 left-0 w-full h-screen bg-[#112e48] bg-opacity-90 flex flex-col items-center justify-center z-50"
+    >
+      <button
+        class="absolute top-5 left-4 text-white font-holtwood-one-sc text-xl"
+        @click="toggleMobileMenu"
+      >
+        X
+      </button>
+      <!-- Your mobile menu content goes here -->
+      <!-- Close button or links to close the mobile menu -->
+    </div>
 
     <!-- Desktop header -->
     <div class="hidden lg:flex flex-row w-full">

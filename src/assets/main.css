@@ -54,6 +54,10 @@ body {
   background-size: cover;
 }
 
+body.mobile-menu-open {
+  overflow: hidden;
+}
+
 .underline-on-hover {
   position: relative;
   overflow: hidden;
