@@ -18,16 +18,20 @@ watchEffect(() => {
 </script>
 
 <template>
-  <header class="pt-4 pb-2 flex">
+  <header class="py-4 flex">
     <!-- Mobile header -->
     <router-link
       to="/"
       class="flex flex-row justify-between items-center w-full lg:hidden relative"
       @click="toggleMobileMenu"
     >
-      <img src="../assets/menu-icon.svg" />
-      <img src="../assets/mobile-logo.svg" />
-      <h4 class="font-alfa-slab-one text-[#386D9D] text-xl">v1</h4>
+      <img src="../assets/menu-icon.svg" class="menu" />
+      <div class="flex flex-row gap-0.5 items-center">
+        <img src="../assets/logo.png" class="h-[25px]" />
+        <h4 class="text-shadow text-[#3e8ad2] pt-1.5 text-xl leading-none">
+          v1
+        </h4>
+      </div>
     </router-link>
 
     <div
@@ -35,7 +39,7 @@ watchEffect(() => {
       class="fixed top-0 left-0 w-full h-screen bg-[#112e48] bg-opacity-90 flex flex-col items-center justify-center z-50"
     >
       <button
-        class="absolute top-5 left-4 text-white font-holtwood-one-sc text-xl"
+        class="absolute top-4 left-4 text-white font-holtwood-one-sc text-xl"
         @click="toggleMobileMenu"
       >
         X
@@ -65,9 +69,5 @@ watchEffect(() => {
 <style scoped>
 .text-shadow {
   text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.35);
-}
-
-.drop-shadow {
-  drop-shadow: (0px 0px 5px rgba(255, 255, 255, 0.8));
 }
 </style>
