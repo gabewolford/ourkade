@@ -39,6 +39,9 @@ const switchToScreen = (screenNumber) => {
     secondaryText="Avoid obstacles and keep running!"
     mainText="Compete in contests for kade."
   >
-    <component :is="getActiveScreenComponent" @switch-screen="switchToScreen" />
+    <component
+      :is="getActiveScreenComponent"
+      @switch-to-screen="switchToScreen"
+    />
   </ScreenLayout>
 </template>

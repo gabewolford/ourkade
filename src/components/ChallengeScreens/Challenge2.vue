@@ -103,7 +103,7 @@ const switchToScreen5 = () => {
 
     <div class="mt-2.5 lg:mt-4 leading-none">
       <button
-        @click="switchToNextScreen"
+        @click="switchToScreen4()"
         class="text-left uppercase text-sm text-[#608CFF]"
       >
         <div class="flex flex-row gap-2 text-xs">

@@ -1,38 +1,50 @@
 <script setup>
 import { ref, defineProps, defineEmits } from "vue";
+import CompeteTable1 from "@/components/CompeteScreens/CompeteTable1.vue";
+import SubscreenLayout from "@/components/SubscreenLayout.vue";
 
 // Define props and emits explicitly
 const props = defineProps([]);
 const emits = defineEmits();
 
-const switchToNextScreen = () => {
+const switchToScreen2 = () => {
   // Emit an event to the parent component
-  emits("switch-screen", 2);
+  emits("switch-to-screen", 2);
 };
 </script>
 
 <template>
-  <div class="flex flex-col md:w-5/12 gap-2">
-    <h2 class="hidden md:flex uppercase text-sm md:text-xl xl:text-2xl">
-      Competition Mode 1
+  <SubscreenLayout>
+    <h2
+      class="hidden md:flex uppercase text-sm md:text-lg lg:text-xl xl:text-2xl"
+    >
+      Competition Mode
     </h2>
     <button
-      @click="switchToNextScreen"
+      @click="switchToScreen2()"
       class="flex flex-row items-center max-w-[250px] md:max-w-full md:w-full relative"
     >
       <div class="flex items-center w-full">
         <h1
-          class="font-nano-pix text-3xl md:text-4xl lg:text-5xl text-black rainbow-gradient hover:bg-[#4bd3a1] rounded-3xl py-2 justify-center flex w-full text-left"
+          class="font-nano-pix text-3xl md:text-4xl lg:text-5xl text-black rainbow-gradient rounded-2xl py-2 justify-center flex w-full text-left"
         >
           Sign up!
         </h1>
       </div>
     </button>
-    <h2 class="uppercase text-sm md:text-xl xl:text-2xl pt-4">
+    <h2 class="uppercase text-sm md:text-lg lg:text-xl xl:text-2xl pt-4">
       Active Contests
     </h2>
-    <!-- Table here -->
-  </div>
+    <CompeteTable1
+      color="#8578A0"
+      tix="2"
+      players="23"
+      time="5:02"
+      goldKade="2"
+      silverKade="1"
+      bronzeKade=".5"
+    />
+  </SubscreenLayout>
 </template>
 
 <style scoped>
