@@ -68,7 +68,7 @@ export default {
           Win&nbsp;Kade
         </h3>
         <h2
-          class="uppercase text-xl md:text-4xl lg:text-3xl xl:text-4xl font-holtwood-one-sc"
+          class="uppercase text-xl mb-4 md:text-4xl lg:text-3xl xl:text-4xl font-holtwood-one-sc"
         >
           while&nbsp;in&nbsp;alpha
         </h2>
@@ -86,7 +86,7 @@ export default {
         <div class="flex flex-row lg:ml-auto z-20">
           <router-link
             :to="{ name: 'WhatsKade' }"
-            class="flex bg-[#8cb2f4] hover:bg-[#6d9cee] px-8 py-2 lg:py-4 rounded-full font-nano-pix text-lg md:text-xl lg:text-2xl w-fit mx-auto"
+            class="hidden lg:flex bg-[#8cb2f4] hover:bg-[#6d9cee] px-8 py-2 lg:py-4 rounded-full font-nano-pix text-lg md:text-xl lg:text-2xl w-fit mx-auto"
           >
             What's Kade?
           </router-link>
