@@ -2,54 +2,49 @@
 
 <template>
   <div
-    class="hidden lg:flex flex-row gradient1 w-full h-full items-center rounded-[30px] carousel-slide lg:px-8 xl:px-12 lg:gap-8 xl:gap-16"
+    class="flex flex-col gradient1 my-auto w-full h-full rounded-[30px] carousel-slide px-4 lg:px-8 xl:px-12"
   >
-    <div class="flex flex-col min-w-1/2 gap-5 p-4">
+    <div class="flex flex-col min-w-1/2 my-8">
       <div class="flex-flex-col">
-        <div class="flex flex-row gap-4 items-center justify-center">
+        <div class="flex flex-row gap-4 items-center">
           <img src="../assets/small-kade-logo.svg" alt="Kade logo" />
-          <h2
-            class="font-holtwood-one-sc lg:text-[50px] xl:text-[64px] 2xl:text-[76px] leading-none"
+          <h4
+            class="font-nano-pix text-3xl lg:text-[86px] xl:text-[96px] 2xl:text-[112px] leading-none rainbow-gradient"
           >
-            Kade&nbsp;is
-          </h2>
+            What's&nbsp;Kade<span class="font-retro-gaming">?</span>
+          </h4>
         </div>
-        <h4
-          class="font-holtwood-one-sc lg:text-[30px] xl:text-[36px] 2xl:text-[40px] leading-none rainbow-gradient"
-        >
-          exchangeable&nbsp;XP
-        </h4>
-      </div>
-
-      <div
-        class="flex flex-col font-rowdies font-light gap-5 lg:text-xl xl:text-2xl 2xl:text-[26px]"
-      >
-        <p>
-          <span class="font-bold">Win it</span> in Alpha-exclusive contests and
-          <span class="font-bold">get rewarded with it</span> whenever you
-          compete in Tix-entry games.
-        </p>
-        <p>
-          <span class="font-bold">Redeem it</span> on stuff like monthly Battle
-          Passes or <span class="font-bold">exchange it</span> for
-          <span class="underline-offset-2">real money</span>.
-        </p>
       </div>
     </div>
-    <div
-      class="flex flex-col gap-5 min-w-1/2 font-rowdies font-light lg:text-base 2xl:text-lg p-4"
-    >
-      <p>
-        <span class="font-bold">Battle Passes</span> grant you discounted Tix,
-        lower entry fees and / or higher payouts in cash prize contests, limited
-        edition skins, and other goodies.
-      </p>
-      <p>
-        Kade will become exchangeable after we launch
-        <span class="font-bold">cash prize contests & wagering</span>. At this
-        point, Kade will no longer be winnable in contests and Tix will no
-        longer be free.
-      </p>
+
+    <div class="flex flex-row lg:gap-10">
+      <div
+        class="flex flex-col font-rowdies font-light gap-5 lg:text-lg xl:text-2xl 2xl:text-[26px]"
+      >
+        <p class="font-bold">
+          <span class="underline underline-offset-2">Kade is XP</span>
+          that you get for competing in Ourkade. You can also win it in contest
+          only in Alpha.
+        </p>
+        <p class="font-bold">
+          Kade is yours to
+          <span class="font-underline">do what you want.</span> Use it to redeem
+          monthly Battle Passes, outfits, swords, and other goodies on Ourkade -
+          or trade it.
+        </p>
+      </div>
+      <div
+        class="flex flex-col gap-8 min-w-1/2 font-rowdies font-light lg:text-base 2xl:text-lg"
+      >
+        <p>
+          <span class="font-bold">Battle Passes</span> grant you discounted Tix,
+          lower entry fees and / or higher payouts in cash prize contests, and
+          free limited edition skins.
+        </p>
+        <p class="font-bold">
+          Kade can be converted into an ERC-20 Token when Ourkade launches Beta.
+        </p>
+      </div>
     </div>
   </div>
 </template>
