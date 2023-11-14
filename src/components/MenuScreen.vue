@@ -60,32 +60,37 @@ export default {
       class="flex flex-col gap-6 flex-1 items-start justify-center text-left"
     >
       <div
-        class="flex flex-col w-full max-w-screen-lg mx-auto gap-2 text-center"
+        class="flex flex-col w-full max-w-screen-lg mx-auto text-center lg:text-left"
       >
         <h3
-          class="flex-1 text-lg md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-holtwood-one-sc"
+          class="flex-1 text-4xl lg:text-5xl xl:text-6xl font-holtwood-one-sc"
         >
-          Collect&nbsp;Up&nbsp;to&nbsp;10x&nbsp;Kade
+          Win&nbsp;Kade
         </h3>
         <h2
-          class="uppercase text-2xl md:text-4xl lg:text-4xl xl:text-5xl font-holtwood-one-sc"
+          class="uppercase text-xl md:text-4xl lg:text-3xl xl:text-4xl font-holtwood-one-sc"
         >
-          Per&nbsp;Day&nbsp;For&nbsp;Free
+          while&nbsp;in&nbsp;alpha
         </h2>
         <div>
-          <p
-            class="mix-blend-overlay font-rowdies md:mb-4 md:text-xl lg:text-2xl"
-          >
-            Win it in alpha-exclusive Kade contests and get rewarded with it
-            whenever you compete in Tix-entry games.
+          <p class="mix-blend-overlay font-rowdies text-sm md:text-xl">
+            Alpha-exclusive contests are the best way to collect Kade. After
+            Alpha, you cannot win Kade.
+          </p>
+          <br />
+          <p class="mix-blend-overlay font-rowdies mb-4 text-sm md:text-xl">
+            Instead, you get rewarded with it for every minute spent competing
+            in Tix-entry games.
           </p>
         </div>
-        <router-link
-          :to="{ name: 'WhatsKade' }"
-          class="bg-[#8cb2f4] hover:bg-[#6d9cee] px-8 py-4 rounded-full font-nano-pix text-lg md:text-xl lg:text-2xl w-fit mx-auto"
-        >
-          What's Kade?
-        </router-link>
+        <div class="flex flex-row lg:ml-auto z-20">
+          <router-link
+            :to="{ name: 'WhatsKade' }"
+            class="flex bg-[#8cb2f4] hover:bg-[#6d9cee] px-8 py-2 lg:py-4 rounded-full font-nano-pix text-lg md:text-xl lg:text-2xl w-fit mx-auto"
+          >
+            What's Kade?
+          </router-link>
+        </div>
       </div>
     </div>
     <button @click="nextSlide" class="flex justify-center items-center w-2/12">
