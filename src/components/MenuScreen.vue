@@ -143,12 +143,11 @@ export default {
         >
           while&nbsp;in&nbsp;alpha
         </h2>
-        <div>
+        <div class="flex flex-col gap-6 px-4">
           <p class="mix-blend-overlay font-rowdies text-sm md:text-xl">
             Alpha-exclusive contests are the best way to collect Kade. After
             Alpha, you cannot win Kade.
           </p>
-          <br />
           <p class="mix-blend-overlay font-rowdies mb-4 text-sm md:text-xl">
             Instead, you get rewarded with it for every minute spent competing
             in Tix-entry games.
