@@ -82,14 +82,6 @@ const $route = useRoute();
         </router-link>
       </li>
       <li
-        :class="{ 'active-link': $route.name === 'Leaderboard' }"
-        class="underline-on-hover w-fit mx-auto"
-      >
-        <router-link :to="{ name: 'Leaderboard' }" class="text-[26px]">
-          Leaderboard
-        </router-link>
-      </li>
-      <li
         :class="{ 'active-link': $route.name === 'Me' }"
         class="underline-on-hover w-fit mx-auto"
       >
@@ -98,9 +90,9 @@ const $route = useRoute();
         </router-link>
       </li>
       <li class="underline-on-hover w-fit mx-auto">
-        <router-link :to="{ name: 'Me' }" class="text-[26px]">
+        <a href="https://ourkade.io" target="_blank" class="text-[26px]">
           Learn More
-        </router-link>
+        </a>
       </li>
     </ul>
 

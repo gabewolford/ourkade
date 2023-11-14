@@ -90,14 +90,40 @@ const router = createRouter({
   routes,
 });
 
-router.beforeEach((to) => {
+// router.beforeEach((to) => {
+//   const authStore = useAuthStore();
+//   if (
+//     !authStore.isLoggedIn() &&
+//     to.meta.requiresAuth &&
+//     !Object.keys(to.query).includes("fromEmail")
+//   ) {
+//     return { name: "Login" };
+//   }
+// });
+
+router.beforeEach((to, from, next) => {
   const authStore = useAuthStore();
-  if (
+
+  if (authStore.isLoggedIn()) {
+    if (to.name === "Register" || to.name === "Login") {
+      // User is signed in and trying to access the register or login page
+      // Redirect them to a different page, e.g., home or dashboard
+      next({ name: "Home" });
+    } else {
+      // Continue with the regular navigation flow
+      next();
+    }
+  } else if (
     !authStore.isLoggedIn() &&
     to.meta.requiresAuth &&
     !Object.keys(to.query).includes("fromEmail")
   ) {
-    return { name: "Login" };
+    // User is not logged in and trying to access a page that requires authentication
+    // Redirect them to the login page
+    next({ name: "Login" });
+  } else {
+    // Continue with the regular navigation flow
+    next();
   }
 });
 
