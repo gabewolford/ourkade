@@ -172,7 +172,7 @@ const switchToScreen = (screenNumber) => {
       </td>
 
       <td
-        v-if="bottomButtonText"
+        v-if="authStore.isLoggedIn() && bottomButtonText"
         :style="{ borderColor: color, backgroundColor: color }"
         class="text-black min-w-[55px] max-w-[55px] lg:min-w-[70px] lg:max-w-[70px]"
         @click="() => switchToScreen(2)"
