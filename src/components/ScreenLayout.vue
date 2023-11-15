@@ -4,15 +4,11 @@ defineProps({
     type: String,
     required: true,
   },
+  desktopSubtitle: {
+    type: String,
+    required: true,
+  },
   image: {
-    type: String,
-    required: true,
-  },
-  mainText: {
-    type: String,
-    required: true,
-  },
-  secondaryText: {
     type: String,
     required: true,
   },
@@ -24,7 +20,7 @@ defineProps({
     class="flex background-image object-contain w-full h-full items-center rounded-[30px] px-4 md:px-8"
   >
     <div
-      class="flex flex-col md:flex-row mx-auto gap-2 md:gap-8 lg:gap-10 xl:gap-20 md:w-full"
+      class="h-[300px] w-fit md:w-full flex flex-col md:flex-row md:justify-between md:gap-8 mx-auto"
     >
       <div class="flex flex-col md:w-6/12 gap-1 lg:gap-2">
         <h2 class="uppercase text-sm md:text-lg lg:text-xl xl:text-2xl">
@@ -35,16 +31,15 @@ defineProps({
           alt="Kade Runner logo"
           class="h-fit w-[160px] md:w-auto md:h-fit lg:w-auto"
         />
-        <h3
-          class="hidden md:block text-sm lg:text-base xl:text-xl 2xl:text-2xl"
-        >
-          {{ secondaryText }}
-        </h3>
-        <h3 class="text-sm lg:text-base xl:text-xl 2xl:text-2xl md:-mt-2 mt-0">
-          {{ mainText }}
-        </h3>
+        <h2 class="hidden md:block lg:text-lg xl:text-xl">
+          {{ desktopSubtitle }}
+        </h2>
       </div>
-      <slot></slot>
+      <div
+        class="flex flex-col md:w-6/12 overflow-y-auto overflow-x-hidden w-full"
+      >
+        <slot></slot>
+      </div>
     </div>
   </div>
 </template>

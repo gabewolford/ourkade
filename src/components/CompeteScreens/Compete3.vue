@@ -1,101 +1,86 @@
 <script setup>
 import { ref, defineProps, defineEmits } from "vue";
-import SubscreenLayout from "@/components/SubscreenLayout.vue";
-import CompeteTable2 from "@/components/CompeteScreens/CompeteTable2.vue";
+import CompeteTable from "@/components/CompeteScreens/CompeteTable.vue";
+import { useAuthStore } from "@/stores/auth";
+const authStore = useAuthStore();
 
-// Define props and emits explicitly
-const props = defineProps([]);
-const emits = defineEmits();
+const emits = defineEmits(["switch-to-screen"]);
 
-const switchToScreen4 = () => {
+const switchToScreen1 = () => {
   // Emit an event to the parent component
-  emits("switch-to-screen", 4);
-};
-
-const switchToScreen2 = () => {
-  // Emit an event to the parent component
-  emits("switch-to-screen", 2);
+  emits("switch-to-screen", 1);
+  console.log("clicked back to screen 1");
 };
 </script>
 
 <template>
-  <SubscreenLayout>
-    <h2 class="hidden md:flex uppercase text-sm md:text-xl xl:text-2xl">
-      Competition Mode 3
-    </h2>
-    <div class="flex flex-row gap-1 lg:gap-2 w-full">
-      <div class="w-2/3">
-        <button
-          @click="switchToScreen4()"
-          class="flex flex-row items-center w-full max-w-[250px] md:max-w-full md:w-full relative"
-        >
-          <div class="flex items-center w-full">
-            <h1
-              class="font-nano-pix text-2xl lg:text-3xl text-black bg-[#C5AAFF] rounded-2xl py-1 lg:py-2 pl-5 lg:pl-4 2xl:pl-16 w-full relative text-left"
-            >
-              run again!
-            </h1>
-            <img
-              src="../../assets/ticket-icon-black-2-light-purple.png"
-              alt="ticket"
-              class="absolute right-[10%] lg:right-[8%] top-3 lg:top-3.5 h-[20px] lg:h-[25px] w-auto ml-2 z-50"
-            />
-          </div>
-        </button>
-      </div>
-
-      <div class="w-1/3">
-        <button
-          @click="switchToScreen2()"
-          class="flex flex-row items-center w-full max-w-[250px] md:max-w-full md:w-full relative"
-        >
-          <div class="flex items-center w-full">
-            <h1
-              class="font-nano-pix text-2xl lg:text-3xl text-black bg-[#8578A0] rounded-2xl py-1 lg:py-2 justify-center flex w-full text-left"
-            >
-              back
-            </h1>
-          </div>
-        </button>
-      </div>
-    </div>
-
-    <h2 class="uppercase text-sm md:text-xl xl:text-2xl pt-1 lg:pt-4">
-      Selected Contests
-    </h2>
-    <div class="flex flex-col gap-2">
-      <CompeteTable2
-        color="#C5AAFF"
-        players="31"
-        time="10:02"
-        goldKade="2"
-        silverKade="1"
-        bronzeKade=".5"
-        runOrFin="fin. "
+  <button
+    class="flex flex-row items-center gap-1 my-1.5 md:mt-0"
+    @click="switchToScreen1"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="11"
+      height="11"
+      viewBox="0 0 11 11"
+      fill="none"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M3.14286 9.42859H1.57143V7.85717H3.14286V9.42859ZM6.28571 11H4.71429V9.42859H6.28571V11ZM7.85714 11H6.28571V9.42859H7.85714V11ZM9.42857 9.42859H7.85714V7.85717H9.42857V9.42859ZM11 7.85717H9.42857V6.28575H11V7.85717ZM4.71429 11H3.14276L3.14286 9.42859H4.71429V11ZM11 6.28575H9.42857V4.71425H11V6.28575ZM11 4.71425H9.42857V3.14283H11V4.71425ZM9.42857 3.14283H7.85714V1.57142H9.42857V3.14283ZM7.85714 1.57142H6.28571V0H7.85714V1.57142ZM6.28571 1.57142H4.71429V0H6.28571V1.57142ZM4.71429 1.57142H3.14286V0H4.71429V1.57142ZM3.14286 3.14283H1.57143V1.57142H3.14286V3.14283ZM1.57143 4.71425H0V3.14283H1.57143V4.71425ZM3.14286 4.71425H1.57143V3.14283H3.14286V4.71425ZM1.57143 3.14283H0V1.57142H1.57143V3.14283ZM4.71429 4.71425H3.14286V3.14283H4.71429V4.71425ZM1.57143 1.57142H0V0H1.57143V1.57142Z"
+        fill="white"
       />
-    </div>
+    </svg>
+    <h3 class="uppercase text-sm pt-1 md:pt-0">Past contests</h3>
+  </button>
 
-    <div class="flex flex-row gap-12 lg:gap-28">
-      <div class="leading-none flex flex-col lg:gap-2">
-        <h2 class="uppercase text-sm md:text-xl xl:text-2xl pt-1 lg:pt-4">
-          Standings
-        </h2>
-        <div class="flex flex-col gap-0.5 lg:gap-2 italic">
-          <p><span class="text-[#E3BA24]">1st: </span>1902pts</p>
-          <p><span class="text-[#A5A0A0]">2nd: </span>1877pts</p>
-          <p><span class="text-[#AA7918]">3rd: </span>1830pts</p>
-        </div>
-      </div>
-      <div class="leading-none flex flex-col lg:gap-2">
-        <h2 class="uppercase text-sm md:text-xl xl:text-2xl pt-1 lg:pt-4">
-          YOU
-        </h2>
-        <div class="flex flex-col lg:gap-2 italic">
-          <p><span>5th </span>1802pts</p>
-        </div>
-      </div>
-    </div>
-  </SubscreenLayout>
+  <div v-if="authStore.isLoggedIn()"></div>
+
+  <div v-else>
+    <router-link
+      :to="{ name: 'Register' }"
+      class="w-[250px] font-nano-pix text-2xl text-black rainbow-gradient py-2 justify-center flex leading-none mb-4"
+    >
+      Sign up to compete
+    </router-link>
+  </div>
+
+  <div class="container flex flex-col gap-4 mb-6 overflow-y-auto">
+    <CompeteTable
+      :color="authStore.isLoggedIn() ? '#C5AAFF' : '#8578A0'"
+      :color2="authStore.isLoggedIn() ? '#8578A0' : '#79718A'"
+      :clickable="authStore.isLoggedIn()"
+      tix="2"
+      players="23"
+      time="fin."
+      ribbons="1992"
+      topButtonText="rank"
+      bottomButtonText=""
+    />
+    <CompeteTable
+      :color="authStore.isLoggedIn() ? '#C5AAFF' : '#8578A0'"
+      :color2="authStore.isLoggedIn() ? '#8578A0' : '#79718A'"
+      :clickable="authStore.isLoggedIn()"
+      tix="2"
+      players="23"
+      time="fin."
+      ribbons="1932"
+      topButtonText="rank"
+      bottomButtonText=""
+    />
+    <CompeteTable
+      :color="authStore.isLoggedIn() ? '#C5AAFF' : '#8578A0'"
+      :color2="authStore.isLoggedIn() ? '#8578A0' : '#79718A'"
+      :clickable="authStore.isLoggedIn()"
+      tix="2"
+      players="23"
+      time="fin."
+      ribbons="1932"
+      topButtonText="rank"
+      bottomButtonText=""
+    />
+  </div>
 </template>
 
 <style scoped>
@@ -109,5 +94,23 @@ const switchToScreen2 = () => {
     #9e71ff 67.99%,
     #fc54ff 83.6%
   );
+}
+
+.container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.container::-webkit-scrollbar-track {
+  background-color: #1e2844;
+  border-radius: 5px;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: #414890;
+  border-radius: 5px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background-color: #5058b0;
 }
 </style>

@@ -10,7 +10,7 @@
         <div class="flex flex-row gap-4 items-center">
           <img src="../assets/small-kade-logo.svg" alt="Kade logo" />
           <h4
-            class="font-nano-pix text-4xl md:text-6xl leading-none rainbow-gradient"
+            class="font-nano-pix text-4xl md:text-7xl leading-none rainbow-gradient"
           >
             What's&nbsp;Kade<span class="font-retro-gaming">?</span>
           </h4>
@@ -38,7 +38,7 @@
           lower entry fees and / or higher payouts in cash prize contests, and
           free limited edition skins.
         </p>
-        <p class="font-bold">
+        <p>
           Kade can be converted into an ERC-20 Token when Ourkade launches Beta.
         </p>
       </div>

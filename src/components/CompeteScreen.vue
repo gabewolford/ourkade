@@ -4,7 +4,6 @@ import Compete1 from "@/components/CompeteScreens/Compete1.vue";
 import Compete2 from "@/components/CompeteScreens/Compete2.vue";
 import Compete3 from "@/components/CompeteScreens/Compete3.vue";
 import Compete4 from "@/components/CompeteScreens/Compete4.vue";
-import Compete5 from "@/components/CompeteScreens/Compete5.vue";
 import ScreenLayout from "@/components/ScreenLayout.vue";
 import competeLogo from "@/assets/kaderunner-logo-purple.png";
 
@@ -20,8 +19,6 @@ const getActiveScreenComponent = computed(() => {
       return Compete3;
     case 4:
       return Compete4;
-    case 5:
-      return Compete5;
     default:
       return Compete1;
   }
@@ -36,8 +33,7 @@ const switchToScreen = (screenNumber) => {
   <ScreenLayout
     gameTitle="Endless Runner"
     :image="competeLogo"
-    secondaryText="Avoid obstacles and keep running!"
-    mainText="Compete in contests for kade."
+    desktopSubtitle="Avoid obstacles and keep running!"
   >
     <component
       :is="getActiveScreenComponent"

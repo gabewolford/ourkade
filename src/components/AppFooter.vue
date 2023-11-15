@@ -100,4 +100,25 @@
     #870a82 90.28%
   );
 }
+
+.underline-on-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.underline-on-hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+  border-radius: 5px;
+}
+
+.underline-on-hover:hover::after {
+  width: 100%;
+}
 </style>

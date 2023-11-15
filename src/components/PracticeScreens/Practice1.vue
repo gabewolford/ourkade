@@ -6,24 +6,21 @@ const authStore = useAuthStore();
 
 const emits = defineEmits(["switch-to-screen"]);
 
-const switchToScreen1 = () => {
-  // Emit an event to the parent component
-  emits("switch-to-screen", 1);
-  console.log("clicked back to screen 1");
+const switchToScreen = (screenNumber) => {
+  console.log(`Switching to screen ${screenNumber}`);
+  emits("switch-to-screen", screenNumber);
 };
 </script>
 
 <template>
-  <button
-    class="flex flex-row items-center gap-1 my-1.5 md:mt-0"
-    @click="switchToScreen1"
-  >
+  <button class="flex flex-row items-center gap-1 my-1.5 md:mt-0" disabled>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="11"
       height="11"
       viewBox="0 0 11 11"
       fill="none"
+      class="hidden"
     >
       <path
         fill-rule="evenodd"
@@ -32,63 +29,25 @@ const switchToScreen1 = () => {
         fill="white"
       />
     </svg>
-    <h3 class="uppercase text-sm pt-1 md:pt-0">Selected Contest</h3>
+    <h3 class="uppercase text-sm pt-1 md:pt-0">Hone Your Skills</h3>
   </button>
-
-  <div v-if="authStore.isLoggedIn()"></div>
-
-  <div v-else>
+  <div>
     <router-link
       :to="{ name: 'Register' }"
-      class="w-[250px] font-nano-pix text-2xl text-black rainbow-gradient py-2 justify-center flex leading-none mb-4"
+      class="w-[250px] font-nano-pix text-2xl text-black bg-[#46FFBC] hover:bg-[#009C64] py-2 justify-center flex leading-none mb-4"
     >
-      Sign up to compete
+      practice
     </router-link>
   </div>
 
-  <div class="container flex flex-col gap-4 mb-4 overflow-y-auto">
-    <CompeteTable
-      :color="authStore.isLoggedIn() ? '#C5AAFF' : '#8578A0'"
-      :color2="authStore.isLoggedIn() ? '#8578A0' : '#79718A'"
-      :clickable="authStore.isLoggedIn()"
-      tix="2"
-      players="23"
-      time="5:02"
-      ribbons="-"
-      topButtonText=""
-      bottomButtonText="run!"
-    />
+  <div class="w-[245px] lg:w[400px] flex flex-col gap-2">
+    <h3 class="uppercase text-sm">My Stats</h3>
+    <ul>
+      <li><span class="text-[#46FFBC]">best: </span>1800pts</li>
+      <li><span class="text-[#46FFBC]">last: </span>1231pts</li>
+      <li><span class="text-[#46FFBC]">avg: </span>1231pts</li>
+    </ul>
   </div>
 </template>
 
-<style scoped>
-.rainbow-gradient {
-  background: linear-gradient(
-    90deg,
-    #ff7246 -0.08%,
-    #ffd646 13.9%,
-    #46ffbc 30.03%,
-    #467aff 48.23%,
-    #9e71ff 67.99%,
-    #fc54ff 83.6%
-  );
-}
-
-.container::-webkit-scrollbar {
-  width: 5px;
-}
-
-.container::-webkit-scrollbar-track {
-  background-color: #1e2844;
-  border-radius: 5px;
-}
-
-.container::-webkit-scrollbar-thumb {
-  background-color: #414890;
-  border-radius: 5px;
-}
-
-.container::-webkit-scrollbar-thumb:hover {
-  background-color: #5058b0;
-}
-</style>
+<style scoped></style>

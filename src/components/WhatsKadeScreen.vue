@@ -41,7 +41,7 @@
           lower entry fees and / or higher payouts in cash prize contests, and
           free limited edition skins.
         </p>
-        <p class="font-bold">
+        <p>
           Kade can be converted into an ERC-20 Token when Ourkade launches Beta.
         </p>
       </div>
