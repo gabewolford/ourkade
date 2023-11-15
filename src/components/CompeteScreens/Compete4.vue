@@ -1,6 +1,6 @@
 <script setup>
 import { ref, defineProps, defineEmits } from "vue";
-import CompeteTable from "@/components/CompeteScreens/CompeteTable.vue";
+import CompeteTable2 from "@/components/CompeteScreens/CompeteTable2.vue";
 import { useAuthStore } from "@/stores/auth";
 const authStore = useAuthStore();
 
@@ -46,29 +46,39 @@ const switchToScreen1 = () => {
     </router-link>
   </div>
 
-  <div class="container flex flex-col gap-4 mb-4 overflow-y-auto">
-    <CompeteTable
+  <div class="container w-full flex flex-col gap-4 mb-4 overflow-y-auto">
+    <CompeteTable2
       :color="authStore.isLoggedIn() ? '#C5AAFF' : '#8578A0'"
       :color2="authStore.isLoggedIn() ? '#8578A0' : '#79718A'"
       :clickable="authStore.isLoggedIn()"
       tix="2"
-      players="23"
-      time="5:02"
-      ribbons="-"
-      topButtonText=""
-      bottomButtonText="run!"
+      players="54"
+      time="fin."
+      ribbons="1992"
+      topButtonText="rank"
+      rank="1"
     />
-    <CompeteTable
-      :color="authStore.isLoggedIn() ? '#C5AAFF' : '#8578A0'"
-      :color2="authStore.isLoggedIn() ? '#8578A0' : '#79718A'"
-      :clickable="authStore.isLoggedIn()"
-      tix="2"
-      players="23"
-      time="5:02"
-      ribbons="-"
-      topButtonText=""
-      bottomButtonText="run!"
-    />
+  </div>
+
+  <div class="w-[277px] lg:w[400px] flex flex-row gap-10">
+    <div class="flex flex-col gap-2">
+      <h3 class="uppercase text-sm md:text-lg lg:text-xl xl:text-2xl">
+        Standings
+      </h3>
+      <ul>
+        <li><span class="text-[#E3BA24] lg:text-lg">1st: </span>1992pts</li>
+        <li><span class="text-[#A5A0A0] lg:text-lg">2nd: </span>1823pts</li>
+        <li><span class="text-[#AA7918] lg:text-lg">3rd: </span>1811pts</li>
+      </ul>
+    </div>
+    <div class="flex flex-col gap-2">
+      <h3 class="uppercase text-sm md:text-lg lg:text-xl xl:text-2xl">
+        Your Best
+      </h3>
+      <ul>
+        <li><span class="lg:text-lg">1st: </span>1992pts</li>
+      </ul>
+    </div>
   </div>
 </template>
 

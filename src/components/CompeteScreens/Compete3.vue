@@ -1,6 +1,6 @@
 <script setup>
 import { ref, defineProps, defineEmits } from "vue";
-import CompeteTable from "@/components/CompeteScreens/CompeteTable.vue";
+import CompeteTable2 from "@/components/CompeteScreens/CompeteTable2.vue";
 import { useAuthStore } from "@/stores/auth";
 const authStore = useAuthStore();
 
@@ -46,39 +46,50 @@ const switchToScreen1 = () => {
     </router-link>
   </div>
 
-  <div class="container flex flex-col gap-4 mb-6 overflow-y-auto">
-    <CompeteTable
+  <div class="container w-full flex flex-col gap-4 mb-7 overflow-y-auto">
+    <CompeteTable2
       :color="authStore.isLoggedIn() ? '#C5AAFF' : '#8578A0'"
       :color2="authStore.isLoggedIn() ? '#8578A0' : '#79718A'"
       :clickable="authStore.isLoggedIn()"
       tix="2"
-      players="23"
+      players="54"
       time="fin."
       ribbons="1992"
       topButtonText="rank"
-      bottomButtonText=""
+      rank="1"
     />
-    <CompeteTable
+    <CompeteTable2
       :color="authStore.isLoggedIn() ? '#C5AAFF' : '#8578A0'"
       :color2="authStore.isLoggedIn() ? '#8578A0' : '#79718A'"
       :clickable="authStore.isLoggedIn()"
       tix="2"
-      players="23"
+      players="31"
       time="fin."
       ribbons="1932"
       topButtonText="rank"
-      bottomButtonText=""
+      rank="2"
     />
-    <CompeteTable
+    <CompeteTable2
       :color="authStore.isLoggedIn() ? '#C5AAFF' : '#8578A0'"
       :color2="authStore.isLoggedIn() ? '#8578A0' : '#79718A'"
       :clickable="authStore.isLoggedIn()"
       tix="2"
-      players="23"
+      players="31"
       time="fin."
       ribbons="1932"
       topButtonText="rank"
-      bottomButtonText=""
+      rank="3"
+    />
+    <CompeteTable2
+      :color="authStore.isLoggedIn() ? '#C5AAFF' : '#8578A0'"
+      :color2="authStore.isLoggedIn() ? '#8578A0' : '#79718A'"
+      :clickable="authStore.isLoggedIn()"
+      tix="2"
+      players="31"
+      time="fin."
+      ribbons="1932"
+      topButtonText="rank"
+      rank="12th"
     />
   </div>
 </template>
