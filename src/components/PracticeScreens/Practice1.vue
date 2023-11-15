@@ -40,7 +40,7 @@ const switchToScreen = (screenNumber) => {
     </router-link>
   </div>
 
-  <div class="w-[253px] lg:w[400px] flex flex-col gap-2">
+  <div class="w-full lg:w[400px] flex flex-col gap-2">
     <h3 class="uppercase text-sm">My Stats</h3>
     <ul>
       <li><span class="text-[#46FFBC]">best: </span>1800pts</li>
