@@ -32,7 +32,7 @@ const switchToScreen1 = () => {
         fill="white"
       />
     </svg>
-    <h3 class="uppercase text-sm pt-1 md:pt-0">Selected Contest</h3>
+    <h3 class="uppercase text-sm lg:text-lg pt-1 md:pt-0">Selected Contest</h3>
   </button>
 
   <div v-if="authStore.isLoggedIn()"></div>

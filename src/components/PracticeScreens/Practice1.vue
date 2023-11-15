@@ -29,7 +29,7 @@ const switchToScreen = (screenNumber) => {
         fill="white"
       />
     </svg>
-    <h3 class="uppercase text-sm pt-1 md:pt-0">Hone Your Skills</h3>
+    <h3 class="uppercase text-sm lg:text-lg pt-1 md:pt-0">Hone Your Skills</h3>
   </button>
   <div>
     <router-link
@@ -41,11 +41,13 @@ const switchToScreen = (screenNumber) => {
   </div>
 
   <div class="w-full lg:w[400px] flex flex-col gap-2">
-    <h3 class="uppercase text-sm">My Stats</h3>
+    <h3 class="uppercase text-sm md:text-lg lg:text-xl xl:text-2xl">
+      My Stats
+    </h3>
     <ul>
-      <li><span class="text-[#46FFBC]">best: </span>1800pts</li>
-      <li><span class="text-[#46FFBC]">last: </span>1231pts</li>
-      <li><span class="text-[#46FFBC]">avg: </span>1231pts</li>
+      <li><span class="text-[#46FFBC] lg:text-lg">best: </span>1800pts</li>
+      <li><span class="text-[#46FFBC] lg:text-lg">last: </span>1231pts</li>
+      <li><span class="text-[#46FFBC] lg:text-lg">avg: </span>1231pts</li>
     </ul>
   </div>
 </template>
