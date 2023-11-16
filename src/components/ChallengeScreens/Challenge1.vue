@@ -1,6 +1,6 @@
 <script setup>
 import { ref, defineProps, defineEmits } from "vue";
-import CompeteTable from "@/components/CompeteScreens/CompeteTable.vue";
+import ChallengeTable from "@/components/ChallengeScreens/ChallengeTable.vue";
 import { useAuthStore } from "@/stores/auth";
 const authStore = useAuthStore();
 
@@ -13,16 +13,14 @@ const switchToScreen = (screenNumber) => {
 </script>
 
 <template>
-  <button
-    class="flex flex-row items-center gap-1 my-1.5 md:mt-0"
-    @click="switchToScreen(1)"
-  >
+  <button class="flex flex-row items-center gap-1 my-1.5 md:mt-0" disabled>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="11"
       height="11"
       viewBox="0 0 11 11"
       fill="none"
+      class="hidden"
     >
       <path
         fill-rule="evenodd"
@@ -31,9 +29,10 @@ const switchToScreen = (screenNumber) => {
         fill="white"
       />
     </svg>
-    <h3 class="uppercase text-sm lg:text-lg pt-1 md:pt-0">Selected Contest</h3>
+    <h3 class="uppercase text-sm lg:text-lg pt-1 md:pt-0">
+      Challenge up to 3 friends for tix
+    </h3>
   </button>
-
   <div v-if="authStore.isLoggedIn()"></div>
 
   <div v-else>
@@ -45,47 +44,56 @@ const switchToScreen = (screenNumber) => {
     </router-link>
   </div>
 
-  <div class="container w-full flex flex-col gap-4 mb-4 overflow-y-auto">
-    <CompeteTable
-      :color="authStore.isLoggedIn() ? '#C5AAFF' : '#8578A0'"
-      :color2="authStore.isLoggedIn() ? '#8578A0' : '#79718A'"
+  <div class="container w-full flex flex-col gap-4 mb-4 overflow-y-scroll">
+    <ChallengeTable
+      :color="authStore.isLoggedIn() ? '#608CFF' : '#7988AF'"
+      :color2="authStore.isLoggedIn() ? '#87A8FF' : '#99A4BF'"
       :clickable="authStore.isLoggedIn()"
-      tix="2"
-      players="31"
-      time="10:02"
-      ribbons="23021"
+      tix="1"
+      players="-"
+      time="24:00"
+      ribbons="-"
       topButtonText=""
-      bottomButtonText="rerun!"
+      bottomButtonText="create"
+      :shareable="false"
+      @switch-to-screen="switchToScreen"
+    />
+    <ChallengeTable
+      v-if="authStore.isLoggedIn()"
+      :color="authStore.isLoggedIn() ? '#608CFF' : '#7988AF'"
+      :color2="authStore.isLoggedIn() ? '#87A8FF' : '#99A4BF'"
+      :clickable="authStore.isLoggedIn()"
+      tix="1"
+      players="3"
+      time="19:02"
+      ribbons="-"
+      topButtonText=""
+      bottomButtonText="run!"
+      :shareable="true"
+      @switch-to-screen="switchToScreen"
+    />
+    <ChallengeTable
+      v-if="authStore.isLoggedIn()"
+      :color="authStore.isLoggedIn() ? '#608CFF' : '#7988AF'"
+      :color2="authStore.isLoggedIn() ? '#87A8FF' : '#99A4BF'"
+      :clickable="authStore.isLoggedIn()"
+      tix="1"
+      players="3"
+      time="20:02"
+      ribbons="12321"
+      topButtonText=""
+      bottomButtonText="run!"
+      :shareable="false"
       @switch-to-screen="switchToScreen"
     />
   </div>
-
-  <div class="w-[277px] lg:w[400px] flex flex-row gap-10">
-    <div class="flex flex-col gap-2">
-      <h3 class="uppercase text-sm md:text-lg lg:text-xl xl:text-2xl">
-        Standings
-      </h3>
-      <ul>
-        <li>
-          <span class="text-[#E3BA24] lg:text-lg">1st:&nbsp;</span>25002pts
-        </li>
-        <li>
-          <span class="text-[#A5A0A0] lg:text-lg">2nd:&nbsp;</span>24992pts
-        </li>
-        <li>
-          <span class="text-[#AA7918] lg:text-lg">3rd:&nbsp;</span>24221pts
-        </li>
-      </ul>
-    </div>
-    <div class="flex flex-col gap-2">
-      <h3 class="uppercase text-sm md:text-lg lg:text-xl xl:text-2xl">
-        Your&nbsp;Best
-      </h3>
-      <ul>
-        <li><span class="lg:text-lg">5th: </span>23021pts</li>
-      </ul>
-    </div>
-  </div>
+  <button
+    v-if="authStore.isLoggedIn()"
+    class="uppercase text-xs text-[#608CFF] hover:text-[#87A8FF] w-fit"
+    @click="() => switchToScreen(3)"
+  >
+    View Past Contests ➜
+  </button>
 </template>
 
 <style scoped>
@@ -111,11 +119,11 @@ const switchToScreen = (screenNumber) => {
 }
 
 .container::-webkit-scrollbar-thumb {
-  background-color: #414890;
+  background-color: #87a8ff;
   border-radius: 5px;
 }
 
 .container::-webkit-scrollbar-thumb:hover {
-  background-color: #5058b0;
+  background-color: #87a8ff;
 }
 </style>

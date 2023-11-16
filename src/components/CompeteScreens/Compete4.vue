@@ -6,17 +6,16 @@ const authStore = useAuthStore();
 
 const emits = defineEmits(["switch-to-screen"]);
 
-const switchToScreen1 = () => {
-  // Emit an event to the parent component
-  emits("switch-to-screen", 1);
-  console.log("clicked back to screen 1");
+const switchToScreen = (screenNumber) => {
+  console.log(`Switching to screen ${screenNumber}`);
+  emits("switch-to-screen", screenNumber);
 };
 </script>
 
 <template>
   <button
     class="flex flex-row items-center gap-1 my-1.5 md:mt-0"
-    @click="switchToScreen1"
+    @click="switchToScreen(3)"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -55,8 +54,9 @@ const switchToScreen1 = () => {
       players="54"
       time="fin."
       ribbons="1992"
-      topButtonText="rank"
+      topButtonText=""
       rank="1"
+      @switch-to-screen="switchToScreen"
     />
   </div>
 

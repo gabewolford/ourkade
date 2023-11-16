@@ -13,16 +13,14 @@ const switchToScreen = (screenNumber) => {
 </script>
 
 <template>
-  <button
-    class="flex flex-row items-center gap-1 my-1.5 md:mt-0"
-    @click="switchToScreen(1)"
-  >
+  <button class="flex flex-row items-center gap-1 my-1.5 md:mt-0" disabled>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="11"
       height="11"
       viewBox="0 0 11 11"
       fill="none"
+      class="hidden"
     >
       <path
         fill-rule="evenodd"
@@ -31,9 +29,10 @@ const switchToScreen = (screenNumber) => {
         fill="white"
       />
     </svg>
-    <h3 class="uppercase text-sm lg:text-lg pt-1 md:pt-0">Selected Contest</h3>
+    <h3 class="uppercase text-sm lg:text-lg pt-1 md:pt-0">
+      Compete in contests for kade
+    </h3>
   </button>
-
   <div v-if="authStore.isLoggedIn()"></div>
 
   <div v-else>
@@ -45,8 +44,21 @@ const switchToScreen = (screenNumber) => {
     </router-link>
   </div>
 
-  <div class="container w-full flex flex-col gap-4 mb-4 overflow-y-auto">
+  <div class="container w-full flex flex-col gap-4 mb-4 overflow-y-scroll">
     <CompeteTable
+      :color="authStore.isLoggedIn() ? '#C5AAFF' : '#8578A0'"
+      :color2="authStore.isLoggedIn() ? '#8578A0' : '#79718A'"
+      :clickable="authStore.isLoggedIn()"
+      tix="2"
+      players="23"
+      time="5:02"
+      ribbons="-"
+      topButtonText=""
+      bottomButtonText="run!"
+      @switch-to-screen="switchToScreen"
+    />
+    <CompeteTable
+      v-if="authStore.isLoggedIn()"
       :color="authStore.isLoggedIn() ? '#C5AAFF' : '#8578A0'"
       :color2="authStore.isLoggedIn() ? '#8578A0' : '#79718A'"
       :clickable="authStore.isLoggedIn()"
@@ -54,38 +66,31 @@ const switchToScreen = (screenNumber) => {
       players="31"
       time="10:02"
       ribbons="23021"
-      topButtonText=""
+      topButtonText="rank"
+      bottomButtonText="rerun!"
+      @switch-to-screen="switchToScreen"
+    />
+    <CompeteTable
+      v-if="authStore.isLoggedIn()"
+      :color="authStore.isLoggedIn() ? '#C5AAFF' : '#8578A0'"
+      :color2="authStore.isLoggedIn() ? '#8578A0' : '#79718A'"
+      :clickable="authStore.isLoggedIn()"
+      tix="2"
+      players="12"
+      time="1:02"
+      ribbons="1302"
+      topButtonText="rank"
       bottomButtonText="rerun!"
       @switch-to-screen="switchToScreen"
     />
   </div>
-
-  <div class="w-[277px] lg:w[400px] flex flex-row gap-10">
-    <div class="flex flex-col gap-2">
-      <h3 class="uppercase text-sm md:text-lg lg:text-xl xl:text-2xl">
-        Standings
-      </h3>
-      <ul>
-        <li>
-          <span class="text-[#E3BA24] lg:text-lg">1st:&nbsp;</span>25002pts
-        </li>
-        <li>
-          <span class="text-[#A5A0A0] lg:text-lg">2nd:&nbsp;</span>24992pts
-        </li>
-        <li>
-          <span class="text-[#AA7918] lg:text-lg">3rd:&nbsp;</span>24221pts
-        </li>
-      </ul>
-    </div>
-    <div class="flex flex-col gap-2">
-      <h3 class="uppercase text-sm md:text-lg lg:text-xl xl:text-2xl">
-        Your&nbsp;Best
-      </h3>
-      <ul>
-        <li><span class="lg:text-lg">5th: </span>23021pts</li>
-      </ul>
-    </div>
-  </div>
+  <button
+    v-if="authStore.isLoggedIn()"
+    class="uppercase text-xs text-[#C5AAFF] hover:text-[#8578A0] w-fit"
+    @click="() => switchToScreen(3)"
+  >
+    View Past Contests ➜
+  </button>
 </template>
 
 <style scoped>

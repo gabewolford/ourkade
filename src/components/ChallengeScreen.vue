@@ -1,9 +1,10 @@
 <script setup>
 import { ref, computed } from "vue";
-import Compete1 from "@/components/CompeteScreens/Compete1.vue";
-import Compete2 from "@/components/CompeteScreens/Compete2.vue";
-import Compete3 from "@/components/CompeteScreens/Compete3.vue";
-import Compete4 from "@/components/CompeteScreens/Compete4.vue";
+import Challenge1 from "@/components/ChallengeScreens/Challenge1.vue";
+import Challenge2 from "@/components/ChallengeScreens/Challenge2.vue";
+import Challenge3 from "@/components/ChallengeScreens/Challenge3.vue";
+import Challenge4 from "@/components/ChallengeScreens/Challenge4.vue";
+import Challenge5 from "@/components/ChallengeScreens/Challenge5.vue";
 import ScreenLayout from "@/components/ScreenLayout.vue";
 import challengeLogo from "@/assets/kaderunner-logo-blue.png";
 
@@ -12,15 +13,17 @@ const activeScreen = ref(1);
 const getActiveScreenComponent = computed(() => {
   switch (activeScreen.value) {
     case 1:
-      return Compete1;
+      return Challenge1;
     case 2:
-      return Compete2;
+      return Challenge2;
     case 3:
-      return Compete3;
+      return Challenge3;
     case 4:
-      return Compete4;
+      return Challenge4;
+    case 5:
+      return Challenge5;
     default:
-      return Compete1;
+      return Challenge1;
   }
 });
 

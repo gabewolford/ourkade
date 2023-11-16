@@ -1,6 +1,6 @@
 <script setup>
 import { ref, defineProps, defineEmits } from "vue";
-import CompeteTable from "@/components/CompeteScreens/CompeteTable.vue";
+import ChallengeTable from "@/components/ChallengeScreens/ChallengeTable.vue";
 import { useAuthStore } from "@/stores/auth";
 const authStore = useAuthStore();
 
@@ -31,7 +31,9 @@ const switchToScreen = (screenNumber) => {
         fill="white"
       />
     </svg>
-    <h3 class="uppercase text-sm lg:text-lg pt-1 md:pt-0">Selected Contest</h3>
+    <h3 class="uppercase text-sm lg:text-lg pt-1 md:pt-0">
+      Selected Challenge
+    </h3>
   </button>
 
   <div v-if="authStore.isLoggedIn()"></div>
@@ -46,45 +48,28 @@ const switchToScreen = (screenNumber) => {
   </div>
 
   <div class="container w-full flex flex-col gap-4 mb-4 overflow-y-auto">
-    <CompeteTable
-      :color="authStore.isLoggedIn() ? '#C5AAFF' : '#8578A0'"
-      :color2="authStore.isLoggedIn() ? '#8578A0' : '#79718A'"
+    <ChallengeTable
+      :color="authStore.isLoggedIn() ? '#608CFF' : '#7988AF'"
+      :color2="authStore.isLoggedIn() ? '#87A8FF' : '#99A4BF'"
       :clickable="authStore.isLoggedIn()"
-      tix="2"
-      players="31"
-      time="10:02"
-      ribbons="23021"
+      tix="1"
+      players="3"
+      time="19:02"
+      ribbons="-"
       topButtonText=""
-      bottomButtonText="rerun!"
+      bottomButtonText="run!"
       @switch-to-screen="switchToScreen"
+      :shareable="false"
     />
   </div>
 
-  <div class="w-[277px] lg:w[400px] flex flex-row gap-10">
-    <div class="flex flex-col gap-2">
-      <h3 class="uppercase text-sm md:text-lg lg:text-xl xl:text-2xl">
-        Standings
-      </h3>
-      <ul>
-        <li>
-          <span class="text-[#E3BA24] lg:text-lg">1st:&nbsp;</span>25002pts
-        </li>
-        <li>
-          <span class="text-[#A5A0A0] lg:text-lg">2nd:&nbsp;</span>24992pts
-        </li>
-        <li>
-          <span class="text-[#AA7918] lg:text-lg">3rd:&nbsp;</span>24221pts
-        </li>
-      </ul>
-    </div>
-    <div class="flex flex-col gap-2">
-      <h3 class="uppercase text-sm md:text-lg lg:text-xl xl:text-2xl">
-        Your&nbsp;Best
-      </h3>
-      <ul>
-        <li><span class="lg:text-lg">5th: </span>23021pts</li>
-      </ul>
-    </div>
+  <div class="w-[277px] lg:w[400px] flex flex-col gap-2">
+    <h3 class="uppercase text-sm md:text-lg lg:text-xl xl:text-2xl">Players</h3>
+    <ul>
+      <li>Doc - <span>fin.</span></li>
+      <li>Stone Ice - <span class="text-[#608CFF]">run!</span></li>
+      <li>Mike Mike - <span>fin.</span></li>
+    </ul>
   </div>
 </template>
 

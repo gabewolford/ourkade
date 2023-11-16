@@ -6,17 +6,16 @@ const authStore = useAuthStore();
 
 const emits = defineEmits(["switch-to-screen"]);
 
-const switchToScreen1 = () => {
-  // Emit an event to the parent component
-  emits("switch-to-screen", 1);
-  console.log("clicked back to screen 1");
+const switchToScreen = (screenNumber) => {
+  console.log(`Switching to screen ${screenNumber}`);
+  emits("switch-to-screen", screenNumber);
 };
 </script>
 
 <template>
   <button
     class="flex flex-row items-center gap-1 my-1.5 md:mt-0"
-    @click="switchToScreen1"
+    @click="switchToScreen(1)"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -57,6 +56,7 @@ const switchToScreen1 = () => {
       ribbons="1992"
       topButtonText="rank"
       rank="1"
+      @switch-to-screen="switchToScreen"
     />
     <CompeteTable2
       :color="authStore.isLoggedIn() ? '#C5AAFF' : '#8578A0'"
@@ -68,6 +68,7 @@ const switchToScreen1 = () => {
       ribbons="1932"
       topButtonText="rank"
       rank="2"
+      @switch-to-screen="switchToScreen"
     />
     <CompeteTable2
       :color="authStore.isLoggedIn() ? '#C5AAFF' : '#8578A0'"
@@ -79,6 +80,7 @@ const switchToScreen1 = () => {
       ribbons="1932"
       topButtonText="rank"
       rank="3"
+      @switch-to-screen="switchToScreen"
     />
     <CompeteTable2
       :color="authStore.isLoggedIn() ? '#C5AAFF' : '#8578A0'"
@@ -90,6 +92,7 @@ const switchToScreen1 = () => {
       ribbons="1932"
       topButtonText="rank"
       rank="12th"
+      @switch-to-screen="switchToScreen"
     />
   </div>
 </template>

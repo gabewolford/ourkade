@@ -66,7 +66,7 @@ const switchToScreen = (screenNumber) => {
       players="31"
       time="10:02"
       ribbons="23021"
-      topButtonText="rank"
+      topButtonText=""
       bottomButtonText="rerun!"
       @switch-to-screen="switchToScreen"
     />
@@ -79,7 +79,7 @@ const switchToScreen = (screenNumber) => {
       players="12"
       time="1:02"
       ribbons="1302"
-      topButtonText="rank"
+      topButtonText=""
       bottomButtonText="rerun!"
       @switch-to-screen="switchToScreen"
     />
@@ -87,7 +87,7 @@ const switchToScreen = (screenNumber) => {
   <button
     v-if="authStore.isLoggedIn()"
     class="uppercase text-xs text-[#C5AAFF] hover:text-[#8578A0] w-fit"
-    @click="() => switchToScreen(3)"
+    @click="switchToScreen(3)"
   >
     View Past Contests ➜
   </button>

@@ -1,6 +1,6 @@
 <script setup>
 import { ref, defineProps, defineEmits } from "vue";
-import CompeteTable from "@/components/CompeteScreens/CompeteTable.vue";
+import ChallengeTable2 from "@/components/ChallengeScreens/ChallengeTable2.vue";
 import { useAuthStore } from "@/stores/auth";
 const authStore = useAuthStore();
 
@@ -46,17 +46,17 @@ const switchToScreen = (screenNumber) => {
   </div>
 
   <div class="container w-full flex flex-col gap-4 mb-4 overflow-y-auto">
-    <CompeteTable
-      :color="authStore.isLoggedIn() ? '#C5AAFF' : '#8578A0'"
-      :color2="authStore.isLoggedIn() ? '#8578A0' : '#79718A'"
+    <ChallengeTable2
+      :color="authStore.isLoggedIn() ? '#608CFF' : '#7988AF'"
+      :color2="authStore.isLoggedIn() ? '#87A8FF' : '#99A4BF'"
       :clickable="authStore.isLoggedIn()"
       tix="2"
-      players="31"
-      time="10:02"
-      ribbons="23021"
-      topButtonText=""
-      bottomButtonText="rerun!"
-      @switch-to-screen="switchToScreen"
+      players="54"
+      time="fin."
+      ribbons="1992"
+      topButtonText="rank"
+      bottomButtonText=""
+      winOrLoss="win"
     />
   </div>
 
@@ -66,23 +66,17 @@ const switchToScreen = (screenNumber) => {
         Standings
       </h3>
       <ul>
-        <li>
-          <span class="text-[#E3BA24] lg:text-lg">1st:&nbsp;</span>25002pts
-        </li>
-        <li>
-          <span class="text-[#A5A0A0] lg:text-lg">2nd:&nbsp;</span>24992pts
-        </li>
-        <li>
-          <span class="text-[#AA7918] lg:text-lg">3rd:&nbsp;</span>24221pts
-        </li>
+        <li><span class="text-[#E3BA24] lg:text-lg">1st: </span>1992pts</li>
+        <li><span class="text-[#A5A0A0] lg:text-lg">2nd: </span>1823pts</li>
+        <li><span class="text-[#AA7918] lg:text-lg">3rd: </span>1811pts</li>
       </ul>
     </div>
     <div class="flex flex-col gap-2">
       <h3 class="uppercase text-sm md:text-lg lg:text-xl xl:text-2xl">
-        Your&nbsp;Best
+        Your Best
       </h3>
       <ul>
-        <li><span class="lg:text-lg">5th: </span>23021pts</li>
+        <li><span class="lg:text-lg">1st: </span>1992pts</li>
       </ul>
     </div>
   </div>
