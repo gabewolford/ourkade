@@ -35,7 +35,7 @@ const switchToScreen = (screenNumber) => {
   <div class="relative">
     <router-link
       :to="{ name: 'Play' }"
-      class="w-[250px] lg:min-w-[350px] lg:px-6 lg:py-3 font-nano-pix text-2xl lg:text-4xl text-black bg-[#46FFBC] hover:bg-[#009C64] py-2 justify-center flex leading-none mb-4 relative lg:justify-start lg:pl-8"
+      class="w-[250px] lg:min-w-[350px] lg:px-6 lg:py-3 font-nano-pix text-2xl lg:text-4xl text-black bg-[#46FFBC] hover:bg-[#009C64] py-2 justify-center flex leading-none mb-4 relative lg:justify-start lg:pl-8 rounded-xl lg:rounded-2xl transition-all duration-300"
     >
       practice
       <img
