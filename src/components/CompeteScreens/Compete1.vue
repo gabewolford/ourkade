@@ -66,7 +66,7 @@ const switchToScreen = (screenNumber) => {
       players="31"
       time="10:02"
       ribbons="23021"
-      topButtonText=""
+      topButtonText="rank"
       bottomButtonText="rerun!"
       @switch-to-screen="switchToScreen"
     />
@@ -79,7 +79,7 @@ const switchToScreen = (screenNumber) => {
       players="12"
       time="1:02"
       ribbons="1302"
-      topButtonText=""
+      topButtonText="rank"
       bottomButtonText="rerun!"
       @switch-to-screen="switchToScreen"
     />

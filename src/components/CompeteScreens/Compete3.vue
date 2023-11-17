@@ -67,30 +67,6 @@ const switchToScreen = (screenNumber) => {
       time="fin."
       ribbons="1932"
       topButtonText="rank"
-      rank="2"
-      @switch-to-screen="switchToScreen"
-    />
-    <CompeteTable2
-      :color="authStore.isLoggedIn() ? '#C5AAFF' : '#8578A0'"
-      :color2="authStore.isLoggedIn() ? '#8578A0' : '#79718A'"
-      :clickable="authStore.isLoggedIn()"
-      tix="2"
-      players="31"
-      time="fin."
-      ribbons="1932"
-      topButtonText="rank"
-      rank="3"
-      @switch-to-screen="switchToScreen"
-    />
-    <CompeteTable2
-      :color="authStore.isLoggedIn() ? '#C5AAFF' : '#8578A0'"
-      :color2="authStore.isLoggedIn() ? '#8578A0' : '#79718A'"
-      :clickable="authStore.isLoggedIn()"
-      tix="2"
-      players="31"
-      time="fin."
-      ribbons="1932"
-      topButtonText="rank"
       rank="12th"
       @switch-to-screen="switchToScreen"
     />

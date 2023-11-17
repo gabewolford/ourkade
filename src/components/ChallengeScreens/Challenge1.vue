@@ -81,8 +81,8 @@ const switchToScreen = (screenNumber) => {
       players="3"
       time="20:02"
       ribbons="12321"
-      topButtonText=""
-      bottomButtonText="run!"
+      topButtonText="rank"
+      bottomButtonText=""
       :shareable="false"
       @switch-to-screen="switchToScreen"
     />
