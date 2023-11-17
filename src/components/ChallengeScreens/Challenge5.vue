@@ -44,7 +44,7 @@ const switchToScreen = (screenNumber) => {
     </router-link>
   </div>
 
-  <div class="container w-full flex flex-col gap-4 mb-4 overflow-y-scroll">
+  <div class="container w-full flex flex-col gap-4 mb-4 overflow-y-auto">
     <CompeteTable
       :color="authStore.isLoggedIn() ? '#C5AAFF' : '#8578A0'"
       :color2="authStore.isLoggedIn() ? '#8578A0' : '#79718A'"
