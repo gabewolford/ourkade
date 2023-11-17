@@ -2,10 +2,6 @@
 import { onMounted, onBeforeUnmount } from "vue";
 import useOurkadeApi from "@/composables/UseOurkadeApi";
 import { useAuthStore } from "@/stores/auth";
-import { useRoute } from "vue-router";
-
-const route = useRoute();
-console.log(route.path);
 
 const authStore = useAuthStore();
 
@@ -25,7 +21,7 @@ onBeforeUnmount(enableScrolling);
 </script>
 
 <template>
-  <div class="h-screen w-full absolute top-0 left-0">
+  <div class="h-screen w-full absolute top-0 left-0 z-50">
     <iframe
       src="https://ourkade-preview-kaderunner.netlify.app/"
       class="h-full w-full"
