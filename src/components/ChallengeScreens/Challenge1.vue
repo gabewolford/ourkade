@@ -38,9 +38,9 @@ const switchToScreen = (screenNumber) => {
   <div v-else>
     <router-link
       :to="{ name: 'Register' }"
-      class="w-[250px] font-nano-pix text-2xl text-black rainbow-gradient py-2 justify-center flex leading-none mb-4"
+      class="w-[250px] lg:w-fit lg:px-6 lg:py-3 font-nano-pix text-2xl lg:text-4xl text-black rainbow-gradient py-2 justify-center flex leading-none mb-4"
     >
-      Sign up to compete
+      Sign up to challenge
     </router-link>
   </div>
 

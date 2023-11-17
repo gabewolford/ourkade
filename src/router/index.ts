@@ -33,6 +33,16 @@ const routes: Array<any> = [
     component: () => import("@/pages/Play.vue"),
   },
   {
+    name: "PlayCompetition",
+    path: "/play/:competitionId",
+    component: () => import("@/pages/Play.vue"),
+  },
+  {
+    name: "PlayChallenge",
+    path: "/play/:challengeId",
+    component: () => import("@/pages/Play.vue"),
+  },
+  {
     name: "WhatsKade",
     path: "/whatskade",
     component: () => import("@/pages/WhatsKade.vue"),

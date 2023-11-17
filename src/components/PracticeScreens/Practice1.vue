@@ -32,12 +32,17 @@ const switchToScreen = (screenNumber) => {
     <h3 class="uppercase text-sm lg:text-lg pt-1 md:pt-0">Hone Your Skills</h3>
   </button>
 
-  <div>
+  <div class="relative">
     <router-link
       :to="{ name: 'Play' }"
-      class="w-[250px] font-nano-pix text-2xl text-black bg-[#46FFBC] hover:bg-[#009C64] py-2 justify-center flex leading-none mb-4"
+      class="w-[250px] lg:min-w-[350px] lg:px-6 lg:py-3 font-nano-pix text-2xl lg:text-4xl text-black bg-[#46FFBC] hover:bg-[#009C64] py-2 justify-center flex leading-none mb-4 relative lg:justify-start lg:pl-8"
     >
       practice
+      <img
+        src="../../assets/ticket-icon-black.png"
+        alt="0 tix"
+        class="hidden lg:flex lg:absolute right-12 top-4 h-[40px]"
+      />
     </router-link>
   </div>
 
