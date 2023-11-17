@@ -1,10 +1,20 @@
+<script setup>
+import { useRoute } from "vue-router";
+
+const $route = useRoute();
+</script>
+
 <template>
   <router-link
     :to="{ name: 'WhatsKade' }"
     class="hover:shadow-custom3 hover:opacity-90 rounded-[20px]"
+    :class="{
+      'shadow-custom2': $route.name === 'WhatsKade',
+      'shadow-custom4': $route.name !== 'WhatsKade',
+    }"
   >
     <div
-      class="flex flex-col rainbow rounded-[20px] h-fit py-8 gap-4 justify-between shadow-custom"
+      class="flex flex-col rainbow rounded-[20px] h-fit py-8 gap-4 justify-between"
     >
       <h4 class="text-2xl font-nano-pix">What's&nbsp;Kade?</h4>
 
