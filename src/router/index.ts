@@ -28,6 +28,11 @@ const routes: Array<any> = [
     component: () => import("@/pages/Practice.vue"),
   },
   {
+    name: "Play",
+    path: "/play",
+    component: () => import("@/pages/Play.vue"),
+  },
+  {
     name: "WhatsKade",
     path: "/whatskade",
     component: () => import("@/pages/WhatsKade.vue"),
