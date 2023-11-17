@@ -64,7 +64,7 @@ const switchToScreen = (screenNumber) => {
   </div>
 
   <div class="w-[277px] lg:w[400px] flex flex-col gap-2">
-    <h3 class="uppercase text-sm md:text-lg lg:text-xl xl:text-2xl">Players</h3>
+    <h3 class="uppercase text-sm lg:text-lg">Players</h3>
     <ul>
       <li>Doc - <span>fin.</span></li>
       <li>Stone Ice - <span class="text-[#608CFF]">run!</span></li>

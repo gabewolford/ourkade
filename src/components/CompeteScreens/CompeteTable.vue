@@ -58,7 +58,7 @@ const switchToScreen = (screenNumber) => {
 
 <template>
   <table
-    :class="`table-auto h-fit w-[245px] lg:w[400px] text-sm lg:text-base mr-2 md:mr-0`"
+    class="table-auto h-fit w-[245px] lg:w[400px] text-sm lg:text-base mr-2 md:mr-0"
   >
     <tr>
       <td

@@ -17,28 +17,34 @@ defineProps({
 
 <template>
   <div
-    class="flex background-image object-contain w-full h-full items-center rounded-[30px] px-4 md:px-8"
+    class="flex background-image object-contain w-full h-full items-center rounded-[30px]"
   >
     <div
-      class="h-[300px] w-full flex flex-col md:flex-row md:justify-between md:gap-8 mx-auto"
+      class="flex w-full h-[338px] md:h-[437px] lg:h-[422px] xl:h-[468px] md:items-center md:justify-center"
     >
-      <div class="flex flex-col md:w-6/12 gap-1 lg:gap-2">
-        <h2 class="uppercase text-sm md:text-lg lg:text-xl xl:text-2xl">
-          {{ gameTitle }} Game
-        </h2>
-        <img
-          :src="image"
-          alt="Kade Runner logo"
-          class="h-fit w-[160px] md:w-auto md:h-fit lg:w-auto"
-        />
-        <h2 class="hidden md:block lg:text-lg xl:text-xl">
-          {{ desktopSubtitle }}
-        </h2>
-      </div>
       <div
-        class="flex flex-col md:w-6/12 overflow-y-auto overflow-x-hidden w-fit"
+        class="flex flex-col md:flex-row m-4 md:mx-10 md:gap-8 md:h-[272px] lg:h-[332px] w-full"
       >
-        <slot></slot>
+        <div
+          class="flex flex-col w-full h-fit md:min-w-6/12 md:max-w-6/12 justify-start gap-1 lg:gap-2 0 mx-auto"
+        >
+          <h2 class="uppercase text-sm md:text-lg lg:text-xl xl:text-2xl">
+            {{ gameTitle }} Game
+          </h2>
+          <img
+            :src="image"
+            alt="Kade Runner logo"
+            class="h-fit w-[160px] md:w-auto md:h-fit lg:w-auto"
+          />
+          <h2 class="hidden md:block lg:text-lg xl:text-xl">
+            {{ desktopSubtitle }}
+          </h2>
+        </div>
+        <div
+          class="flex flex-col w-full h-fit md:min-w-6/12 md:max-w-6/12 justify-start overflow-y-auto overflow-x-clip mx-auto"
+        >
+          <slot></slot>
+        </div>
       </div>
     </div>
   </div>
