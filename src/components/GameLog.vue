@@ -165,7 +165,6 @@ const dummyData = [
       </div>
     </div>
 
-    <!-- Contests -->
     <div>
       <div
         class="table-container h-[355px] lg:h-[364px] xl:h-[401px] overflow-y-auto"

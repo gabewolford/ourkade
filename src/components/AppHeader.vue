@@ -28,7 +28,6 @@ watchEffect(() => {
 
 <template>
   <header class="py-4 flex">
-    <!-- Mobile header -->
     <div
       class="flex flex-row w-full items-center justify-between lg:hidden relative"
     >
@@ -192,7 +191,6 @@ watchEffect(() => {
       </ul>
     </div>
 
-    <!-- Desktop header -->
     <div class="hidden lg:flex flex-row w-full">
       <div class="flex items-center m-0 flex-row justify-between">
         <div class="lg:w-5/12">

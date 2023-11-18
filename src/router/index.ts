@@ -12,16 +12,91 @@ const routes: Array<any> = [
     path: "/",
     component: () => import("@/pages/Home.vue"),
   },
+
+  // Compete Screen 1
   {
-    name: "Compete",
+    name: "Compete1",
     path: "/compete",
-    component: () => import("@/pages/Compete.vue"),
+    component: () => import("@/pages/Compete1.vue"),
   },
+
+  // Compete Screen 2
   {
-    name: "Challenge",
-    path: "/challenge",
-    component: () => import("@/pages/Challenge.vue"),
+    name: "CompeteDetails2",
+    path: "/compete/:competitionId",
+    meta: {
+      requiresAuth: true,
+    },
+    component: () => import("@/pages/CompeteDetails2.vue"),
   },
+
+  // Compete Screen 3
+  {
+    name: "PastCompetitions3",
+    path: "/past-competitions",
+    meta: {
+      requiresAuth: true,
+    },
+    component: () => import("@/pages/PastCompetitions3.vue"),
+  },
+
+  // Compete Screen 4
+  {
+    name: "PastCompetitionDetails4",
+    path: "/past-competitions/:competitionId",
+    meta: {
+      requiresAuth: true,
+    },
+    component: () => import("@/pages/PastCompetitionDetails4.vue"),
+  },
+
+  // Challenge Screen 1
+  {
+    name: "Challenge1",
+    path: "/challenge",
+    component: () => import("@/pages/Challenge1.vue"),
+  },
+
+  // Challenge Screen 2
+  {
+    name: "ChallengeDetails2",
+    path: "/challenge/:challengeId",
+    meta: {
+      requiresAuth: true,
+    },
+    component: () => import("@/pages/ChallengeDetails2.vue"),
+  },
+
+  // Challenge Screen 3
+  {
+    name: "PastChallenges3",
+    path: "/past-challenges",
+    meta: {
+      requiresAuth: true,
+    },
+    component: () => import("@/pages/PastChallenges3.vue"),
+  },
+
+  // Challenge Screen 4
+  {
+    name: "PastChallengeDetails4",
+    path: "/past-challenges/:challengeId",
+    meta: {
+      requiresAuth: true,
+    },
+    component: () => import("@/pages/PastChallengeDetails4.vue"),
+  },
+
+  // Join Challenge Screen
+  {
+    name: "JoinChallenge",
+    path: "/join-challenge/:challengeId",
+    // meta: {
+    //   requiresAuth: true,
+    // },
+    component: () => import("@/pages/JoinChallenge.vue"),
+  },
+
   {
     name: "Practice",
     path: "/practice",
@@ -33,16 +108,6 @@ const routes: Array<any> = [
     component: () => import("@/pages/Play.vue"),
   },
   {
-    name: "PlayCompetition",
-    path: "/play/:competitionId",
-    component: () => import("@/pages/Play.vue"),
-  },
-  {
-    name: "PlayChallenge",
-    path: "/play/:challengeId",
-    component: () => import("@/pages/Play.vue"),
-  },
-  {
     name: "WhatsKade",
     path: "/whatskade",
     component: () => import("@/pages/WhatsKade.vue"),
@@ -51,11 +116,6 @@ const routes: Array<any> = [
     name: "CheatCodes",
     path: "/cheatcodes",
     component: () => import("@/pages/CheatCodes.vue"),
-  },
-  {
-    name: "Compete",
-    path: "/compete",
-    component: () => import("@/pages/Compete.vue"),
   },
   {
     name: "Me",
@@ -104,17 +164,6 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes,
 });
-
-// router.beforeEach((to) => {
-//   const authStore = useAuthStore();
-//   if (
-//     !authStore.isLoggedIn() &&
-//     to.meta.requiresAuth &&
-//     !Object.keys(to.query).includes("fromEmail")
-//   ) {
-//     return { name: "Login" };
-//   }
-// });
 
 router.beforeEach((to, from, next) => {
   const authStore = useAuthStore();

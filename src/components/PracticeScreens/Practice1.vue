@@ -1,19 +1,12 @@
 <script setup>
-import { ref, defineProps, defineEmits } from "vue";
-import CompeteTable from "@/components/CompeteScreens/CompeteTable.vue";
-import { useAuthStore } from "@/stores/auth";
-const authStore = useAuthStore();
-
-const emits = defineEmits(["switch-to-screen"]);
-
-const switchToScreen = (screenNumber) => {
-  console.log(`Switching to screen ${screenNumber}`);
-  emits("switch-to-screen", screenNumber);
-};
+// import { ref, defineProps, defineEmits } from "vue";
+// // import CompeteTable from "@/components/CompeteScreens/CompeteTable.vue";
+// import { useAuthStore } from "@/stores/auth";
+// const authStore = useAuthStore();
 </script>
 
 <template>
-  <button class="flex flex-row items-center gap-1 my-1.5 md:mt-0" disabled>
+  <!-- <button class="flex flex-row items-center gap-1 my-1.5 md:mt-0" disabled>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="11"
@@ -53,7 +46,7 @@ const switchToScreen = (screenNumber) => {
       <li><span class="text-[#46FFBC] lg:text-lg">last: </span>1231pts</li>
       <li><span class="text-[#46FFBC] lg:text-lg">avg: </span>1231pts</li>
     </ul>
-  </div>
+  </div> -->
 </template>
 
 <style scoped></style>

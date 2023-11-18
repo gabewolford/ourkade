@@ -9,12 +9,12 @@ const $route = useRoute();
     class="grid grid-cols-2 lg:grid-cols-4 justify-between gap-2 lg:gap-6 text-lg lg:text-xl xl:text-3xl 2xl:text-4xl"
     :class="{}"
   >
-    <router-link :to="{ name: 'Compete' }">
+    <router-link :to="{ name: 'Compete1' }">
       <button
         class="flex flew-row flex-1 gap-2 items-center rounded-full 2xl:rounded-[50px] bg-[#3d4D7C] hover:bg-[#425A9F] w-full min-w-fit p-2 lg:p-4 h-fit lg:h-[75px] xl:h-[100px] 2xl:h-[125px] font-nano-pix"
         :class="{
-          'shadow-custom2': $route.name === 'Compete',
-          'shadow-custom4': $route.name !== 'Compete',
+          'shadow-custom2': $route.name === 'Compete1',
+          'shadow-custom4': $route.name !== 'Compete1',
         }"
       >
         <img src="../assets/button-icons/compete-icon.svg" alt="compete icon" />
@@ -22,12 +22,12 @@ const $route = useRoute();
       </button>
     </router-link>
 
-    <router-link :to="{ name: 'Challenge' }">
+    <router-link :to="{ name: 'Challenge1' }">
       <button
         class="flex flew-row flex-1 gap-2 items-center rounded-full 2xl:rounded-[40px] bg-[#386D9D] hover:bg-[#3275B2] w-full min-w-fit p-2 lg:p-4 h-fit lg:h-[75px] xl:h-[100px] 2xl:h-[125px] font-nano-pix"
         :class="{
-          'shadow-custom2': $route.name === 'Challenge',
-          'shadow-custom4': $route.name !== 'Challenge',
+          'shadow-custom2': $route.name === 'Challenge1',
+          'shadow-custom4': $route.name !== 'Challenge1',
         }"
       >
         <img

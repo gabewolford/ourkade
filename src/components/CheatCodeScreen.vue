@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div
+  <!-- <div
     class="flex bg-black w-full h-full items-center rounded-[30px] px-4 md:px-12"
   >
     <div
@@ -17,14 +17,14 @@
           <h2 class="lg:text-2xl">Input Code Below</h2>
         </div>
         <div>
-          <!-- input cheat code here -->
+
         </div>
         <div>
-          <!-- input success or error message here -->
+
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <style scoped></style>

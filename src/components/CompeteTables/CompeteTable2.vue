@@ -1,5 +1,4 @@
 <script setup>
-import { defineEmits, ref } from "vue";
 import { useAuthStore } from "@/stores/auth";
 const authStore = useAuthStore();
 import SmallTicket from "@/components/TableIcons/SmallTicket.vue";
@@ -21,10 +20,6 @@ defineProps({
     type: String,
     required: true,
   },
-  clickable: {
-    type: Boolean,
-    required: true,
-  },
   tix: {
     type: String,
     required: true,
@@ -41,18 +36,21 @@ defineProps({
     type: String,
     required: true,
   },
+  topButtonText: {
+    type: String,
+  },
+  bottomButtonText: {
+    type: String,
+  },
   rank: {
     type: String,
     required: true,
   },
+  competitionId: {
+    type: Number,
+    required: true,
+  },
 });
-
-const emits = defineEmits(["switch-to-screen"]);
-
-const switchToScreen = (screenNumber) => {
-  console.log(`Switching to screen ${screenNumber}`);
-  emits("switch-to-screen", screenNumber);
-};
 </script>
 
 <template>
@@ -104,13 +102,20 @@ const switchToScreen = (screenNumber) => {
       </td>
 
       <td
-        v-if="authStore.isLoggedIn()"
+        v-if="authStore.isLoggedIn() && topButtonText"
         :style="{ backgroundColor: color2, borderColor: color2 }"
         class="text-black min-w-[55px] max-w-[55px] lg:min-w-[70px] lg:max-w-[70px]"
-        @click="() => switchToScreen(4)"
-        :class="{ 'cursor-pointer': clickable }"
       >
-        <div class="center-this mx-2">rank</div>
+        <div class="center-this mx-2">
+          <router-link
+            :to="{
+              name: 'PastCompetitionDetails4',
+              params: { competitionId: competitionId },
+            }"
+          >
+            {{ topButtonText }}
+          </router-link>
+        </div>
       </td>
     </tr>
 

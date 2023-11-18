@@ -7,9 +7,6 @@ import Players from "@/components/TableIcons/Players.vue";
 import Time from "@/components/TableIcons/Time.vue";
 import Trophy from "@/components/TableIcons/Trophy.vue";
 import Ribbon from "@/components/TableIcons/Ribbon.vue";
-import GoldKade from "@/components/TableIcons/GoldKade.vue";
-import SilverKade from "@/components/TableIcons/SilverKade.vue";
-import BronzeKade from "@/components/TableIcons/BronzeKade.vue";
 
 defineProps({
   color: {
@@ -36,29 +33,30 @@ defineProps({
     type: String,
     required: true,
   },
-  ribbons: {
-    type: String,
-    required: true,
-  },
   topButtonText: {
     type: String,
   },
   bottomButtonText: {
     type: String,
   },
+  ribbons: {
+    type: String,
+    required: true,
+  },
+  winOrLoss: {
+    type: String,
+    required: true,
+  },
+  challengeId: {
+    type: Number,
+    required: true,
+  },
 });
-
-const emits = defineEmits(["switch-to-screen"]);
-
-const switchToScreen = (screenNumber) => {
-  console.log(`Switching to screen ${screenNumber}`);
-  emits("switch-to-screen", screenNumber);
-};
 </script>
 
 <template>
   <table
-    class="table-auto h-fit w-[245px] lg:w[400px] text-sm lg:text-base mr-2 md:mr-0"
+    :class="`table-auto pr-2 h-fit w-[245px] lg:w[400px] text-sm lg:text-base`"
   >
     <tr>
       <td
@@ -108,10 +106,17 @@ const switchToScreen = (screenNumber) => {
         v-if="authStore.isLoggedIn() && topButtonText"
         :style="{ backgroundColor: color2, borderColor: color2 }"
         class="text-black min-w-[55px] max-w-[55px] lg:min-w-[70px] lg:max-w-[70px]"
-        @click="() => switchToScreen(4)"
-        :class="{ 'cursor-pointer': clickable }"
       >
-        <div class="center-this mx-2">{{ topButtonText }}</div>
+        <div class="center-this mx-2">
+          <router-link
+            :to="{
+              name: 'PastChallengeDetails4',
+              params: { challengeId: challengeId },
+            }"
+          >
+            {{ topButtonText }}
+          </router-link>
+        </div>
       </td>
     </tr>
 
@@ -123,34 +128,18 @@ const switchToScreen = (screenNumber) => {
       </td>
 
       <td :style="{ borderColor: color }" colspan="3">
-        <div class="flex flex-row gap-0.5 px-1.5 space-x-1 justify-center">
-          <div class="flex flex-row">
-            <div class="center-this">
-              <p class="text-[#E3BA24] leading-none mt-1">2</p>
+        <div class="flex flex-row px-4 space-x-1 justify-center">
+          <div class="flex flex-row px-4 space-x-1 justify-center">
+            <div v-if="winOrLoss === 'win'" class="">
+              <div class="center-this">
+                <p class="text-[#46FFBC] leading-none mt-1">W</p>
+              </div>
             </div>
 
-            <div class="center-this">
-              <GoldKade />
-            </div>
-          </div>
-
-          <div class="flex flex-row">
-            <div class="center-this">
-              <p class="text-[#A5A0A0] leading-none mt-1">1</p>
-            </div>
-
-            <div class="center-this">
-              <SilverKade />
-            </div>
-          </div>
-
-          <div class="flex flex-row">
-            <div class="center-this">
-              <p class="text-[#AA7918] leading-none mt-1">.5</p>
-            </div>
-
-            <div class="center-this">
-              <BronzeKade />
+            <div v-else-if="winOrLoss === 'loss'" class="">
+              <div class="center-this">
+                <p class="text-[#FF7246] leading-none mt-1">L</p>
+              </div>
             </div>
           </div>
         </div>
@@ -175,10 +164,14 @@ const switchToScreen = (screenNumber) => {
         v-if="authStore.isLoggedIn() && bottomButtonText"
         :style="{ borderColor: color, backgroundColor: color }"
         class="text-black min-w-[55px] max-w-[55px] lg:min-w-[70px] lg:max-w-[70px]"
-        @click="() => switchToScreen(2)"
-        :class="{ 'cursor-pointer': clickable }"
       >
-        <div class="center-this mx-2">{{ bottomButtonText }}</div>
+        <div class="center-this mx-2">
+          <router-link
+            :to="{ name: 'Play', query: { challengeId: challengeId } }"
+          >
+            {{ bottomButtonText }}
+          </router-link>
+        </div>
       </td>
     </tr>
   </table>

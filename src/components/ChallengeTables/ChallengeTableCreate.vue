@@ -3,10 +3,12 @@ import { defineEmits, ref } from "vue";
 import { useAuthStore } from "@/stores/auth";
 const authStore = useAuthStore();
 import SmallTicket from "@/components/TableIcons/SmallTicket.vue";
+import LargeTicket from "@/components/TableIcons/LargeTicket.vue";
 import Players from "@/components/TableIcons/Players.vue";
 import Time from "@/components/TableIcons/Time.vue";
 import Trophy from "@/components/TableIcons/Trophy.vue";
 import Ribbon from "@/components/TableIcons/Ribbon.vue";
+import ShareIcon from "@/components/TableIcons/ShareIcon.vue";
 
 defineProps({
   color: {
@@ -15,10 +17,6 @@ defineProps({
   },
   color2: {
     type: String,
-    required: true,
-  },
-  clickable: {
-    type: Boolean,
     required: true,
   },
   tix: {
@@ -33,31 +31,28 @@ defineProps({
     type: String,
     required: true,
   },
+  ribbons: {
+    type: String,
+    required: true,
+  },
   topButtonText: {
     type: String,
   },
   bottomButtonText: {
     type: String,
   },
-  ribbons: {
-    type: String,
-    required: true,
+  shareable: {
+    type: Boolean,
   },
-  winOrLoss: String,
-  required: true,
+  challengeId: {
+    type: Number,
+  },
 });
-
-const emits = defineEmits(["switch-to-screen"]);
-
-const switchToScreen = (screenNumber) => {
-  console.log(`Switching to screen ${screenNumber}`);
-  emits("switch-to-screen", screenNumber);
-};
 </script>
 
 <template>
   <table
-    :class="`table-auto pr-2 h-fit w-[245px] lg:w[400px] text-sm lg:text-base`"
+    :class="`table-auto h-fit w-[245px] lg:w[400px] text-sm lg:text-base mr-2 md:mr-0`"
   >
     <tr>
       <td
@@ -107,10 +102,17 @@ const switchToScreen = (screenNumber) => {
         v-if="authStore.isLoggedIn() && topButtonText"
         :style="{ backgroundColor: color2, borderColor: color2 }"
         class="text-black min-w-[55px] max-w-[55px] lg:min-w-[70px] lg:max-w-[70px]"
-        @click="() => switchToScreen(4)"
-        :class="{ 'cursor-pointer': clickable }"
       >
-        <div class="center-this mx-2">{{ topButtonText }}</div>
+        <div class="center-this mx-2">
+          <router-link
+            :to="{
+              name: 'ChallengeDetails2',
+              params: { challengeId: challengeId },
+            }"
+          >
+            {{ topButtonText }}
+          </router-link>
+        </div>
       </td>
     </tr>
 
@@ -122,18 +124,14 @@ const switchToScreen = (screenNumber) => {
       </td>
 
       <td :style="{ borderColor: color }" colspan="3">
-        <div class="flex flex-row px-4 space-x-1 justify-center">
-          <div class="flex flex-row px-4 space-x-1 justify-center">
-            <div v-if="winOrLoss === 'win'" class="">
-              <div class="center-this">
-                <p class="text-[#46FFBC] leading-none mt-1">W</p>
-              </div>
+        <div class="flex flex-row gap-0.5 px-4 space-x-1 justify-center">
+          <div class="flex flex-row">
+            <div class="center-this">
+              <p class="text-[#E3BA24] leading-none mt-1">3</p>
             </div>
 
-            <div v-else-if="winOrLoss === 'loss'" class="">
-              <div class="center-this">
-                <p class="text-[#FF7246] leading-none mt-1">L</p>
-              </div>
+            <div class="center-this">
+              <LargeTicket />
             </div>
           </div>
         </div>
@@ -156,12 +154,16 @@ const switchToScreen = (screenNumber) => {
 
       <td
         v-if="authStore.isLoggedIn() && bottomButtonText"
-        :style="{ borderColor: color, backgroundColor: color }"
+        :style="{ backgroundColor: color2, borderColor: color2 }"
         class="text-black min-w-[55px] max-w-[55px] lg:min-w-[70px] lg:max-w-[70px]"
-        @click="() => switchToScreen(2)"
-        :class="{ 'cursor-pointer': clickable }"
       >
-        <div class="center-this mx-2">{{ bottomButtonText }}</div>
+        <div class="center-this mx-2 cursor-default">
+          {{ bottomButtonText }}
+        </div>
+      </td>
+
+      <td v-if="authStore.isLoggedIn()" class="pl-2 border-none">
+        <ShareIcon :color="shareable ? '#608CFF' : 'transparent'" />
       </td>
     </tr>
   </table>

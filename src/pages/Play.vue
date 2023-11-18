@@ -22,9 +22,6 @@ onBeforeUnmount(enableScrolling);
 
 <template>
   <div class="h-screen w-full absolute top-0 left-0 z-50">
-    <iframe
-      src="https://ourkade-preview-kaderunner.netlify.app/"
-      class="h-full w-full"
-    ></iframe>
+    <iframe src="https://kaderunner.ourkade.io/" class="h-full w-full"></iframe>
   </div>
 </template>
