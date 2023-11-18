@@ -44,6 +44,13 @@ const authStore = useAuthStore();
         >
           Sign&nbsp;up&nbsp;to&nbsp;accept
         </router-link>
+
+        <router-link
+          :to="{ name: 'Play' }"
+          class="min-w-[260px] w-fit px-4 lg:py-3 font-nano-pix text-2xl lg:text-3xl xl:text-4xl text-black bg-[#608CFF] hover:bg-[#7497f0] py-2 justify-center flex leading-none mb-4 rounded-xl lg:rounded-2xl hover:shadow-customWhite transition-all duration-300"
+        >
+          Do&nbsp;a&nbsp;test&nbsp;run
+        </router-link>
       </div>
 
       <div class="container w-full flex flex-col gap-4 mb-4 overflow-y-auto">
