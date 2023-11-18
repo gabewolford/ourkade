@@ -40,9 +40,9 @@ const authStore = useAuthStore();
       <div v-else>
         <router-link
           :to="{ name: 'Register' }"
-          class="w-[250px] lg:w-fit lg:px-6 lg:py-3 font-nano-pix text-2xl lg:text-4xl text-black rainbow-gradient py-2 justify-center flex leading-none mb-4 rounded-xl lg:rounded-2xl hover:shadow-customWhite transition-all duration-300"
+          class="min-w-[260px] w-fit px-4 lg:py-3 font-nano-pix text-2xl lg:text-3xl xl:text-4xl text-black rainbow-gradient py-2 justify-center flex leading-none mb-4 rounded-xl lg:rounded-2xl hover:shadow-customWhite transition-all duration-300"
         >
-          Sign up to accept
+          Sign&nbsp;up&nbsp;to&nbsp;accept
         </router-link>
       </div>
 

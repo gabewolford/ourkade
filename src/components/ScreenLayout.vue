@@ -23,7 +23,7 @@ defineProps({
       class="flex w-full h-[338px] md:h-[437px] lg:h-[422px] xl:h-[468px] md:items-center md:justify-center"
     >
       <div
-        class="flex flex-col md:flex-row m-4 md:mx-10 md:gap-8 lg:gap-16 md:h-[272px] lg:h-[332px] w-full"
+        class="flex flex-col md:flex-row m-4 md:mx-10 lg:mx-6 xl:mx-10 md:gap-8 lg:gap-10 xl:gap-16 md:h-[272px] lg:h-[332px] w-full"
       >
         <div
           class="flex flex-col w-full h-fit md:min-w-6/12 md:max-w-6/12 justify-start gap-1 lg:gap-2 0 mx-auto"

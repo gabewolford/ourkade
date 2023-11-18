@@ -31,8 +31,8 @@ const authStore = useAuthStore();
             fill="white"
           />
         </svg>
-        <h3 class="uppercase text-sm lg:text-lg pt-1 md:pt-0">
-          Challenge up to 3 friends for tix
+        <h3 class="uppercase text-sm lg:text-base xl:text-lg pt-1 md:pt-0">
+          Challenge&nbsp;up&nbsp;to&nbsp;3&nbsp;friends&nbsp;for&nbsp;tix
         </h3>
       </button>
       <div v-if="authStore.isLoggedIn()"></div>
@@ -40,9 +40,9 @@ const authStore = useAuthStore();
       <div v-else>
         <router-link
           :to="{ name: 'Register' }"
-          class="w-[250px] lg:w-fit px-6 lg:py-3 font-nano-pix text-2xl xl:text-4xl text-black rainbow-gradient py-2 justify-center flex leading-none mb-4 rounded-xl lg:rounded-2xl hover:shadow-customWhite transition-all duration-300"
+          class="min-w-[260px] w-fit px-4 lg:py-3 font-nano-pix text-2xl lg:text-3xl xl:text-4xl text-black rainbow-gradient py-2 justify-center flex leading-none mb-4 rounded-xl lg:rounded-2xl hover:shadow-customWhite transition-all duration-300"
         >
-          Sign up to challenge
+          Sign&nbsp;up&nbsp;to&nbsp;challenge
         </router-link>
       </div>
 
