@@ -11,13 +11,10 @@ const highScoreData = ref([]);
 onBeforeMount(async () => {
   try {
     highScoreData.value = await getGlobalHighScores(1);
-    console.log(highScoreData.value);
   } catch (error) {
     console.error("Error fetching high scores:", error);
   }
 });
-
-// need usernames
 </script>
 
 <template>
@@ -63,7 +60,8 @@ onBeforeMount(async () => {
               class="py-2 text-sm xl:text-base"
             >
               <td>{{ `#${index + 1}` }}</td>
-              <td class="pl-2 py-2">{{ data.playerId }}</td>
+              <!-- Update playername once API is updated -->
+              <td class="pl-2 py-2">{{ data.playerName || "Playername" }}</td>
               <td class="text-right py-2">{{ `${data.score}pts` }}</td>
             </tr>
           </tbody>
@@ -71,7 +69,6 @@ onBeforeMount(async () => {
       </div>
       <div v-else>
         <p>Loading...</p>
-        <!-- You can replace this with a loader or any other loading indicator -->
       </div>
     </div>
   </div>
