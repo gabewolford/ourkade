@@ -16,6 +16,8 @@ onBeforeMount(async () => {
     console.error("Error fetching high scores:", error);
   }
 });
+
+// need usernames
 </script>
 
 <template>
