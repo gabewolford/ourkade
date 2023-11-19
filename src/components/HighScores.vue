@@ -1,16 +1,21 @@
 <script setup>
-const dummyData = [
-  { rank: 1, name: "Stone Ice", score: 1890 },
-  { rank: 2, name: "Doc", score: 1801 },
-  { rank: 3, name: "Kade", score: 1777 },
-  { rank: 4, name: "Mikey", score: 1727 },
-  { rank: 5, name: "Nonooo", score: 1712 },
-  { rank: 6, name: "HerofHyrule", score: 1623 },
-  { rank: 7, name: "CakeIsaLIE", score: 1611 },
-  { rank: 8, name: "Boltonconstr.", score: 1522 },
-  { rank: 9, name: "Manhattanite", score: 1522 },
-  { rank: 10, name: "WhoopyPie!", score: 1499 },
-];
+import useOurkadeApi from "@/composables/UseOurkadeApi";
+import { ref, onBeforeMount } from "vue";
+import { useAuthStore } from "@/stores/auth";
+const authStore = useAuthStore();
+
+const { getGlobalHighScores } = useOurkadeApi();
+
+const highScoreData = ref([]);
+
+onBeforeMount(async () => {
+  try {
+    highScoreData.value = await getGlobalHighScores(1);
+    console.log(highScoreData.value);
+  } catch (error) {
+    console.error("Error fetching high scores:", error);
+  }
+});
 </script>
 
 <template>
@@ -47,19 +52,25 @@ const dummyData = [
     </div>
 
     <div>
-      <table class="w-full h-fit">
-        <tbody>
-          <tr
-            v-for="(data, index) in dummyData"
-            :key="index"
-            class="py-2 text-sm xl:text-base"
-          >
-            <td>{{ `#${data.rank}` }}</td>
-            <td class="pl-2 py-2">{{ data.name }}</td>
-            <td class="text-right py-2">{{ `${data.score}pts` }}</td>
-          </tr>
-        </tbody>
-      </table>
+      <div v-if="highScoreData">
+        <table class="w-full h-fit">
+          <tbody>
+            <tr
+              v-for="(data, index) in highScoreData"
+              :key="data.id"
+              class="py-2 text-sm xl:text-base"
+            >
+              <td>{{ `#${index + 1}` }}</td>
+              <td class="pl-2 py-2">{{ data.playerId }}</td>
+              <td class="text-right py-2">{{ `${data.score}pts` }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div v-else>
+        <p>Loading...</p>
+        <!-- You can replace this with a loader or any other loading indicator -->
+      </div>
     </div>
   </div>
 </template>
