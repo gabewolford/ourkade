@@ -1,5 +1,12 @@
+<script setup>
+import { useAuthStore } from "@/stores/auth";
+
+const authStore = useAuthStore();
+</script>
+
 <template>
   <div
+    v-if="authStore.isLoggedIn()"
     class="flex flex-col gap-6 bg-[#8E7F47] rounded-[20px] min-h-[350px] py-6 justify-between shadow-custom"
   >
     <div class="flex flex-row gap-4 items-center ml-4">

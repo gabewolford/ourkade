@@ -2,23 +2,31 @@
 import useOurkadeApi from "@/composables/UseOurkadeApi";
 import { ref, onBeforeMount } from "vue";
 import { useAuthStore } from "@/stores/auth";
+
 const authStore = useAuthStore();
 
 const { getGlobalHighScores } = useOurkadeApi();
 
-const highScoreData = ref([]);
+const highScoresLoaded = ref(false);
+const highScores = ref([]);
 
 onBeforeMount(async () => {
-  try {
-    highScoreData.value = await getGlobalHighScores(1);
-  } catch (error) {
-    console.error("Error fetching high scores:", error);
+  if (authStore.isLoggedIn()) {
+    try {
+      highScores.value = await getGlobalHighScores(1);
+      highScoresLoaded.value = true;
+    } catch (error) {
+      console.error("Error fetching high scores:", error);
+    }
+  } else {
+    console.warn("User is not logged in. High scores will not be fetched.");
   }
 });
 </script>
 
 <template>
   <div
+    v-if="authStore.isLoggedIn()"
     class="flex flex-col gap-6 w-full lg:w-1/3 bg-[#0F0F0F]/60 px-4 py-4 lg:py-6 rounded-[20px] max-h-fit"
   >
     <div class="flex flex-row gap-4 items-center">
@@ -51,16 +59,15 @@ onBeforeMount(async () => {
     </div>
 
     <div>
-      <div v-if="highScoreData">
+      <div v-if="highScores">
         <table class="w-full h-fit">
           <tbody>
             <tr
-              v-for="(data, index) in highScoreData"
+              v-for="(data, index) in highScores"
               :key="data.id"
               class="py-2 text-sm xl:text-base"
             >
               <td>{{ `#${index + 1}` }}</td>
-              <!-- Update playername once API is updated -->
               <td class="pl-2 py-2">{{ data.playerName || "Playername" }}</td>
               <td class="text-right py-2">{{ `${data.score}pts` }}</td>
             </tr>

@@ -96,6 +96,7 @@ const dummyData = [
 
 <template>
   <div
+    v-if="authStore.isLoggedIn()"
     class="hidden lg:flex flex-col gap-7 w-full lg:w-2/3 bg-[#0F0F0F]/60 p-4 rounded-[20px]"
   >
     <div class="flex flex-row gap-4 items-center">

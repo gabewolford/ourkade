@@ -1,10 +1,11 @@
 import axios, { AxiosRequestHeaders } from "axios";
 import { useAuthStore } from "@/stores/auth";
 import { CreateCompetitionDto } from "@/dtos/createCompetion.dto";
-const authStore = useAuthStore();
+// const authStore = useAuthStore();
 
 export default function useOurkadeApi() {
-  // console.log(authStore.currentToken!);
+  const authStore = useAuthStore();
+  // console.log(authStore.currentToken!)
 
   const axiosClient = axios.create({
     baseURL: process.env.VUE_APP_OURKADE_API, // Replace with your API's base URL
@@ -15,7 +16,7 @@ export default function useOurkadeApi() {
 
   let getProfile = async function () {
     try {
-      let result = await axiosClient.get("/player-profile");
+      let result = await axiosClient.get(`/player-profile`);
       return result.data;
     } catch (error) {
       return error;
@@ -35,7 +36,7 @@ export default function useOurkadeApi() {
 
   let getPlayableCompetitions = async function () {
     try {
-      let result = await axiosClient.get("/competition");
+      let result = await axiosClient.get("/competition/contest/playable");
       return result.data;
     } catch (error) {
       return error;
