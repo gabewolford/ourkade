@@ -11,15 +11,11 @@ const highScoresLoaded = ref(false);
 const highScores = ref([]);
 
 onBeforeMount(async () => {
-  if (authStore.isLoggedIn()) {
-    try {
-      highScores.value = await getGlobalHighScores(1);
-      highScoresLoaded.value = true;
-    } catch (error) {
-      console.error("Error fetching high scores:", error);
-    }
-  } else {
-    console.warn("User is not logged in. High scores will not be fetched.");
+  try {
+    highScores.value = await getGlobalHighScores(1);
+    highScoresLoaded.value = true;
+  } catch (error) {
+    console.error("Error fetching high scores:", error);
   }
 });
 </script>
