@@ -182,6 +182,25 @@ onBeforeMount(async () => {
   );
   border-radius: 5px;
 }
+.active-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-image: linear-gradient(
+    to right,
+    #ff7246,
+    #ffd646,
+    #46ffbc,
+    #467aff,
+    #9e71ff,
+    #fc54ff
+  );
+  border-radius: 5px;
+}
 
 .underline-on-hover {
   position: relative;
@@ -195,12 +214,13 @@ onBeforeMount(async () => {
   left: 0;
   width: 0;
   height: 3px;
-  background-color: #fff;
-  transition: width 0.3s ease;
+  background-color: transparent; /* Set the initial color to transparent */
+  transition: 0.35s ease;
   border-radius: 5px;
 }
 
 .underline-on-hover:hover::after {
   width: 100%;
+  background-color: white;
 }
 </style>
