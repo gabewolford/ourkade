@@ -57,19 +57,12 @@ import competeLogo from "@/assets/kaderunner-logo-green.png";
       </h3>
     </button>
 
-    <div class="relative">
-      <router-link
-        :to="{ name: 'Play' }"
-        class="w-[250px] lg:min-w-[350px] lg:px-6 lg:py-3 font-nano-pix text-2xl lg:text-4xl text-black bg-[#46FFBC] hover:bg-[#009C64] py-2 justify-center flex leading-none mb-4 relative lg:justify-start lg:pl-8 rounded-xl lg:rounded-2xl transition-all duration-300"
-      >
-        practice
-        <img
-          src="../assets/ticket-icon-black.png"
-          alt="0 tix"
-          class="hidden lg:flex lg:absolute right-12 top-4 h-[40px]"
-        />
-      </router-link>
-    </div>
+    <router-link
+      :to="{ name: 'Play' }"
+      class="w-[250px] lg:min-w-[300px] lg:py-3 font-nano-pix text-2xl lg:text-4xl text-black bg-[#46FFBC] hover:bg-[#009C64] py-2 justify-center flex leading-none mb-4 rounded-xl lg:rounded-2xl transition-all duration-300"
+    >
+      practice
+    </router-link>
 
     <div class="w-[277px] lg:w[400px] flex flex-col gap-2">
       <h3 class="uppercase text-sm lg:text-lg">My Stats</h3>
