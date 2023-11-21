@@ -155,7 +155,6 @@ const routes: Array<any> = [
         next({ name: "Home" });
       } catch (error) {
         // Handle logout error if needed
-        console.error("Logout error:", error);
         next({ name: "Home" });
       }
     },
