@@ -24,11 +24,6 @@
             Reset
           </button>
         </div>
-        <img
-          src="../assets/cartridge.png"
-          alt="cartridge goes here"
-          class="hidden lg:flex lg:pr-12"
-        />
       </div>
     </div>
   </div>
