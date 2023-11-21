@@ -13,16 +13,24 @@
       >
         <div class="flex flex-row gap-2 lg:gap-4">
           <img src="../assets/red-light.svg" alt="red light" />
-          <button
-            class="text-[#939393] bg-[#151E23] px-4 lg:px-10 py-1.5 rounded-full lg:text-lg button-shadow font-nano-pix"
+          <router-link
+            :to="{ name: 'Home' }"
+            class="text-[#939393] bg-[#151E23] px-4 lg:px-10 py-1.5 rounded-full lg:text-lg font-nano-pix"
+            :class="{
+              'button-shadow': $route.name !== 'KadeGenie',
+            }"
           >
             Power
-          </button>
-          <button
+          </router-link>
+          <router-link
+            :to="{ name: 'KadeGenie' }"
             class="text-[#939393] bg-[#151E23] px-4 lg:px-10 py-1.5 rounded-full lg:text-lg font-nano-pix"
+            :class="{
+              'button-shadow': $route.name === 'KadeGenie',
+            }"
           >
             Reset
-          </button>
+          </router-link>
         </div>
       </div>
     </div>

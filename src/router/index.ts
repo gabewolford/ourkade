@@ -113,9 +113,9 @@ const routes: Array<any> = [
     component: () => import("@/pages/WhatsKade.vue"),
   },
   {
-    name: "CheatCodes",
-    path: "/cheatcodes",
-    component: () => import("@/pages/CheatCodes.vue"),
+    name: "KadeGenie",
+    path: "/kade-genie",
+    component: () => import("@/pages/KadeGenie.vue"),
   },
   {
     name: "Me",

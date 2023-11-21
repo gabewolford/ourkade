@@ -1,10 +1,10 @@
 <script setup>
 import PrimaryLayout from "@/components/PrimaryLayout";
-import CheatCodeScreen from "@/components/CheatCodeScreen";
+import KadeGenieScreen from "@/components/KadeGenieScreen";
 </script>
 
 <template>
   <PrimaryLayout>
-    <CheatCodeScreen />
+    <KadeGenieScreen />
   </PrimaryLayout>
 </template>
