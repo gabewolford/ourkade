@@ -4,7 +4,6 @@ import { useAuthStore } from "@/stores/auth";
 import { useRoute } from "vue-router";
 
 const authStore = useAuthStore();
-console.log(authStore);
 const $route = useRoute();
 
 const mobileMenuOpen = ref(false);
