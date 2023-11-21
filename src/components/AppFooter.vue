@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="absolute bottom-0 h-[200px] w-full text-[#B0B0B0] bg-[#101212] py-4 lg:py-6"
+    class="absolute bottom-0 h-[200px] lg:h-[125px] w-full text-[#B0B0B0] bg-[#101212] py-4 lg:py-6"
   >
     <div class="px-4 lg:px-6 flex flex-col h-full">
       <div
