@@ -46,7 +46,7 @@ import CompeteTable1 from "@/components/CompeteTables/CompeteTable1.vue";
           time="10:02"
           ribbons="23021"
           topButtonText=""
-          bottomButtonText="rerun!"
+          bottomButtonText="replay!"
           :competitionId="1"
         />
       </div>

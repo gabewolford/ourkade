@@ -55,7 +55,7 @@ const authStore = useAuthStore();
           time="5:02"
           ribbons="-"
           topButtonText=""
-          bottomButtonText="run!"
+          bottomButtonText="play!"
           :competitionId="1"
         />
         <CompeteTable1
@@ -66,8 +66,8 @@ const authStore = useAuthStore();
           players="31"
           time="10:02"
           ribbons="23021"
-          topButtonText="rank"
-          bottomButtonText="rerun!"
+          topButtonText="stats"
+          bottomButtonText="replay!"
           :competitionId="2"
         />
         <CompeteTable1
@@ -78,8 +78,8 @@ const authStore = useAuthStore();
           players="12"
           time="1:02"
           ribbons="1302"
-          topButtonText="rank"
-          bottomButtonText="rerun!"
+          topButtonText="stats"
+          bottomButtonText="replay!"
           :competitionId="3"
         />
       </div>

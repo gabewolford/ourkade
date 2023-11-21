@@ -8,20 +8,6 @@ import { ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
 
 const authStore = useAuthStore();
-
-// const route = useRoute();
-// const challengeId = ref(route.params.challengeId);
-// const challengeData = ref(null);
-
-// onMounted(async () => {
-//   // Use your API fetching logic here, for example:
-//   try {
-//     const response = await fetch(`/api/challenges/${challengeId.value}`);
-//     challengeData.value = await response.json();
-//   } catch (error) {
-//     console.error("Error fetching challenge data:", error);
-//   }
-// });
 </script>
 
 <template>
@@ -64,7 +50,7 @@ const authStore = useAuthStore();
           time="19:02"
           ribbons="-"
           topButtonText=""
-          bottomButtonText="run!"
+          bottomButtonText="play!"
           :shareable="true"
           :challengeId="9"
         />

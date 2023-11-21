@@ -43,7 +43,7 @@ const authStore = useAuthStore();
           players="54"
           time="fin."
           ribbons="1992"
-          topButtonText="rank"
+          topButtonText="stats"
           rank="1"
           :competitionId="1"
         />
@@ -54,7 +54,7 @@ const authStore = useAuthStore();
           players="31"
           time="fin."
           ribbons="1932"
-          topButtonText="rank"
+          topButtonText="stats"
           rank="12th"
           :competitionId="2"
         />
