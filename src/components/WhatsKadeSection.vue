@@ -7,12 +7,12 @@
   >
     <div class="flex flex-col w-full mb-4">
       <div class="flex-flex-col">
-        <div class="flex flex-row gap-4 items-center">
+        <div class="flex flex-row gap-6 lg:gap-4 items-center">
           <img src="../assets/small-kade-logo.svg" alt="Kade logo" />
           <h4
-            class="font-nano-pix text-4xl md:text-7xl leading-none rainbow-gradient"
+            class="font-nano-pix text-5xl md:text-7xl leading-none rainbow-gradient"
           >
-            What's&nbsp;Kade<span class="font-retro-gaming">?</span>
+            What's Kade<span class="font-retro-gaming">?</span>
           </h4>
         </div>
       </div>
