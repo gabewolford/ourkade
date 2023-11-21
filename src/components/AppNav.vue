@@ -35,7 +35,7 @@ onBeforeMount(async () => {
   >
     <div v-if="authStore.isLoggedIn() && profileLoaded">
       <h3 class="text-[32px] w-full flex justify-center font-nano-pix">
-        Hey Gabe!
+        Greetings!
       </h3>
 
       <div class="flex flex-row gap-4 w-full">
@@ -101,7 +101,19 @@ onBeforeMount(async () => {
 
     <ul v-if="authStore.isLoggedIn()" class="flex flex-col gap-4 font-nano-pix">
       <li
-        :class="{ 'active-link': $route.name === 'Home' }"
+        :class="{
+          'active-link':
+            $route.name === 'Home' ||
+            $route.name === 'Compete1' ||
+            $route.name === 'CompeteDetails2' ||
+            $route.name === 'PastCompetitions3' ||
+            $route.name === 'PastCompetitionDetails4' ||
+            $route.name === 'Challenge1' ||
+            $route.name === 'ChallengeDetails2' ||
+            $route.name === 'PastChallenges3' ||
+            $route.name === 'PastChallengeDetails4' ||
+            $route.name === 'Practice',
+        }"
         class="underline-on-hover w-fit mx-auto"
       >
         <router-link :to="{ name: 'Home' }" class="text-[26px]">
