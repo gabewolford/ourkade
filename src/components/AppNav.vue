@@ -23,9 +23,6 @@ onBeforeMount(async () => {
     profileLoaded.value = true;
     tix.value = profile.value.tickets;
     kade.value = profile.value.kade;
-    console.log(profileLoaded.value);
-    console.log(kade.value);
-    console.log(tix.value);
   } catch (error) {
     console.error("Error fetching profile:", error);
   }

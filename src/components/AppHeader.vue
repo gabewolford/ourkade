@@ -4,6 +4,7 @@ import { useAuthStore } from "@/stores/auth";
 import { useRoute } from "vue-router";
 
 const authStore = useAuthStore();
+console.log(authStore);
 const $route = useRoute();
 
 const mobileMenuOpen = ref(false);
@@ -31,9 +32,22 @@ watchEffect(() => {
     <div
       class="flex flex-row w-full items-center justify-between lg:hidden relative"
     >
-      <button class="" @click="toggleMobileMenu">
-        <img src="../assets/menu-icon.svg" class="menu" />
-      </button>
+      <div class="flex flex-row gap-4">
+        <button class="" @click="toggleMobileMenu">
+          <img src="../assets/menu-icon.svg" class="menu" />
+        </button>
+
+        <div v-if="authStore.isLoggedIn()"></div>
+
+        <div v-else class="relative">
+          <router-link
+            :to="{ name: 'Register' }"
+            class="flex flex-row gap-0.5 items-center rainbow-underline text-lg"
+            >Sign Up</router-link
+          >
+        </div>
+      </div>
+
       <router-link
         :to="{ name: 'Home' }"
         class="flex flex-row gap-0.5 items-center"
@@ -220,6 +234,30 @@ watchEffect(() => {
   bottom: 0;
   left: 0;
   right: 0;
+  height: 3px;
+  background-image: linear-gradient(
+    to right,
+    #ff7246,
+    #ffd646,
+    #46ffbc,
+    #467aff,
+    #9e71ff,
+    #fc54ff
+  );
+  border-radius: 5px;
+}
+
+.rainbow-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.rainbow-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   height: 3px;
   background-image: linear-gradient(
     to right,
