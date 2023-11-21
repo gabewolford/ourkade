@@ -7,10 +7,10 @@ const $route = useRoute();
 <template>
   <router-link
     :to="{ name: 'WhatsKade' }"
-    class="hover:shadow-custom3 hover:opacity-90 rounded-[20px]"
+    class="hover:opacity-90 rounded-[20px]"
     :class="{
-      'shadow-custom2': $route.name === 'WhatsKade',
-      'shadow-custom4': $route.name !== 'WhatsKade',
+      'shadow-custom2': $route.name !== 'WhatsKade',
+      'shadow-custom4': $route.name === 'WhatsKade',
     }"
   >
     <div
