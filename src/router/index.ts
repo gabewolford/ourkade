@@ -149,8 +149,15 @@ const routes: Array<any> = [
     path: "/logout",
     beforeEnter: async (to: any, from: any, next: any) => {
       const authStore = useAuthStore();
-      await authStore.logout();
-      next("Home");
+      try {
+        await authStore.logout();
+        // Redirect to Home after successful logout
+        next({ name: "Home" });
+      } catch (error) {
+        // Handle logout error if needed
+        console.error("Logout error:", error);
+        next({ name: "Home" });
+      }
     },
   },
   {
