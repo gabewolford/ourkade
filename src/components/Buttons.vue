@@ -17,7 +17,16 @@ const $route = useRoute();
           'shadow-custom4': $route.name === 'Home',
         }"
       >
-        <img src="../assets/button-icons/menu-icon.svg" alt="menu icon" />
+        <img
+          src="../assets/button-icons/menu-icon.svg"
+          alt="menu icon"
+          class="hidden md:flex"
+        />
+        <img
+          src="../assets/button-icons/menu-icon-mobile.svg"
+          alt="menu icon"
+          class="flex md:hidden"
+        />
         <h3>Home</h3>
       </button>
     </router-link>
@@ -30,7 +39,16 @@ const $route = useRoute();
           'shadow-custom4': $route.name === 'Compete1',
         }"
       >
-        <img src="../assets/button-icons/compete-icon.svg" alt="compete icon" />
+        <img
+          src="../assets/button-icons/compete-icon.svg"
+          alt="compete icon"
+          class="hidden md:flex"
+        />
+        <img
+          src="../assets/button-icons/compete-icon-mobile.svg"
+          alt="compete icon"
+          class="flex md:hidden"
+        />
         <h3>Compete</h3>
       </button>
     </router-link>
@@ -46,6 +64,12 @@ const $route = useRoute();
         <img
           src="../assets/button-icons/challenge-icon.svg"
           alt="challenge icon"
+          class="hidden md:flex"
+        />
+        <img
+          src="../assets/button-icons/challenge-icon-mobile.svg"
+          alt="challenge icon"
+          class="flex md:hidden"
         />
         <h3>Challenge</h3>
       </button>
@@ -62,6 +86,12 @@ const $route = useRoute();
         <img
           src="../assets/button-icons/practice-icon.svg"
           alt="practice icon"
+          class="hidden md:flex"
+        />
+        <img
+          src="../assets/button-icons/practice-icon-mobile.svg"
+          alt="practice icon"
+          class="flex md:hidden"
         />
         <h3>Practice</h3>
       </button>
