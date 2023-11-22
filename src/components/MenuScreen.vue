@@ -10,7 +10,6 @@ export default {
   methods: {
     showSlide(n) {
       this.currentSlide = n;
-      console.log("slide: " + n);
     },
     nextSlide() {
       if (this.currentSlide < 4) {
