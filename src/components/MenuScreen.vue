@@ -103,6 +103,14 @@ export default {
         }"
         @click="showSlide(3)"
       ></button>
+      <button
+        class="mx-2 h-4 w-4 rounded-full"
+        :class="{
+          'bg-white': currentSlide === 4,
+          'bg-[#FFC147]': currentSlide !== 4,
+        }"
+        @click="showSlide(4)"
+      ></button>
     </div>
 
     <div class="hidden lg:flex flex-col items-center justify-center w-2/12">
@@ -217,7 +225,9 @@ export default {
           alt="kade runner logo"
           class="w-3/4"
         />
-        <p class="texl-lg lg:text-[40px] py-2 text-shadow">
+        <p
+          class="texl-3xl md:text-4xl lg:text-[40px] xl:text-5xl py-2 text-shadow"
+        >
           endless runner game
         </p>
         <div class="flex flex-row z-20 mr-auto">
