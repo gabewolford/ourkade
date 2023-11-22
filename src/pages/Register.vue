@@ -27,6 +27,7 @@ const handleSubmit = async () => {
   try {
     if (form.value.password !== form.value.passwordConfirmation) {
       errorMessage.value = "Password and Confirm Password do not match.";
+      console.log(errorMessage.value);
       return;
     }
 
@@ -102,7 +103,7 @@ const handleSubmit = async () => {
         </div>
 
         <div class="flex-col gap-2 hidden lg:flex mt-2">
-          <div class="flex flex-row justify-between items-center">
+          <div class="flex flex-row gap-4 items-center">
             <h4>
               I accept the
               <span class="text-[#5FC0C0]">Terms & Conditions</span>
@@ -151,7 +152,7 @@ const handleSubmit = async () => {
         </div>
 
         <div class="flex-col gap-2 flex lg:hidden">
-          <div class="flex flex-row justify-between items-center">
+          <div class="flex flex-row gap-4 items-center">
             <h4>
               I accept the
               <span class="text-[#5FC0C0]">Terms & Conditions</span>
