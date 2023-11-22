@@ -40,13 +40,9 @@ onBeforeMount(async () => {
 
       <div class="flex flex-row gap-4 w-full">
         <div class="flex flex-col w-1/2 mx-auto items-end">
-          <div class="h-[55px] text-2xl flex items-center pt-1.5">
-            {{ tix }}
-          </div>
+          <div class="h-[55px] text-2xl flex items-center pt-1.5">13</div>
 
-          <div class="h-[55px] text-2xl flex items-center pt-1.5">
-            {{ kade }}
-          </div>
+          <div class="h-[55px] text-2xl flex items-center pt-1.5">14.25</div>
 
           <div class="h-[55px] text-2xl flex items-center pt-1.5">2</div>
         </div>
