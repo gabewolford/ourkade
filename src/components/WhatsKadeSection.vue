@@ -19,27 +19,15 @@
     </div>
 
     <div class="flex flex-col gap-4">
-      <div class="flex flex-col font-rowdies font-light gap-5">
-        <p class="font-bold text-xl">
-          <span class="underline underline-offset-2">Kade is XP</span>
-          that you get for competing in Ourkade. You can also win it in contest
-          only in Alpha.
-        </p>
-        <p class="font-bold">
-          Kade is yours to
-          <span class="font-underline">do what you want.</span> Use it to redeem
-          monthly Battle Passes, outfits, swords, and other goodies on Ourkade -
-          or trade it.
-        </p>
-      </div>
-      <div class="flex flex-col gap-4 min-w-1/2 font-rowdies font-light">
+      <div class="flex flex-col font-rowdies font-light gap-5 text-xl">
         <p>
-          <span class="font-bold">Battle Passes</span> grant you discounted Tix,
-          lower entry fees and / or higher payouts in cash prize contests, and
-          free limited edition skins.
+          Get XP, called Kade, when you compete in cash-prize contests and
+          redeem it on battle passes, skins, swords, and other goodies,
+          <span class="underline underline-offset-2">or trade it.</span>
         </p>
         <p>
-          Kade can be converted into an ERC-20 Token when Ourkade launches Beta.
+          Our goal is to give players true ownership over Kade and the freedom
+          to do whatever they want with it.
         </p>
       </div>
     </div>
