@@ -29,7 +29,7 @@ const handleLogin = async (provider) => {
 
 <template>
   <section
-    class="flex flex-col w-full bg-[#603961] rounded-[20px] lg:h-[450px] p-4 lg:p-8 text-white gap-6"
+    class="flex flex-col w-full bg-[#603961]/60 rounded-[20px] lg:h-[450px] p-4 lg:p-8 text-white gap-6"
   >
     <div
       class="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-12 font-nano-pix"
@@ -62,7 +62,7 @@ const handleLogin = async (provider) => {
           v-model="form.email"
           type="email"
           id="email"
-          class="!bg-[#C5AAFF] px-6 py-4 rounded-2xl text-[#603961]"
+          class="!bg-[#C5AAFF] px-6 py-4 lg:py-5 lg:text-lg rounded-2xl text-[#603961]"
         />
       </div>
 
@@ -72,7 +72,7 @@ const handleLogin = async (provider) => {
           v-model="form.password"
           type="password"
           id="password"
-          class="!bg-[#C5AAFF] px-6 py-4 rounded-2xl text-[#603961]"
+          class="!bg-[#C5AAFF] px-6 py-4 lg:py-5 lg:text-lg rounded-2xl text-[#603961]"
         />
       </div>
 

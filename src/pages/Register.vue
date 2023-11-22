@@ -4,8 +4,6 @@ import { useRouter, useRoute } from "vue-router";
 import { useAuthStore } from "@/stores/auth";
 
 const authStore = useAuthStore();
-
-// Use necessary composables
 const router = useRouter();
 const route = useRoute();
 
@@ -15,34 +13,45 @@ if (route.query.referral) {
   referralCode = route.query.referral;
 }
 
-// Form reactive ref to keep up with the form data
 const form = ref({
   email: "",
+  username: "",
   password: "",
+  passwordConfirmation: "",
   referral: referralCode,
 });
 
-// function to hand the form submit
+const errorMessage = ref("");
+
 const handleSubmit = async () => {
   try {
-    // use the register method from the AuthUser composable
-    await authStore.register(form.value.email, form.value.password);
+    if (form.value.password !== form.value.passwordConfirmation) {
+      errorMessage.value = "Password and Confirm Password do not match.";
+      return;
+    }
 
-    // and redirect to a EmailConfirmation page the will instruct
-    // the user to confirm they're email address
+    errorMessage.value = "";
+
+    await authStore.register(
+      form.value.email,
+      form.value.password,
+      form.value.passwordConfirmation,
+      form.value.username
+    );
+
     router.push({
       name: "EmailConfirmation",
       query: { email: form.value.email },
     });
   } catch (error) {
-    alert(error.message);
+    errorMessage.value = error.message;
   }
 };
 </script>
 
 <template>
   <section
-    class="flex flex-col w-full bg-[#603961] rounded-[20px] lg:h-[450px] p-4 lg:p-8 text-white gap-6"
+    class="flex flex-col w-full bg-[#603961]/60 rounded-[20px] lg:min-h-fit p-4 lg:p-8 text-white gap-6"
   >
     <div
       class="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-12 font-nano-pix"
@@ -67,48 +76,115 @@ const handleSubmit = async () => {
 
     <form
       @submit.prevent="handleSubmit"
-      class="flex flex-col m-auto w-full lg:w-1/2 gap-4"
+      class="flex flex-col lg:flex-row m-auto w-full lg:justify-between gap-4 lg:gap-16"
     >
-      <div class="flex flex-col">
-        <label for="email">Email</label>
-        <input
-          v-model="form.email"
-          type="email"
-          id="email"
-          class="!bg-[#C5AAFF] px-6 py-4 rounded-2xl text-[#603961]"
-        />
+      <div class="flex flex-col gap-4 lg:w-6/12">
+        <div class="flex flex-col">
+          <label for="email" class="pl-2">Email</label>
+          <input
+            v-model="form.email"
+            type="email"
+            id="email"
+            class="!bg-[#C5AAFF] px-6 py-4 lg:py-5 lg:text-lg rounded-2xl text-[#603961]"
+            required
+          />
+        </div>
+
+        <div class="flex flex-col">
+          <label for="email" class="pl-2">Username</label>
+          <input
+            v-model="form.username"
+            type="string"
+            id="username"
+            class="!bg-[#C5AAFF] px-6 py-4 lg:py-5 lg:text-lg rounded-2xl text-[#603961]"
+            required
+          />
+        </div>
+
+        <div class="flex-col gap-2 hidden lg:flex mt-2">
+          <div class="flex flex-row justify-between items-center">
+            <h4>
+              I accept the
+              <span class="text-[#5FC0C0]">Terms & Conditions</span>
+            </h4>
+            <div>
+              <input
+                type="checkbox"
+                name="checkbox"
+                class="appearance-none checked:bg-[#5FC0C0] w-3.5 h-3.5 border-2 border-[#C5AAFF] rounded-sm"
+                required
+              />
+            </div>
+          </div>
+          <h5 class="text-sm">Key things in here include:</h5>
+          <ul class="text-sm list-disc pl-4">
+            <li>You must be over eighteen years of age</li>
+            <li>You will have to KYC to access any Kade you have collected</li>
+            <li>
+              You understand that me may adjust any and all aspects of Ourkade
+              in order to ensure its long term success
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <div class="flex flex-col">
-        <label for="password">Password</label>
-        <input
-          v-model="form.password"
-          type="password"
-          id="password"
-          class="!bg-[#C5AAFF] px-6 py-4 rounded-2xl text-[#603961]"
-        />
-      </div>
+      <div class="flex flex-col gap-4 lg:w-6/12">
+        <div class="flex flex-col">
+          <label for="password" class="pl-2">Password</label>
+          <input
+            v-model="form.password"
+            type="password"
+            id="password"
+            class="!bg-[#C5AAFF] px-6 py-4 lg:py-5 lg:text-lg rounded-2xl text-[#603961]"
+            required
+          />
+        </div>
+        <div class="flex flex-col">
+          <label for="password" class="pl-2">Confirm Password</label>
+          <input
+            v-model="form.passwordConfirmation"
+            type="password"
+            id="passwordConfirmation"
+            class="!bg-[#C5AAFF] px-6 py-4 lg:py-5 lg:text-lg rounded-2xl text-[#603961]"
+            required
+          />
+        </div>
 
-      <!-- <div class="flex flex-col">
-        <label for="password">Referral Code</label>
-        <input
-          v-model="form.referral"
-          type="text"
-          class="!bg-[#C5AAFF] px-6 py-4 rounded-2xl text-[#603961]"
-        />
-      </div> -->
+        <div class="flex-col gap-2 flex lg:hidden">
+          <div class="flex flex-row justify-between items-center">
+            <h4>
+              I accept the
+              <span class="text-[#5FC0C0]">Terms & Conditions</span>
+            </h4>
+            <input type="checkbox" required />
+          </div>
+          <h5>Key things in here include:</h5>
+          <ul class="text-sm list-disc pl-4">
+            <li>You must be over eighteen years of age.</li>
+            <li>You will have to KYC to access any Kade you have collected.</li>
+            <li>
+              You understand that me may adjust any and all aspects of Ourkade
+              in order to ensure its long term success.
+            </li>
+          </ul>
+        </div>
 
-      <div class="flex flex-row items-center justify-between mt-2">
-        <button
-          class="rainbow hover:shadow-customWhite transition duration-300 font-nano-pix text-black w-fit px-8 py-2 text-xl rounded-xl"
-        >
-          Sign Up
-        </button>
-        <router-link
-          to="/login"
-          class="text-xs lg:text-sm hover:underline underline-offset-6"
-          >Already have an account?</router-link
-        >
+        <div class="flex flex-row items-center justify-between mt-2">
+          <button
+            @click="handleSubmit"
+            class="rainbow hover:shadow-customWhite transition duration-300 font-nano-pix text-black w-fit px-8 py-2 text-xl rounded-xl"
+          >
+            Sign Up
+          </button>
+          <router-link
+            to="/login"
+            class="text-xs lg:text-sm hover:underline underline-offset-6"
+            >Already have an account?</router-link
+          >
+        </div>
+        <div v-if="errorMessage.value" class="text-red-500 mt-2">
+          {{ errorMessage.value }}
+        </div>
       </div>
     </form>
   </section>
