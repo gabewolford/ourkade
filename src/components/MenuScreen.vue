@@ -202,7 +202,7 @@ export default {
 
   <div
     v-show="currentSlide === 3"
-    class="flex flex-row gradient3 w-full h-full rounded-[30px] relative carousel-slide shadow-tvShadow p-4"
+    class="flex flex-row gradient3 w-full h-full rounded-[30px] relative carousel-slide shadow-tvShadow"
     id="slide3"
     @touchstart="handleTouchStart"
     @touchmove="handleTouchMove"
@@ -217,7 +217,7 @@ export default {
         />
       </button>
     </div>
-    <div class="flex flex-col flex-1 items-start justify-center text-left">
+    <div class="flex flex-col flex-1 items-start justify-center text-left p-4">
       <div class="flex flex-col w-full max-w-screen-lg mx-auto text-left">
         <img
           src="../assets/kaderunner-logo-white.png"
