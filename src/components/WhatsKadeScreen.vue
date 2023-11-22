@@ -9,7 +9,7 @@
         <div class="flex flex-row gap-4 items-center">
           <img src="../assets/small-kade-logo.svg" alt="Kade logo" />
           <h4
-            class="font-nano-pix text-3xl lg:text-[86px] xl:text-[96px] 2xl:text-[112px] leading-none rainbow-gradient"
+            class="font-nano-pix text-3xl lg:text-[86px] xl:text-[96px] 2xl:text-[112px] leading-none"
           >
             What's&nbsp;Kade<span class="font-retro-gaming">?</span>
           </h4>
@@ -17,32 +17,23 @@
       </div>
     </div>
 
-    <div class="flex flex-row lg:gap-10">
+    <div class="flex flex-col md:flex-row gap-4 lg:gap-10">
       <div
-        class="flex flex-col font-rowdies font-light gap-5 lg:text-lg xl:text-2xl 2xl:text-[26px]"
+        class="flex flex-col font-rowdies text-sm lg:text-3xl xl:text-[32px] 2xl:text-5xl w-full md:w-1/2"
       >
-        <p class="font-bold">
-          <span class="underline underline-offset-2">Kade is XP</span>
-          that you get for competing in Ourkade. You can also win it in contest
-          only in Alpha.
-        </p>
-        <p class="font-bold">
-          Kade is yours to
-          <span class="font-underline">do what you want.</span> Use it to redeem
-          monthly Battle Passes, outfits, swords, and other goodies on Ourkade -
-          or trade it.
+        <p>
+          Get XP, called Kade, when you compete in cash-prize contests and
+          redeem it on battle passes, skins, swords, and other goodies,
+          <span class="underline underline-offset-2">or trade it.</span>
         </p>
       </div>
+
       <div
-        class="flex flex-col gap-8 min-w-1/2 font-rowdies font-light lg:text-base 2xl:text-lg"
+        class="flex flex-col font-rowdies text-sm lg:text-3xl xl:text-[32px] 2xl:text-5xl w-full md:w-1/2"
       >
         <p>
-          <span class="font-bold">Battle Passes</span> grant you discounted Tix,
-          lower entry fees and / or higher payouts in cash prize contests, and
-          free limited edition skins.
-        </p>
-        <p>
-          Kade can be converted into an ERC-20 Token when Ourkade launches Beta.
+          Our goal is to give players true ownership over Kade and the freedom
+          to do whatever they want with it.
         </p>
       </div>
     </div>
@@ -51,31 +42,10 @@
 
 <style scoped>
 .gradient1 {
-  background: linear-gradient(
-    113deg,
-    #462015 1.18%,
-    #1c1807 19.48%,
-    #0c3425 41.85%,
-    #0c1630 63.11%,
-    #1f0e42 83.06%,
-    #420340 100%
-  );
-  .rainbow-gradient {
-    background: var(
-      --Ranbow-lines,
-      linear-gradient(
-        90deg,
-        #ff7246 -0.08%,
-        #ffd646 13.9%,
-        #46ffbc 30.03%,
-        #467aff 48.23%,
-        #9e71ff 67.99%,
-        #fc54ff 83.6%
-      )
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+  background-image: url("../assets/whats-kade-bg-image.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 </style>
