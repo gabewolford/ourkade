@@ -47,5 +47,6 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  filter: brightness(90%);
 }
 </style>

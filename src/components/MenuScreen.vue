@@ -10,9 +10,10 @@ export default {
   methods: {
     showSlide(n) {
       this.currentSlide = n;
+      console.log("slide: " + n);
     },
     nextSlide() {
-      if (this.currentSlide < 3) {
+      if (this.currentSlide < 4) {
         // Check if not on the last slide
         this.showSlide(this.currentSlide + 1);
       }
@@ -119,44 +120,28 @@ export default {
     @touchmove="handleTouchMove"
     @touchend="handleTouchEnd"
   >
-    <div class="absolute top-8 right-11 lg:top-24 lg:right-32">
-      <img src="../assets/kade-watermark.svg" alt="kade watermark" />
-    </div>
     <div class="hidden lg:flex flex-col items-center justify-center w-2/12">
       <button class="flex justify-center items-center" @click="prevSlide">
         <img src="../assets/left-arrow.svg" alt="" class="mix-blend-overlay" />
       </button>
     </div>
-    <div
-      class="flex flex-col gap-6 flex-1 items-start justify-center text-left"
-    >
-      <div
-        class="flex flex-col w-full max-w-screen-lg mx-auto text-center lg:text-left"
-      >
+    <div class="flex flex-col flex-1 items-start justify-center text-center">
+      <div class="flex flex-col w-full max-w-screen-lg mx-auto text-center">
         <h3
-          class="flex-1 text-4xl lg:text-5xl xl:text-6xl font-holtwood-one-sc"
+          class="flex-1 text-3xl lg:text-5xl xl:text-7xl font-holtwood-one-sc"
         >
-          Win&nbsp;Kade
+          Play for Kade
         </h3>
-        <h2
-          class="uppercase text-xl mb-4 md:text-4xl lg:text-3xl xl:text-4xl font-holtwood-one-sc"
-        >
-          while&nbsp;in&nbsp;alpha
-        </h2>
-        <div class="flex flex-col gap-6 px-4">
-          <p class="mix-blend-overlay font-rowdies text-sm md:text-xl">
-            Alpha-exclusive contests are the best way to collect Kade. After
-            Alpha, you cannot win Kade.
-          </p>
-          <p class="mix-blend-overlay font-rowdies mb-4 text-sm md:text-xl">
-            Instead, you get rewarded with it for every minute spent competing
-            in Tix-entry games.
-          </p>
-        </div>
-        <div class="flex flex-row lg:ml-auto z-20">
+        <p class="font-rowdies texl-lg lg:text-2xl lg:py-2">
+          Compete in Kade-prize contests.
+        </p>
+        <p class="font-rowdies texl-lg lg:text-2xl lg:pb-4">
+          Only available during Alpha.
+        </p>
+        <div class="flex flex-row z-20">
           <router-link
             :to="{ name: 'WhatsKade' }"
-            class="hidden lg:flex bg-[#8cb2f4] hover:bg-[#6d9cee] px-8 py-2 lg:py-4 rounded-full font-nano-pix text-lg md:text-xl lg:text-2xl w-fit mx-auto"
+            class="hidden lg:flex bg-[#ec4569]/30 hover:bg-[#f67a94]/60 px-8 py-2 lg:py-4 rounded-3xl font-nano-pix text-lg md:text-xl lg:text-2xl w-fit mx-auto transition-all duration-200"
           >
             What's Kade?
           </router-link>
@@ -191,6 +176,14 @@ export default {
         }"
         @click="showSlide(3)"
       ></button>
+      <button
+        class="mx-2 h-4 w-4 rounded-full"
+        :class="{
+          'bg-white': currentSlide === 4,
+          'bg-[#FFC147]': currentSlide !== 4,
+        }"
+        @click="showSlide(4)"
+      ></button>
     </div>
 
     <div class="hidden lg:flex flex-col items-center justify-center w-2/12">
@@ -202,8 +195,90 @@ export default {
 
   <div
     v-show="currentSlide === 3"
-    class="flex flex-row gradient3 w-full h-full rounded-[30px] carousel-slide shadow-tvShadow relative"
+    class="flex flex-row gradient3 w-full h-full rounded-[30px] relative carousel-slide shadow-tvShadow p-4"
     id="slide3"
+    @touchstart="handleTouchStart"
+    @touchmove="handleTouchMove"
+    @touchend="handleTouchEnd"
+  >
+    <div class="hidden lg:flex flex-col items-center justify-center w-2/12">
+      <button class="flex justify-center items-center" @click="prevSlide">
+        <img
+          src="../assets/left-arrow.svg"
+          alt="prev"
+          class="mix-blend-overlay"
+        />
+      </button>
+    </div>
+    <div class="flex flex-col flex-1 items-start justify-center text-left">
+      <div class="flex flex-col w-full max-w-screen-lg mx-auto text-left">
+        <img
+          src="../assets/kaderunner-logo-white.png"
+          alt="kade runner logo"
+          class="w-3/4"
+        />
+        <p class="texl-lg lg:text-[40px] py-2 text-shadow">
+          endless runner game
+        </p>
+        <div class="flex flex-row z-20 mr-auto">
+          <router-link
+            :to="{ name: 'Practice' }"
+            class="flex bg-[#7A98E6]/80 hover:bg-[#7A98E6]/60 text-black px-10 py-2 lg:py-4 rounded-3xl font-nano-pix text-lg md:text-xl lg:text-2xl w-fit mx-auto transition-all duration-200 mr-auto inverse"
+          >
+            Play
+          </router-link>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="lg:hidden absolute bottom-4 left-1/2 transform -translate-x-1/2"
+    >
+      <button
+        class="mx-2 h-4 w-4 rounded-full"
+        :class="{
+          'bg-white': currentSlide === 1,
+          'bg-[#FFC147]': currentSlide !== 1,
+        }"
+        @click="showSlide(1)"
+      ></button>
+      <button
+        class="mx-2 h-4 w-4 rounded-full"
+        :class="{
+          'bg-white': currentSlide === 2,
+          'bg-[#FFC147]': currentSlide !== 2,
+        }"
+        @click="showSlide(2)"
+      ></button>
+      <button
+        class="mx-2 h-4 w-4 rounded-full"
+        :class="{
+          'bg-white': currentSlide === 3,
+          'bg-[#FFC147]': currentSlide !== 3,
+        }"
+        @click="showSlide(3)"
+      ></button>
+      <button
+        class="mx-2 h-4 w-4 rounded-full"
+        :class="{
+          'bg-white': currentSlide === 4,
+          'bg-[#FFC147]': currentSlide !== 4,
+        }"
+        @click="showSlide(4)"
+      ></button>
+    </div>
+
+    <div class="hidden lg:flex flex-col items-center justify-center w-2/12">
+      <button class="flex justify-center items-center" @click="nextSlide">
+        <img src="../assets/right-arrow.svg" alt="" class="mix-blend-overlay" />
+      </button>
+    </div>
+  </div>
+
+  <div
+    v-show="currentSlide === 4"
+    class="flex flex-row gradient4 w-full h-full rounded-[30px] carousel-slide shadow-tvShadow relative"
+    id="slide4"
     @touchstart="handleTouchStart"
     @touchmove="handleTouchMove"
     @touchend="handleTouchEnd"
@@ -231,7 +306,7 @@ export default {
           <a
             href="https://ourkade.io"
             target="_blank"
-            class="bg-[#D751FF] hover:bg-[#b745da] text-[#FF9FFF] rounded-[20px] font-nano-pix px-8 py-2 2xl:py-3 text-xl lg:text-3xl 2xl:text-6xl min-w-fit max-w-fit h-fit mt-auto text-center ml-auto mr-auto md:ml-auto md:mr-0"
+            class="bg-[#3E4181]/80 hover:bg-[#4b4e88] text-[#858CFF] rounded-[20px] font-nano-pix px-8 py-2 2xl:py-3 text-xl lg:text-3xl 2xl:text-6xl min-w-fit max-w-fit h-fit mt-auto text-center ml-auto mr-auto md:ml-auto md:mr-0"
           >
             Let's go!
           </a>
@@ -266,6 +341,14 @@ export default {
         }"
         @click="showSlide(3)"
       ></button>
+      <button
+        class="mx-2 h-4 w-4 rounded-full"
+        :class="{
+          'bg-white': currentSlide === 4,
+          'bg-[#FFC147]': currentSlide !== 4,
+        }"
+        @click="showSlide(4)"
+      ></button>
     </div>
 
     <button
@@ -284,12 +367,37 @@ export default {
 
 <style scoped>
 .gradient1 {
-  background: linear-gradient(90deg, #a33d15 2.38%, #9c8533 99.98%);
+  background-image: url("../assets/classic-games-bg-image.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .gradient2 {
-  background: linear-gradient(90deg, #9c8533 1.68%, #1f4ec6 99.98%);
+  background-image: url("../assets/whats-kade-bg-image.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: brightness(80%);
 }
 .gradient3 {
-  background: linear-gradient(270deg, #871b89 0.02%, #1f4ec6 100%);
+  background-image: url("../assets/kade-runner-bg.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: brightness(90%);
+}
+.gradient4 {
+  background: linear-gradient(95deg, #3d4079 6.88%, #181933 98.35%);
+}
+
+.stroker {
+  -webkit-text-stroke: 1px #506469;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px #000000;
 }
 </style>
