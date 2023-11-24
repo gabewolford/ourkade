@@ -63,6 +63,12 @@ export const useAuthStore = defineStore('auth', () => {
 		}
 	};
 
+	
+		/**
+		 * compute a getter for user auth state
+		 */
+	const isAuthenticated = computed(() => isLoggedIn())
+
 	/**
 	 * Check if the user is logged in or not
 	 */
@@ -131,6 +137,7 @@ export const useAuthStore = defineStore('auth', () => {
 		currentToken,
 		login,
 		loginWithSocialProvider,
+		isAuthenticated,
 		isLoggedIn,
 		isAdmin,
 		logout,
