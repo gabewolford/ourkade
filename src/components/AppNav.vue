@@ -19,7 +19,9 @@ const kade = ref(null);
 
 onBeforeMount(async () => {
   try {
-    profile.value = await getProfile();
+    if (authStore.isAuthenticated) {
+      profile.value = await getProfile();
+    }
     profileLoaded.value = true;
     tix.value = profile.value.tickets;
     kade.value = profile.value.kade;
