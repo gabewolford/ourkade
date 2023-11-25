@@ -154,14 +154,14 @@ const dummyData = [
           Game&nbsp;Log
         </h4>
       </div>
-      <div class="flex flex-row gap-2 h-full items-end flex-1">
+      <div class="flex flex-row h-full items-end flex-1 pl-6">
         <button
-          class="bg-white/30 shadow-custom5 flex font-nano-pix text-lg xl:text-xl px-6 xl:px-10 py-2 justify-center rounded-full"
+          class="flex font-nano-pix text-lg xl:text-xl px-6 xl:px-10 py-1 justify-center rounded-l-lg border-t-2 border-l-2 border-b-2 border-r border-[#787777]/70 bg-[#787777]/70 text-white"
         >
           Contests
         </button>
         <button
-          class="bg-white/5 shadow-custom5 flex font-nano-pix text-lg xl:text-xl px-6 xl:px-10 py-2 justify-center rounded-full"
+          class="flex font-nano-pix text-lg xl:text-xl px-6 xl:px-10 py-1 justify-center rounded-r-lg border-t-2 border-l border-b-2 border-r-2 border-[#787777]/70"
         >
           Challenges
         </button>
