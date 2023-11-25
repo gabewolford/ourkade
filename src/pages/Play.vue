@@ -5,7 +5,7 @@ import { useAuthStore } from "@/stores/auth";
 
 const authStore = useAuthStore();
 
-const { axiosClient, getProfile } = useOurkadeApi();
+const ourkadeApi = useOurkadeApi();
 
 const disableScrolling = () => {
   document.body.style.overflow = "hidden";

@@ -10,7 +10,7 @@ const authStore = useAuthStore();
 
 const $route = useRoute();
 
-const { getProfile } = useOurkadeApi();
+const ourkadeApi = useOurkadeApi();
 
 const profileLoaded = ref(false);
 const profile = ref({});
@@ -20,7 +20,7 @@ const kade = ref(null);
 onBeforeMount(async () => {
   try {
     if (authStore.isAuthenticated) {
-      profile.value = await getProfile();
+      profile.value = await ourkadeApi.getProfile();
     }
     profileLoaded.value = true;
     tix.value = profile.value.tickets;

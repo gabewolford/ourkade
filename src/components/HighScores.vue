@@ -5,14 +5,14 @@ import { useAuthStore } from "@/stores/auth";
 
 const authStore = useAuthStore();
 
-const { getGlobalHighScores } = useOurkadeApi();
+const ourkadeApi = useOurkadeApi();
 
 const highScoresLoaded = ref(false);
 const highScores = ref([]);
 
 onBeforeMount(async () => {
   try {
-    highScores.value = await getGlobalHighScores(1);
+    highScores.value = await ourkadeApi.getGlobalHighScores(1);
     highScoresLoaded.value = true;
   } catch (error) {
     console.error("Error fetching high scores:", error);

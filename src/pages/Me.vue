@@ -9,12 +9,12 @@ const route = useRoute();
 
 const authStore = useAuthStore();
 
-const { getProfile } = useOurkadeApi();
+const ourkadeApi = useOurkadeApi();
 const profileLoaded = ref(false);
 const profile = ref(null);
 
 onBeforeMount(async () => {
-  profile.value = await getProfile();
+  profile.value = await ourkadeApi.getProfile();
   profileLoaded.value = true;
 });
 

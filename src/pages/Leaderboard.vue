@@ -6,8 +6,7 @@ import { useAuthStore } from "@/stores/auth";
 
 const authStore = useAuthStore();
 
-const { axiosClient, getProfile, getPlayableCompetitions, createCompetition } =
-  useOurkadeApi();
+const ourkadeApi = useOurkadeApi();
 
 const competitionsLoaded = ref(false);
 const competitions = ref([]);
@@ -22,7 +21,7 @@ createForm.value = {
 };
 
 (async () => {
-  competitions.value = await getPlayableCompetitions();
+  competitions.value = await ourkadeApi.getPlayableCompetitions();
   competitionsLoaded.value = true;
 })();
 </script>
@@ -63,7 +62,7 @@ createForm.value = {
       </div>
       <br />
       <div v-if="authStore.isAdmin()">
-        <form @submit.prevent="createCompetition(createForm)">
+        <form @submit.prevent="ourkadeApi.createCompetition(createForm)">
           <h1>Create Competition</h1>
           <label
             >Entry Fee <input v-model="createForm.entryFee" type="number"
