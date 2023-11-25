@@ -10,7 +10,7 @@ export default function useOurkadeApi() {
   const axiosClient = axios.create({
     baseURL: process.env.VUE_APP_OURKADE_API, // Replace with your API's base URL
     headers: {
-      Authorization: "Bearer " + authStore.currentToken!,
+      Authorization: "Bearer " + authStore.getCurrentToken,
     },
   });
 

@@ -2,19 +2,16 @@ import { LoginFormDto } from '@/dtos/loginForm.dto';
 import { PlayerProfile } from '@/types/PlayerProfile';
 import { AuthResponse, AuthTokenResponse, OAuthResponse, SupabaseClient, User, UserAttributes, UserResponse, createClient } from '@supabase/supabase-js';
 import { defineStore } from 'pinia'
-import { computed, ref } from 'vue'
-
-const supabaseUrl: string = process.env.VUE_APP_SUPABASE_URL!;
-const supabaseKey: string = process.env.VUE_APP_SUPABASE_KEY!;
+import { computed, inject, ref } from 'vue'
 
 export const useAuthStore = defineStore('auth', () => {
 	const user = ref<User>();
 	const currentToken = ref<string>();
 	const supabase = ref<SupabaseClient>();
 
-	supabase.value = createClient(supabaseUrl, supabaseKey);
+	supabase.value = inject('supabase');
 	// setup auth state listener
-	supabase.value.auth.onAuthStateChange((event, session) => {
+	supabase.value!.auth.onAuthStateChange((event, session) => {
 		// the "event" is a string indicating what trigger the state change (ie. SIGN_IN, SIGN_OUT, etc)
 		// the session contains info about the current session most importanly the user dat
 
@@ -63,6 +60,7 @@ export const useAuthStore = defineStore('auth', () => {
 		}
 	};
 
+	const getCurrentToken = computed(() => currentToken);
 	
 		/**
 		 * compute a getter for user auth state
@@ -134,7 +132,7 @@ export const useAuthStore = defineStore('auth', () => {
 
 	return {
 		user,
-		currentToken,
+		getCurrentToken,
 		login,
 		loginWithSocialProvider,
 		isAuthenticated,
