@@ -64,13 +64,13 @@ const handleSubmit = async () => {
 
       <div class="flex flex-row text-xl">
         <p
-          class="bg-[#C5AAFF] px-10 py-1 border-2 border-[#C5AAFF] rounded-l-xl"
+          class="bg-[#bda1f9] px-10 py-1 border-2 border-[#bda1f9] rounded-l-xl"
         >
           Sign Up
         </p>
         <router-link
           to="/login"
-          class="px-10 py-1 border-2 border-[#C5AAFF] rounded-r-xl text-[#757575]"
+          class="px-10 py-1 border-2 border-[#bda1f9] rounded-r-xl text-[#757575]"
         >
           Log In
         </router-link>

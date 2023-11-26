@@ -42,11 +42,11 @@ const handleLogin = async (provider) => {
       <div class="flex flex-row text-xl">
         <router-link
           to="/register"
-          class="border-2 border-[#C5AAFF] px-10 py-1 rounded-l-xl text-[#757575]"
+          class="border-2 border-[#bda1f9] px-10 py-1 rounded-l-xl text-[#757575]"
         >
           Sign Up
         </router-link>
-        <p class="bg-[#C5AAFF]/70 px-10 py-1 rounded-r-xl">Log In</p>
+        <p class="bg-[#bda1f9] px-10 py-1 rounded-r-xl">Log In</p>
       </div>
     </div>
 
