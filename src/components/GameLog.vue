@@ -258,10 +258,12 @@ const switchTab = (tab) => {
       <div class="flex flex-row h-full items-end flex-1 pl-6">
         <button
           @click="switchTab('contests')"
-          class="flex font-nano-pix text-lg xl:text-xl px-6 xl:px-10 py-1 justify-center rounded-l-lg border-t-2 border-l-2 border-b-2 border-r border-[#787777]/70 text-white"
+          class="flex font-nano-pix text-lg xl:text-xl px-6 xl:px-10 py-1 justify-center rounded-l-lg border-t-2 border-l-2 border-b-2 border-r border-[#787777]/70"
           :class="{
             'bg-[#787777]/70': activeTab === 'contests',
             'bg-transparent': activeTab !== 'contests',
+            'text-white': activeTab === 'contests',
+            'text-[#787777]/70': activeTab !== 'contests',
           }"
         >
           Contests
@@ -272,6 +274,8 @@ const switchTab = (tab) => {
           :class="{
             'bg-[#787777]/70': activeTab === 'challenges',
             'bg-transparent': activeTab !== 'challenges',
+            'text-white': activeTab === 'challenges',
+            'text-[#787777]/70': activeTab !== 'challenges',
           }"
         >
           Challenges

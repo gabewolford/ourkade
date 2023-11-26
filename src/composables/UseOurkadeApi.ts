@@ -5,12 +5,12 @@ import { CreateCompetitionDto } from "@/dtos/createCompetion.dto";
 
 export default function useOurkadeApi() {
   const authStore = useAuthStore();
-  // console.log(authStore.currentToken!)
+  // console.log(authStore.getCurrentToken.value);
 
   const axiosClient = axios.create({
     baseURL: process.env.VUE_APP_OURKADE_API, // Replace with your API's base URL
     headers: {
-      Authorization: "Bearer " + authStore.getCurrentToken,
+      Authorization: "Bearer " + authStore.getCurrentToken.value,
     },
   });
 
