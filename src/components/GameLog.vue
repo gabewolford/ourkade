@@ -1,7 +1,8 @@
 <script setup>
+import { ref, onBeforeMount } from "vue";
 import { useAuthStore } from "@/stores/auth";
 const authStore = useAuthStore();
-const dummyData = [
+const dummyContestData = [
   {
     date: "10.5.22",
     myScore: 1702,
@@ -94,6 +95,106 @@ const dummyData = [
     players: 12,
   },
 ];
+const dummyChallengeData = [
+  {
+    date: "10.5.22",
+    myScore: 1702,
+    result: "Win",
+    topScore: 1802,
+    players: "MikeMike, Doc",
+  },
+  {
+    date: "10.5.22",
+    myScore: 1702,
+    result: "Loss",
+    topScore: 1802,
+    players: "MikeMike, Doc",
+  },
+  {
+    date: "10.5.22",
+    myScore: 1702,
+    result: "Win",
+    topScore: 1802,
+    players: "Doc",
+  },
+  {
+    date: "10.5.22",
+    myScore: 1702,
+    result: "Win",
+    topScore: 1802,
+    players: "MikeMike",
+  },
+  {
+    date: "10.5.22",
+    myScore: 1702,
+    result: "Win",
+    topScore: 1802,
+    players: "MikeMike",
+  },
+  {
+    date: "10.5.22",
+    myScore: 1702,
+    result: "Loss",
+    topScore: 1802,
+    players: "Spongebob, Doc",
+  },
+  {
+    date: "10.5.22",
+    myScore: 1702,
+    result: "Loss",
+    topScore: 1802,
+    players: "Spongebob, Doc",
+  },
+  {
+    date: "10.5.22",
+    myScore: 1702,
+    result: "Loss",
+    topScore: 1802,
+    players: "Spongebob, Doc",
+  },
+  {
+    date: "10.5.22",
+    myScore: 1702,
+    result: "Loss",
+    topScore: 1802,
+    players: "Spongebob, Doc",
+  },
+  {
+    date: "10.5.22",
+    myScore: 1702,
+    result: "Win",
+    topScore: 1802,
+    players: "Spongebob, Doc",
+  },
+  {
+    date: "10.5.22",
+    myScore: 1702,
+    result: "Loss",
+    topScore: 1802,
+    players: "Spongebob, Doc",
+  },
+  {
+    date: "10.5.22",
+    myScore: 1702,
+    result: "Win",
+    topScore: 1802,
+    players: "Spongebob, Doc",
+  },
+  {
+    date: "10.5.22",
+    myScore: 1702,
+    result: "Loss",
+    topScore: 1802,
+    players: "Spongebob, Doc",
+  },
+];
+
+const activeTab = ref("contests");
+
+const switchTab = (tab) => {
+  activeTab.value = tab;
+  console.log(activeTab.value);
+};
 </script>
 
 <template>
@@ -156,12 +257,22 @@ const dummyData = [
       </div>
       <div class="flex flex-row h-full items-end flex-1 pl-6">
         <button
-          class="flex font-nano-pix text-lg xl:text-xl px-6 xl:px-10 py-1 justify-center rounded-l-lg border-t-2 border-l-2 border-b-2 border-r border-[#787777]/70 bg-[#787777]/70 text-white"
+          @click="switchTab('contests')"
+          class="flex font-nano-pix text-lg xl:text-xl px-6 xl:px-10 py-1 justify-center rounded-l-lg border-t-2 border-l-2 border-b-2 border-r border-[#787777]/70 text-white"
+          :class="{
+            'bg-[#787777]/70': activeTab === 'contests',
+            'bg-transparent': activeTab !== 'contests',
+          }"
         >
           Contests
         </button>
         <button
+          @click="switchTab('challenges')"
           class="flex font-nano-pix text-lg xl:text-xl px-6 xl:px-10 py-1 justify-center rounded-r-lg border-t-2 border-l border-b-2 border-r-2 border-[#787777]/70"
+          :class="{
+            'bg-[#787777]/70': activeTab === 'challenges',
+            'bg-transparent': activeTab !== 'challenges',
+          }"
         >
           Challenges
         </button>
@@ -184,9 +295,9 @@ const dummyData = [
               <th class="uppercase text-left sticky top-0 w-1/5">Players</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody v-if="activeTab === 'contests'">
             <tr
-              v-for="(data, index) in dummyData"
+              v-for="(data, index) in dummyContestData"
               :key="index"
               class="text-sm xl:text-base"
             >
@@ -210,6 +321,34 @@ const dummyData = [
               </td>
               <td class="text-left w-1/5 py-3">
                 {{ `${data.players} players` }}
+              </td>
+            </tr>
+          </tbody>
+          <tbody v-else-if="activeTab === 'challenges'">
+            <tr
+              v-for="(data, index) in dummyChallengeData"
+              :key="index"
+              class="text-sm xl:text-base"
+            >
+              <td class="text-left w-1/5 py-3">{{ data.date }}</td>
+              <td class="text-left w-1/5 py-3">
+                {{ `${data.myScore}pts` }}
+              </td>
+              <td class="text-left w-1/5 py-3 lg:pl-4">
+                <span
+                  :class="{
+                    'text-[#46FFBC]': data.result === 'Win',
+                    'text-[#FF7246]': data.result === 'Loss',
+                  }"
+                >
+                  {{ data.result }}</span
+                >
+              </td>
+              <td class="text-left w-1/5 py-3">
+                {{ `${data.topScore}pts` }}
+              </td>
+              <td class="text-left w-1/5 py-3">
+                {{ data.players }}
               </td>
             </tr>
           </tbody>
