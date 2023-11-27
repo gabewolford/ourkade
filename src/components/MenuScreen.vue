@@ -301,7 +301,7 @@ export default {
 
   <div
     v-show="currentSlide === 4"
-    class="flex flex-row gradient4 w-full h-full rounded-[30px] carousel-slide shadow-tvShadow relative"
+    class="flex flex-row gradient4 w-full h-full rounded-[30px] carousel-slide shadow-tvShadow relative p-4 lg:p-0"
     id="slide4"
     @touchstart="handleTouchStart"
     @touchmove="handleTouchMove"
@@ -309,7 +309,7 @@ export default {
   >
     <button
       @click="prevSlide"
-      class="flex justify-center items-center w-2/12 z-[1000]"
+      class="justify-center items-center w-2/12 z-[1000] hidden lg:flex"
     >
       <img
         src="../assets/left-arrow.svg"
