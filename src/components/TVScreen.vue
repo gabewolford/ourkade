@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import "animate.css";
+</script>
 
 <template class="w-full">
   <div class="flex w-full lg:min-h-[350px]">
@@ -10,7 +12,9 @@
       >
         <div class="w-full relative overflow-hidden rounded-[30px]">
           <div class="scanlines"></div>
-          <div class="w-full h-full rounded-[30px]">
+          <div
+            class="w-full h-full rounded-[30px] animate__animated animate__fadeIn"
+          >
             <slot></slot>
           </div>
         </div>
