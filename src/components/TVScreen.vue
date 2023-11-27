@@ -58,8 +58,8 @@ import "animate.css";
     to bottom,
     transparent 0px,
     transparent 1px,
-    rgba(255, 255, 255, 0.1) 1px,
-    rgba(255, 255, 255, 0.1) 2px
+    rgba(255, 255, 255, 0.2) 4px,
+    rgba(48, 48, 48, 0.2) 1px
   );
   animation: scanlines 3s linear infinite;
   width: 100%;
