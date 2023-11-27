@@ -31,10 +31,10 @@ export default {
     },
     handleTouchEnd() {
       const diffX = this.touchEndX - this.touchStartX;
-      if (diffX > 100) {
+      if (diffX > 50) {
         // Swipe right, go to the previous slide
         this.prevSlide();
-      } else if (diffX < -100) {
+      } else if (diffX < -50) {
         // Swipe left, go to the next slide
         this.nextSlide();
       }
