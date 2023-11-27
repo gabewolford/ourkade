@@ -54,7 +54,7 @@ export default {
   >
     <div class="hidden lg:flex flex-col items-center justify-center w-2/12">
       <button
-        class="flex justify-center items-center"
+        class="flex justify-center items-center z-[1000]"
         @click="prevSlide"
         :disabled="currentSlide === 1"
       >
@@ -76,10 +76,10 @@ export default {
       />
     </div>
     <div
-      class="lg:hidden absolute bottom-4 left-1/2 transform -translate-x-1/2"
+      class="lg:hidden absolute bottom-4 left-1/2 transform -translate-x-1/2 z-[1000]"
     >
       <button
-        class="mx-2 h-4 w-4 rounded-full"
+        class="mx-2 h-4 w-4 rounded-full z-[1000]"
         :class="{
           'bg-white': currentSlide === 1,
           'bg-[#FFC147]': currentSlide !== 1,
@@ -87,7 +87,7 @@ export default {
         @click="showSlide(1)"
       ></button>
       <button
-        class="mx-2 h-4 w-4 rounded-full"
+        class="mx-2 h-4 w-4 rounded-full z-[1000]"
         :class="{
           'bg-white': currentSlide === 2,
           'bg-[#FFC147]': currentSlide !== 2,
@@ -95,7 +95,7 @@ export default {
         @click="showSlide(2)"
       ></button>
       <button
-        class="mx-2 h-4 w-4 rounded-full"
+        class="mx-2 h-4 w-4 rounded-full z-[1000]"
         :class="{
           'bg-white': currentSlide === 3,
           'bg-[#FFC147]': currentSlide !== 3,
@@ -103,7 +103,7 @@ export default {
         @click="showSlide(3)"
       ></button>
       <button
-        class="mx-2 h-4 w-4 rounded-full"
+        class="mx-2 h-4 w-4 rounded-full z-[1000]"
         :class="{
           'bg-white': currentSlide === 4,
           'bg-[#FFC147]': currentSlide !== 4,
@@ -113,8 +113,11 @@ export default {
     </div>
 
     <div class="hidden lg:flex flex-col items-center justify-center w-2/12">
-      <button class="flex justify-center items-center" @click="nextSlide">
-        <img src="../assets/right-arrow.svg" alt="" class="mix-blend-overlay" />
+      <button
+        class="flex justify-center items-center z-[1000]"
+        @click="nextSlide"
+      >
+        <img src="../assets/right-arrow.svg" alt="" class="" />
       </button>
     </div>
   </div>
@@ -128,7 +131,10 @@ export default {
     @touchend="handleTouchEnd"
   >
     <div class="hidden lg:flex flex-col items-center justify-center w-2/12">
-      <button class="flex justify-center items-center" @click="prevSlide">
+      <button
+        class="flex justify-center items-center z-[1000]"
+        @click="prevSlide"
+      >
         <img src="../assets/left-arrow.svg" alt="" class="mix-blend-overlay" />
       </button>
     </div>
@@ -145,10 +151,10 @@ export default {
         <p class="font-rowdies texl-lg lg:text-2xl lg:pb-4">
           Only available during Alpha.
         </p>
-        <div class="flex flex-row z-20">
+        <div class="flex flex-row z-[1000]">
           <router-link
             :to="{ name: 'WhatsKade' }"
-            class="hidden lg:flex bg-[#ec4569]/30 hover:bg-[#f67a94]/60 px-8 py-2 lg:py-4 rounded-3xl font-nano-pix text-lg md:text-xl lg:text-2xl w-fit mx-auto transition-all duration-200"
+            class="hidden lg:flex bg-[#ec4569]/30 hover:bg-[#f67a94]/60 px-8 py-2 lg:py-4 rounded-3xl font-nano-pix text-lg md:text-xl lg:text-2xl w-fit mx-auto transition-all duration-200 z-[1000]"
           >
             What's Kade?
           </router-link>
@@ -157,10 +163,10 @@ export default {
     </div>
 
     <div
-      class="lg:hidden absolute bottom-4 left-1/2 transform -translate-x-1/2"
+      class="lg:hidden absolute bottom-4 left-1/2 transform -translate-x-1/2 z-[1000]"
     >
       <button
-        class="mx-2 h-4 w-4 rounded-full"
+        class="mx-2 h-4 w-4 rounded-full z-[1000]"
         :class="{
           'bg-white': currentSlide === 1,
           'bg-[#FFC147]': currentSlide !== 1,
@@ -168,7 +174,7 @@ export default {
         @click="showSlide(1)"
       ></button>
       <button
-        class="mx-2 h-4 w-4 rounded-full"
+        class="mx-2 h-4 w-4 rounded-full z-[1000]"
         :class="{
           'bg-white': currentSlide === 2,
           'bg-[#FFC147]': currentSlide !== 2,
@@ -176,7 +182,7 @@ export default {
         @click="showSlide(2)"
       ></button>
       <button
-        class="mx-2 h-4 w-4 rounded-full"
+        class="mx-2 h-4 w-4 rounded-full z-[1000]"
         :class="{
           'bg-white': currentSlide === 3,
           'bg-[#FFC147]': currentSlide !== 3,
@@ -184,7 +190,7 @@ export default {
         @click="showSlide(3)"
       ></button>
       <button
-        class="mx-2 h-4 w-4 rounded-full"
+        class="mx-2 h-4 w-4 rounded-full z-[1000]"
         :class="{
           'bg-white': currentSlide === 4,
           'bg-[#FFC147]': currentSlide !== 4,
@@ -194,7 +200,10 @@ export default {
     </div>
 
     <div class="hidden lg:flex flex-col items-center justify-center w-2/12">
-      <button class="flex justify-center items-center" @click="nextSlide">
+      <button
+        class="flex justify-center items-center z-[1000]"
+        @click="nextSlide"
+      >
         <img src="../assets/right-arrow.svg" alt="" class="mix-blend-overlay" />
       </button>
     </div>
@@ -209,7 +218,10 @@ export default {
     @touchend="handleTouchEnd"
   >
     <div class="hidden lg:flex flex-col items-center justify-center w-2/12">
-      <button class="flex justify-center items-center" @click="prevSlide">
+      <button
+        class="flex justify-center items-center z-[1000]"
+        @click="prevSlide"
+      >
         <img
           src="../assets/left-arrow.svg"
           alt="prev"
@@ -229,10 +241,10 @@ export default {
         >
           endless runner game
         </p>
-        <div class="flex flex-row z-20 mr-auto">
+        <div class="flex flex-row z-[1000] mr-auto">
           <router-link
             :to="{ name: 'Practice' }"
-            class="flex bg-[#7A98E6]/80 hover:bg-[#7A98E6]/60 text-black px-10 py-2 lg:py-4 rounded-3xl font-nano-pix text-lg md:text-xl lg:text-2xl w-fit mx-auto transition-all duration-200 mr-auto inverse"
+            class="z-[1000] flex bg-[#7A98E6]/80 hover:bg-[#7A98E6]/60 text-black px-10 py-2 lg:py-4 rounded-3xl font-nano-pix text-lg md:text-xl lg:text-2xl w-fit mx-auto transition-all duration-200 mr-auto inverse"
           >
             Play
           </router-link>
@@ -241,10 +253,10 @@ export default {
     </div>
 
     <div
-      class="lg:hidden absolute bottom-4 left-1/2 transform -translate-x-1/2"
+      class="lg:hidden absolute bottom-4 left-1/2 transform -translate-x-1/2 z-[1000]"
     >
       <button
-        class="mx-2 h-4 w-4 rounded-full"
+        class="mx-2 h-4 w-4 rounded-full z-[1000]"
         :class="{
           'bg-white': currentSlide === 1,
           'bg-[#FFC147]': currentSlide !== 1,
@@ -252,7 +264,7 @@ export default {
         @click="showSlide(1)"
       ></button>
       <button
-        class="mx-2 h-4 w-4 rounded-full"
+        class="mx-2 h-4 w-4 rounded-full z-[1000]"
         :class="{
           'bg-white': currentSlide === 2,
           'bg-[#FFC147]': currentSlide !== 2,
@@ -260,7 +272,7 @@ export default {
         @click="showSlide(2)"
       ></button>
       <button
-        class="mx-2 h-4 w-4 rounded-full"
+        class="mx-2 h-4 w-4 rounded-full z-[1000]"
         :class="{
           'bg-white': currentSlide === 3,
           'bg-[#FFC147]': currentSlide !== 3,
@@ -268,7 +280,7 @@ export default {
         @click="showSlide(3)"
       ></button>
       <button
-        class="mx-2 h-4 w-4 rounded-full"
+        class="mx-2 h-4 w-4 rounded-full z-[1000]"
         :class="{
           'bg-white': currentSlide === 4,
           'bg-[#FFC147]': currentSlide !== 4,
@@ -278,7 +290,10 @@ export default {
     </div>
 
     <div class="hidden lg:flex flex-col items-center justify-center w-2/12">
-      <button class="flex justify-center items-center" @click="nextSlide">
+      <button
+        class="flex justify-center items-center z-[1000]"
+        @click="nextSlide"
+      >
         <img src="../assets/right-arrow.svg" alt="" class="mix-blend-overlay" />
       </button>
     </div>
@@ -292,7 +307,10 @@ export default {
     @touchmove="handleTouchMove"
     @touchend="handleTouchEnd"
   >
-    <button @click="prevSlide" class="flex justify-center items-center w-2/12">
+    <button
+      @click="prevSlide"
+      class="flex justify-center items-center w-2/12 z-[1000]"
+    >
       <img
         src="../assets/left-arrow.svg"
         alt=""
@@ -315,7 +333,7 @@ export default {
           <a
             href="https://ourkade.io"
             target="_blank"
-            class="bg-[#3E4181]/80 hover:bg-[#4b4e88] text-[#858CFF] rounded-[20px] font-nano-pix px-8 py-2 2xl:py-3 text-xl lg:text-3xl 2xl:text-6xl min-w-fit max-w-fit h-fit mt-auto text-center ml-auto mr-auto md:ml-auto md:mr-0"
+            class="bg-[#3E4181]/80 hover:bg-[#4b4e88] text-[#858CFF] rounded-[20px] font-nano-pix px-8 py-2 2xl:py-3 text-xl lg:text-3xl 2xl:text-6xl min-w-fit max-w-fit h-fit mt-auto text-center ml-auto mr-auto md:ml-auto md:mr-0 z-[1000]"
           >
             Let's go!
           </a>
@@ -324,10 +342,10 @@ export default {
     </div>
 
     <div
-      class="lg:hidden absolute bottom-4 left-1/2 transform -translate-x-1/2"
+      class="lg:hidden absolute bottom-4 left-1/2 transform -translate-x-1/2 z-[1000]"
     >
       <button
-        class="mx-2 h-4 w-4 rounded-full"
+        class="mx-2 h-4 w-4 rounded-full z-[1000]"
         :class="{
           'bg-white': currentSlide === 1,
           'bg-[#FFC147]': currentSlide !== 1,
@@ -335,7 +353,7 @@ export default {
         @click="showSlide(1)"
       ></button>
       <button
-        class="mx-2 h-4 w-4 rounded-full"
+        class="mx-2 h-4 w-4 rounded-full z-[1000]"
         :class="{
           'bg-white': currentSlide === 2,
           'bg-[#FFC147]': currentSlide !== 2,
@@ -343,7 +361,7 @@ export default {
         @click="showSlide(2)"
       ></button>
       <button
-        class="mx-2 h-4 w-4 rounded-full"
+        class="mx-2 h-4 w-4 rounded-full z-[1000]"
         :class="{
           'bg-white': currentSlide === 3,
           'bg-[#FFC147]': currentSlide !== 3,
@@ -351,7 +369,7 @@ export default {
         @click="showSlide(3)"
       ></button>
       <button
-        class="mx-2 h-4 w-4 rounded-full"
+        class="mx-2 h-4 w-4 rounded-full z-[1000]"
         :class="{
           'bg-white': currentSlide === 4,
           'bg-[#FFC147]': currentSlide !== 4,
@@ -360,27 +378,30 @@ export default {
       ></button>
     </div>
 
-    <button
-      @click="nextSlide"
-      :disabled="currentSlide === 3"
-      class="flex justify-center items-center w-2/12"
-    >
-      <img
-        src="../assets/right-arrow.svg"
-        alt=""
-        class="mix-blend-overlay hidden"
-      />
-    </button>
+    <div class="hidden lg:flex flex-col items-center justify-center w-2/12">
+      <button
+        class="justify-center items-center z-[1000] hidden"
+        :disabled="currentSlide === 4"
+        @click="nextSlide"
+      >
+        <img src="../assets/right-arrow.svg" alt="" class="mix-blend-overlay" />
+      </button>
+    </div>
   </div>
 </template>
 
 <style scoped>
+button {
+  z-index: 1000;
+}
+
 .gradient1 {
   background-image: url("../assets/classic-games-bg-image.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  z-index: 20;
 }
 .gradient2 {
   background-image: url("../assets/whats-kade-bg-image.png");
@@ -389,6 +410,7 @@ export default {
   -o-background-size: cover;
   background-size: cover;
   filter: brightness(80%);
+  z-index: 20;
 }
 .gradient3 {
   background-image: url("../assets/kade-runner-bg.png");
@@ -397,9 +419,11 @@ export default {
   -o-background-size: cover;
   background-size: cover;
   filter: brightness(90%);
+  z-index: 20;
 }
 .gradient4 {
   background: linear-gradient(95deg, #3d4079 6.88%, #181933 98.35%);
+  z-index: 20;
 }
 
 .stroker {

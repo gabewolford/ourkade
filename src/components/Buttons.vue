@@ -6,8 +6,7 @@ const $route = useRoute();
 
 <template>
   <div
-    class="grid grid-cols-2 lg:grid-cols-4 justify-between gap-2 lg:gap-6 text-lg lg:text-xl xl:text-3xl 2xl:text-4xl"
-    :class="{}"
+    class="grid grid-cols-2 lg:grid-cols-4 justify-between gap-2 lg:gap-6 text-lg lg:text-xl xl:text-3xl 2xl:text-4xl z-[1200]"
   >
     <router-link :to="{ name: 'Home' }">
       <button
