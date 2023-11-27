@@ -6,11 +6,11 @@
       class="flex items-start justify-around border-t-[10px] lg:border-t-[20px] border-x-[10px] lg:border-x-[20px] border-b-[2px] border-[#222f37] bg-[#222f37] w-full h-[400px] md:h-[500px] lg:h-[525px] xl:h-[570px] rounded-t-[20px] rounded-b-[20px] relative shadow-custom z-[4000] overflow-hidden"
     >
       <div
-        class="flex w-full h-[338px] md:h-[439px] lg:h-[424px] xl:h-[468px] z-[2000]"
+        class="flex w-full h-[338px] md:h-[439px] lg:h-[424px] xl:h-[468px] z-[2000] relative"
       >
-        <div class="w-full relative">
+        <div class="w-full relative overflow-hidden rounded-[30px]">
           <div class="scanlines"></div>
-          <div class="w-full h-full">
+          <div class="w-full h-full rounded-[30px]">
             <slot></slot>
           </div>
         </div>
@@ -54,7 +54,7 @@
     to bottom,
     transparent 0px,
     transparent 1px,
-    rgba(255, 255, 255, 0.1) 1px,
+    rgba(255, 255, 255, 0.1) 2px,
     rgba(255, 255, 255, 0.1) 2px
   );
   animation: scanlines 3s linear infinite;
@@ -63,6 +63,9 @@
   position: absolute;
   z-index: 40;
   pointer-events: none;
+  top: 0;
+  left: 0;
+  overflow: hidden;
 }
 
 @keyframes scanlines {
