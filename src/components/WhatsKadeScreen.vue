@@ -2,12 +2,16 @@
 
 <template>
   <div
-    class="flex flex-col gradient1 my-auto w-full h-full rounded-[30px] carousel-slide px-4 lg:px-8 xl:px-12"
+    class="flex flex-col gradient1 my-auto w-full h-full rounded-[30px] carousel-slide px-4 lg:px-8 xl:px-12 text-shadow2"
   >
     <div class="flex flex-col min-w-1/2 my-8">
       <div class="flex-flex-col">
         <div class="flex flex-row gap-4 items-center">
-          <img src="../assets/small-kade-logo.svg" alt="Kade logo" />
+          <img
+            src="../assets/small-kade-logo.svg"
+            alt="Kade logo"
+            class="text-shadow2"
+          />
           <h4
             class="font-nano-pix text-3xl lg:text-[86px] xl:text-[96px] 2xl:text-[112px] leading-none"
           >
@@ -47,6 +51,11 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: brightness(90%);
+  filter: brightness(70%);
+  filter: contrast(-80%);
+}
+
+.text-shadow2 {
+  text-shadow: 1px 1px 0.5px #5d5d5d7e;
 }
 </style>

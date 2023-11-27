@@ -140,7 +140,9 @@ export default {
     </div>
 
     <div class="flex flex-col flex-1 items-start justify-center text-center">
-      <div class="flex flex-col w-full max-w-screen-lg mx-auto text-center">
+      <div
+        class="flex flex-col w-full max-w-screen-lg mx-auto text-center text-shadow2"
+      >
         <h3
           class="flex-1 text-3xl lg:text-5xl xl:text-7xl font-holtwood-one-sc"
         >
@@ -416,7 +418,8 @@ button {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: brightness(80%);
+  filter: brightness(70%);
+  filter: contrast(-80%);
   z-index: 20;
 }
 .gradient3 {
@@ -439,5 +442,8 @@ button {
 
 .text-shadow {
   text-shadow: 2px 2px 4px #000000;
+}
+.text-shadow2 {
+  text-shadow: 1px 1px 0.5px #5d5d5d7e;
 }
 </style>
