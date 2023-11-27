@@ -31,10 +31,10 @@ export default {
     },
     handleTouchEnd() {
       const diffX = this.touchEndX - this.touchStartX;
-      if (diffX > 50) {
+      if (diffX > 100) {
         // Swipe right, go to the previous slide
         this.prevSlide();
-      } else if (diffX < -50) {
+      } else if (diffX < -100) {
         // Swipe left, go to the next slide
         this.nextSlide();
       }
@@ -138,6 +138,7 @@ export default {
         <img src="../assets/left-arrow.svg" alt="" class="mix-blend-overlay" />
       </button>
     </div>
+
     <div class="flex flex-col flex-1 items-start justify-center text-center">
       <div class="flex flex-col w-full max-w-screen-lg mx-auto text-center">
         <h3
@@ -241,10 +242,10 @@ export default {
         >
           endless runner game
         </p>
-        <div class="flex flex-row z-[1000] mr-auto">
+        <div class="flex flex-row z-[4000] mr-auto">
           <router-link
             :to="{ name: 'Play' }"
-            class="z-[1000] flex bg-[#7A98E6]/80 hover:bg-[#7A98E6]/60 text-black px-10 py-2 lg:py-4 rounded-3xl font-nano-pix text-lg md:text-xl lg:text-2xl w-fit mx-auto transition-all duration-200 mr-auto inverse"
+            class="z-[4000] flex bg-[#7A98E6]/80 hover:bg-[#7A98E6]/60 text-black px-10 py-2 lg:py-4 rounded-3xl font-nano-pix text-lg md:text-xl lg:text-2xl w-fit mx-auto transition-all duration-200 mr-auto inverse"
           >
             Play
           </router-link>
