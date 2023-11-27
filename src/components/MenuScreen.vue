@@ -54,7 +54,7 @@ export default {
   >
     <div class="hidden lg:flex flex-col items-center justify-center w-2/12">
       <button
-        class="flex justify-center items-center z-[1000]"
+        class="hidden lg:flex justify-center items-center z-[1000]"
         @click="prevSlide"
         :disabled="currentSlide === 1"
       >
@@ -114,7 +114,7 @@ export default {
 
     <div class="hidden lg:flex flex-col items-center justify-center w-2/12">
       <button
-        class="flex justify-center items-center z-[1000]"
+        class="hidden lg:flex justify-center items-center z-[1000]"
         @click="nextSlide"
       >
         <img src="../assets/right-arrow.svg" alt="" class="" />
@@ -132,7 +132,7 @@ export default {
   >
     <div class="hidden lg:flex flex-col items-center justify-center w-2/12">
       <button
-        class="flex justify-center items-center z-[1000]"
+        class="hidden lg:flex justify-center items-center z-[1000]"
         @click="prevSlide"
       >
         <img src="../assets/left-arrow.svg" alt="" class="mix-blend-overlay" />
@@ -201,7 +201,7 @@ export default {
 
     <div class="hidden lg:flex flex-col items-center justify-center w-2/12">
       <button
-        class="flex justify-center items-center z-[1000]"
+        class="hidden lg:flex justify-center items-center z-[1000]"
         @click="nextSlide"
       >
         <img src="../assets/right-arrow.svg" alt="" class="mix-blend-overlay" />
@@ -219,7 +219,7 @@ export default {
   >
     <div class="hidden lg:flex flex-col items-center justify-center w-2/12">
       <button
-        class="flex justify-center items-center z-[1000]"
+        class="hidden lg:flex justify-center items-center z-[1000]"
         @click="prevSlide"
       >
         <img
@@ -243,7 +243,7 @@ export default {
         </p>
         <div class="flex flex-row z-[1000] mr-auto">
           <router-link
-            :to="{ name: 'Practice' }"
+            :to="{ name: 'Play' }"
             class="z-[1000] flex bg-[#7A98E6]/80 hover:bg-[#7A98E6]/60 text-black px-10 py-2 lg:py-4 rounded-3xl font-nano-pix text-lg md:text-xl lg:text-2xl w-fit mx-auto transition-all duration-200 mr-auto inverse"
           >
             Play
@@ -291,7 +291,7 @@ export default {
 
     <div class="hidden lg:flex flex-col items-center justify-center w-2/12">
       <button
-        class="flex justify-center items-center z-[1000]"
+        class="hidden lg:flex justify-center items-center z-[1000]"
         @click="nextSlide"
       >
         <img src="../assets/right-arrow.svg" alt="" class="mix-blend-overlay" />
@@ -307,16 +307,18 @@ export default {
     @touchmove="handleTouchMove"
     @touchend="handleTouchEnd"
   >
-    <button
-      @click="prevSlide"
-      class="justify-center items-center w-2/12 z-[1000] hidden lg:flex"
-    >
-      <img
-        src="../assets/left-arrow.svg"
-        alt=""
-        class="mix-blend-overlay hidden lg:flex"
-      />
-    </button>
+    <div class="hidden lg:flex flex-col items-center justify-center w-2/12">
+      <button
+        class="hidden lg:flex justify-center items-center z-[1000]"
+        @click="prevSlide"
+      >
+        <img
+          src="../assets/left-arrow.svg"
+          alt="prev"
+          class="mix-blend-overlay"
+        />
+      </button>
+    </div>
     <div class="flex flex-col gap-6 flex-1 items-center justify-center">
       <div class="flex flex-col w-full max-w-screen-lg mx-auto gap-2">
         <h2
@@ -333,7 +335,7 @@ export default {
           <a
             href="https://ourkade.io"
             target="_blank"
-            class="bg-[#3E4181]/80 hover:bg-[#4b4e88] text-[#858CFF] rounded-[20px] font-nano-pix px-8 py-2 2xl:py-3 text-xl lg:text-3xl 2xl:text-6xl min-w-fit max-w-fit h-fit mt-auto text-center ml-auto mr-auto md:ml-auto md:mr-0 z-[1000]"
+            class="bg-[#3E4181]/80 hover:bg-[#4b4e88] text-[#858CFF] rounded-[20px] font-nano-pix px-8 py-2 2xl:py-3 text-xl lg:text-3xl 2xl:text-6xl min-w-fit max-w-fit h-fit mt-auto text-center ml-auto mr-auto md:ml-auto md:mr-0 z-[4000]"
           >
             Let's go!
           </a>
@@ -380,11 +382,15 @@ export default {
 
     <div class="hidden lg:flex flex-col items-center justify-center w-2/12">
       <button
-        class="justify-center items-center z-[1000] hidden"
+        class="hidden lg:flex justify-center items-center z-[1000]"
         :disabled="currentSlide === 4"
         @click="nextSlide"
       >
-        <img src="../assets/right-arrow.svg" alt="" class="mix-blend-overlay" />
+        <img
+          src="../assets/right-arrow.svg"
+          alt=""
+          class="mix-blend-overlay hidden"
+        />
       </button>
     </div>
   </div>
