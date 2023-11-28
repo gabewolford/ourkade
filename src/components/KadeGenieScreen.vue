@@ -55,8 +55,14 @@ const resetForm = () => {
     <div
       class="flex flex-col md:flex-row mx-auto gap-2 md:gap-12 xl:gap-20 md:w-full p-4"
     >
-      <div class="flex w-[225px] md:w-[300px] lg:w-[400px] xl:w-6/12">
-        <img src="../assets/kade-genie-cheat-logo.png" alt="kade genie" />
+      <div
+        class="flex max-w-[225px] md:max-w-[300px] lg:max-w-[400px] xl:w-6/12"
+      >
+        <img
+          src="../assets/kade-genie-cheat-logo.png"
+          alt="kade genie"
+          class="w-fit h-fit"
+        />
       </div>
 
       <div class="flex flex-col md:w-6/12 justify-around">
