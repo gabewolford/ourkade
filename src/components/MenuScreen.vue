@@ -418,7 +418,6 @@ button {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: brightness(70%);
   filter: contrast(-80%);
   z-index: 20;
 }
@@ -428,7 +427,7 @@ button {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: brightness(90%);
+
   z-index: 20;
 }
 .gradient4 {
@@ -445,5 +444,6 @@ button {
 }
 .text-shadow2 {
   text-shadow: 1px 1px 0.5px #5d5d5d7e;
+  filter: brightness(150%);
 }
 </style>
