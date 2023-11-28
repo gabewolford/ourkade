@@ -111,12 +111,7 @@ const handleSubmit = async () => {
               <span class="text-[#5FC0C0]">Terms & Conditions</span>
             </h4>
             <div>
-              <input
-                type="checkbox"
-                name="checkbox"
-                class="appearance-none checked:bg-[#5FC0C0] w-3.5 h-3.5 border-2 border-[#C5AAFF] rounded-sm"
-                required
-              />
+              <input type="checkbox" name="checkbox" class="w-4 h-4" required />
             </div>
           </div>
           <h5 class="text-sm">Key things in here include:</h5>
@@ -124,8 +119,8 @@ const handleSubmit = async () => {
             <li>You must be over eighteen years of age</li>
             <li>You will have to KYC to access any Kade you have collected</li>
             <li>
-              You understand that me may adjust any and all aspects of Ourkade
-              in order to ensure its long term success
+              You understand that Ourkade may adjust any and all aspects of the
+              platform as we see fit for the project
             </li>
           </ul>
         </div>
