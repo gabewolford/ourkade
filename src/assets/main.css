@@ -47,7 +47,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  background-image: url("../assets/bg-image.png");
+  background-image: url("../assets/backgrounds/bg-image.png");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

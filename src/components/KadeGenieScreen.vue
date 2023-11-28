@@ -59,7 +59,7 @@ const resetForm = () => {
         class="flex max-w-[225px] md:max-w-[300px] lg:max-w-[400px] xl:w-6/12"
       >
         <img
-          src="../assets/kade-genie-cheat-logo.png"
+          src="../assets/logos/kade-genie-cheat-logo.png"
           alt="kade genie"
           class="w-fit h-fit"
         />

@@ -3,7 +3,7 @@
     class="flex flex-col text-center justify-center items-center font-nano-pix my-6 lg:my-24 w-2/3 mx-auto gap-6"
   >
     <img
-      src="../assets/email-icon.svg"
+      src="../assets/icons/email-icon.svg"
       alt="email icon"
       class="w-1/4 lg:w-1/5"
     />

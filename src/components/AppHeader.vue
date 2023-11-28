@@ -33,7 +33,7 @@ watchEffect(() => {
     >
       <div class="flex flex-row gap-4">
         <button class="" @click="toggleMobileMenu">
-          <img src="../assets/menu-icon.svg" class="menu" />
+          <img src="../assets/icons/menu-icon.svg" class="menu" />
         </button>
 
         <div v-if="authStore.isLoggedIn()"></div>
@@ -51,7 +51,7 @@ watchEffect(() => {
         :to="{ name: 'Home' }"
         class="flex flex-row gap-0.5 items-center"
       >
-        <img src="../assets/logo.png" class="h-[25px]" />
+        <img src="../assets/logos/logo.png" class="h-[25px]" />
         <h4 class="text-shadow text-[#3e8ad2] pt-1.5 text-xl leading-none">
           v1
         </h4>
@@ -83,18 +83,18 @@ watchEffect(() => {
 
           <div class="flex flex-col w-1/2 mx-auto items-start">
             <div class="h-[55px] w-[72px] items-center flex relative">
-              <img src="../assets/ticket-icon.svg" alt="ticket icon" />
+              <img src="../assets/icons/ticket-icon.svg" alt="ticket icon" />
               <div class="absolute top-0 right-0" title="Tix">
-                <img src="../assets/info.svg" alt="info icon" />
+                <img src="../assets/icons/info.svg" alt="info icon" />
               </div>
             </div>
             <div class="h-[55px] items-center flex">
-              <img src="../assets/fox-icon.svg" alt="fox icon" />
+              <img src="../assets/icons/kade-icon.svg" alt="fox icon" />
             </div>
             <div class="h-[55px] w-[65px] items-center flex relative">
-              <img src="../assets/swords-icon.svg" alt="swords icon" />
+              <img src="../assets/icons/swords-icon.svg" alt="swords icon" />
               <div class="absolute top-0 right-0" title="Tooltip goes here">
-                <img src="../assets/info.svg" alt="info icon" />
+                <img src="../assets/icons/info.svg" alt="info icon" />
               </div>
             </div>
           </div>
@@ -117,13 +117,13 @@ watchEffect(() => {
 
           <div class="flex flex-col w-1/2 mx-auto items-start">
             <div class="h-[55px] w-[72px] items-center flex relative">
-              <img src="../assets/ticket-icon.svg" alt="ticket icon" />
+              <img src="../assets/icons/ticket-icon.svg" alt="ticket icon" />
             </div>
             <div class="h-[55px] items-center flex">
-              <img src="../assets/fox-icon.svg" alt="fox icon" />
+              <img src="../assets/icons/kade-icon.svg" alt="fox icon" />
             </div>
             <div class="h-[55px] w-[65px] items-center flex relative">
-              <img src="../assets/swords-icon.svg" alt="swords icon" />
+              <img src="../assets/icons/swords-icon.svg" alt="swords icon" />
             </div>
           </div>
         </div>
@@ -207,14 +207,18 @@ watchEffect(() => {
     <div class="hidden lg:flex flex-row w-full">
       <div class="flex items-center m-0 flex-row justify-between">
         <div class="lg:w-5/12">
-          <img src="../assets/left-line.png" alt="left line" />
+          <img src="../assets/icons/lines/left-line.png" alt="left line" />
         </div>
         <router-link to="/" class="flex items-center lg:max-w-2/12 lg:gap-1">
-          <img src="../assets/logo.png" alt="Ourkade logo" class="min-w-fit" />
+          <img
+            src="../assets/logos/logo.png"
+            alt="Ourkade logo"
+            class="min-w-fit"
+          />
           <h4 class="text-shadow text-[#3e8ad2] text-[28px] pt-2">v1</h4>
         </router-link>
         <div class="lg:w-5/12">
-          <img src="../assets/right-line.png" alt="right line" />
+          <img src="../assets/icons/lines/right-line.png" alt="right line" />
         </div>
       </div>
     </div>

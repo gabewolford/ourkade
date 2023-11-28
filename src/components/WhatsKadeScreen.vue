@@ -8,7 +8,7 @@
       <div class="flex-flex-col">
         <div class="flex flex-row gap-4 items-center">
           <img
-            src="../assets/small-kade-logo.svg"
+            src="../assets/logos/small-kade-logo.svg"
             alt="Kade logo"
             class="text-shadow2"
           />
@@ -46,7 +46,7 @@
 
 <style scoped>
 .gradient1 {
-  background-image: url("../assets/whats-kade-bg-image.png");
+  background-image: url("../assets/backgrounds/whats-kade-bg-image.png");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

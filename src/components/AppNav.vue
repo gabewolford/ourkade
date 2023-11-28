@@ -51,18 +51,18 @@ onBeforeMount(async () => {
 
         <div class="flex flex-col w-1/2 mx-auto items-start">
           <div class="h-[55px] w-[72px] items-center flex relative">
-            <img src="../assets/ticket-icon.svg" alt="ticket icon" />
+            <img src="../assets/icons/ticket-icon.svg" alt="ticket icon" />
             <div class="absolute top-0 right-0" title="Total Tix">
-              <img src="../assets/info.svg" alt="info icon" />
+              <img src="../assets/icons/info.svg" alt="info icon" />
             </div>
           </div>
           <div class="h-[55px] items-center flex">
-            <img src="../assets/fox-icon.svg" alt="fox icon" />
+            <img src="../assets/icons/kade-icon.svg" alt="fox icon" />
           </div>
           <div class="h-[55px] w-[65px] items-center flex relative">
-            <img src="../assets/swords-icon.svg" alt="swords icon" />
+            <img src="../assets/icons/swords-icon.svg" alt="swords icon" />
             <div class="absolute top-0 right-0" title="Active Challenges">
-              <img src="../assets/info.svg" alt="info icon" />
+              <img src="../assets/icons/info.svg" alt="info icon" />
             </div>
           </div>
         </div>
@@ -85,13 +85,13 @@ onBeforeMount(async () => {
 
         <div class="flex flex-col w-1/2 mx-auto items-start">
           <div class="h-[55px] w-[72px] items-center flex relative">
-            <img src="../assets/ticket-icon.svg" alt="ticket icon" />
+            <img src="../assets/icons/ticket-icon.svg" alt="ticket icon" />
           </div>
           <div class="h-[55px] items-center flex">
-            <img src="../assets/fox-icon.svg" alt="fox icon" />
+            <img src="../assets/icons/kade-icon.svg" alt="fox icon" />
           </div>
           <div class="h-[55px] w-[65px] items-center flex relative">
-            <img src="../assets/swords-icon.svg" alt="swords icon" />
+            <img src="../assets/icons/swords-icon.svg" alt="swords icon" />
           </div>
         </div>
       </div>

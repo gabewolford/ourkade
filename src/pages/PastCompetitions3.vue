@@ -1,7 +1,7 @@
 <script setup>
 import PrimaryLayout from "@/components/PrimaryLayout";
 import ScreenLayout from "@/components/ScreenLayout";
-import competeLogo from "@/assets/kaderunner-logo-purple.png";
+import competeLogo from "@/assets/logos/kaderunner-logo-purple.png";
 import CompeteTable2 from "@/components/CompeteTables/CompeteTable2.vue";
 import { useAuthStore } from "@/stores/auth";
 const authStore = useAuthStore();

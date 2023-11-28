@@ -23,7 +23,7 @@ import "animate.css";
         class="absolute bottom-0 bg-[#222f37] h-[50px] lg:h-[80px] w-full flex flex-row items-center lg:items-end lg:pb-3 justify-between rounded-b-2xl lg:rounded-b-none z-[2000]"
       >
         <div class="flex flex-row gap-2 lg:gap-4">
-          <img src="../assets/red-light.svg" alt="red light" />
+          <img src="../assets/icons/red-light.svg" alt="red light" />
           <router-link
             :to="{ name: 'Home' }"
             class="text-[#939393] bg-[#151E23] px-4 lg:px-10 py-1.5 rounded-full lg:text-lg font-nano-pix"

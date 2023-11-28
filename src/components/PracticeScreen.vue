@@ -1,6 +1,6 @@
 <script setup>
 import ScreenLayout from "@/components/ScreenLayout.vue";
-import competeLogo from "@/assets/kaderunner-logo-green.png";
+import competeLogo from "@/assets/logos/kaderunner-logo-green.png";
 </script>
 
 <template>
@@ -50,7 +50,7 @@ import competeLogo from "@/assets/kaderunner-logo-green.png";
 
 <style scoped>
 .background-image {
-  background-image: url("../assets/kaderunner-bg.png");
+  background-image: url("../assets/backgrounds/kaderunner-bg.png");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

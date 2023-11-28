@@ -1,7 +1,7 @@
 <script setup>
 import PrimaryLayout from "@/components/PrimaryLayout";
 import ScreenLayout from "@/components/ScreenLayout";
-import challengeLogo from "@/assets/kaderunner-logo-blue.png";
+import challengeLogo from "@/assets/logos/kaderunner-logo-blue.png";
 import ChallengeTable1 from "@/components/ChallengeTables/ChallengeTable1.vue";
 import ChallengeTableCreate from "@/components/ChallengeTables/ChallengeTableCreate.vue";
 import { useAuthStore } from "@/stores/auth";

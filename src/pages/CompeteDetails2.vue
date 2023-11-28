@@ -3,7 +3,7 @@ import { useAuthStore } from "@/stores/auth";
 const authStore = useAuthStore();
 import PrimaryLayout from "@/components/PrimaryLayout";
 import ScreenLayout from "@/components/ScreenLayout";
-import competeLogo from "@/assets/kaderunner-logo-purple.png";
+import competeLogo from "@/assets/logos/kaderunner-logo-purple.png";
 import CompeteTable1 from "@/components/CompeteTables/CompeteTable1.vue";
 </script>
 

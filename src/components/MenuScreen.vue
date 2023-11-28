@@ -59,7 +59,7 @@ export default {
         :disabled="currentSlide === 1"
       >
         <img
-          src="../assets/left-arrow.svg"
+          src="../assets/icons/arrows/left-arrow.svg"
           alt=""
           class="mix-blend-overlay hidden"
         />
@@ -70,7 +70,7 @@ export default {
       class="flex flex-col h-full items-center justify-center w-8/12 mx-auto"
     >
       <img
-        src="../assets/classic-games-logo.png"
+        src="../assets/logos/classic-games-logo.png"
         alt="compete in classic games"
         class="w-full h-auto object-contain md:py-4 lg:py-6 2xl:py-8"
       />
@@ -117,7 +117,7 @@ export default {
         class="hidden lg:flex justify-center items-center z-[1000]"
         @click="nextSlide"
       >
-        <img src="../assets/right-arrow.svg" alt="" class="" />
+        <img src="../assets/icons/arrows/right-arrow.svg" alt="" class="" />
       </button>
     </div>
   </div>
@@ -135,7 +135,11 @@ export default {
         class="hidden lg:flex justify-center items-center z-[1000]"
         @click="prevSlide"
       >
-        <img src="../assets/left-arrow.svg" alt="" class="mix-blend-overlay" />
+        <img
+          src="../assets/icons/arrows/left-arrow.svg"
+          alt=""
+          class="mix-blend-overlay"
+        />
       </button>
     </div>
 
@@ -207,7 +211,11 @@ export default {
         class="hidden lg:flex justify-center items-center z-[1000]"
         @click="nextSlide"
       >
-        <img src="../assets/right-arrow.svg" alt="" class="mix-blend-overlay" />
+        <img
+          src="../assets/icons/arrows/right-arrow.svg"
+          alt=""
+          class="mix-blend-overlay"
+        />
       </button>
     </div>
   </div>
@@ -226,7 +234,7 @@ export default {
         @click="prevSlide"
       >
         <img
-          src="../assets/left-arrow.svg"
+          src="../assets/icons/arrows/left-arrow.svg"
           alt="prev"
           class="mix-blend-overlay"
         />
@@ -235,7 +243,7 @@ export default {
     <div class="flex flex-col flex-1 items-start justify-center text-left p-4">
       <div class="flex flex-col w-full max-w-screen-lg mx-auto text-left">
         <img
-          src="../assets/kaderunner-logo-white.png"
+          src="../assets/logos/kaderunner-logo-white.png"
           alt="kade runner logo"
           class="w-3/4"
         />
@@ -297,7 +305,11 @@ export default {
         class="hidden lg:flex justify-center items-center z-[1000]"
         @click="nextSlide"
       >
-        <img src="../assets/right-arrow.svg" alt="" class="mix-blend-overlay" />
+        <img
+          src="../assets/icons/arrows/right-arrow.svg"
+          alt=""
+          class="mix-blend-overlay"
+        />
       </button>
     </div>
   </div>
@@ -316,7 +328,7 @@ export default {
         @click="prevSlide"
       >
         <img
-          src="../assets/left-arrow.svg"
+          src="../assets/icons/arrows/left-arrow.svg"
           alt="prev"
           class="mix-blend-overlay"
         />
@@ -331,7 +343,7 @@ export default {
         </h2>
         <div class="flex flex-col lg:flex-row gap-8 lg:gap-4">
           <img
-            src="../assets/large-logo.svg"
+            src="../assets/logos/large-ourkade-logo.svg"
             alt="Ourkade"
             class="lg:max-w-[75%] 2xl:max-w[90%]"
           />
@@ -390,7 +402,7 @@ export default {
         @click="nextSlide"
       >
         <img
-          src="../assets/right-arrow.svg"
+          src="../assets/icons/arrows/right-arrow.svg"
           alt=""
           class="mix-blend-overlay hidden"
         />
@@ -405,7 +417,7 @@ button {
 }
 
 .gradient1 {
-  background-image: url("../assets/classic-games-bg-image.jpg");
+  background-image: url("../assets/backgrounds/classic-games-bg-image.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -413,7 +425,7 @@ button {
   z-index: 20;
 }
 .gradient2 {
-  background-image: url("../assets/whats-kade-bg-image.png");
+  background-image: url("../assets/backgrounds/whats-kade-bg-image.png");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -422,7 +434,7 @@ button {
   z-index: 20;
 }
 .gradient3 {
-  background-image: url("../assets/kade-runner-bg.png");
+  background-image: url("../assets/backgrounds/kade-runner-bg.png");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

@@ -35,7 +35,7 @@ const handleLogin = async (provider) => {
       class="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-12 font-nano-pix"
     >
       <div class="flex flex-row gap-2">
-        <img src="../assets/account-logo.svg" alt="account icon" />
+        <img src="../assets/icons/account-icon.svg" alt="account icon" />
         <h1 class="text-3xl">Account</h1>
       </div>
 
