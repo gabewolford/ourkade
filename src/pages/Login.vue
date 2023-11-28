@@ -55,7 +55,7 @@ const handleLogin = async (provider) => {
       class="flex flex-col m-auto w-full lg:w-1/2 gap-4"
     >
       <div class="flex flex-col">
-        <label for="email">Email</label>
+        <label for="email" class="pl-2">Email</label>
         <input
           v-model="form.email"
           type="email"
@@ -65,7 +65,7 @@ const handleLogin = async (provider) => {
       </div>
 
       <div class="flex flex-col">
-        <label for="password">Password</label>
+        <label for="password" class="pl-2">Password</label>
         <input
           v-model="form.password"
           type="password"
