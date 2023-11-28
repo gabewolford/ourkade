@@ -51,13 +51,11 @@ const resetForm = () => {
 </script>
 
 <template>
-  <div
-    class="flex bg-black w-full h-full items-center rounded-[30px] px-4 md:px-12"
-  >
+  <div class="flex bg-black w-full h-full items-center rounded-[30px] lg:px-12">
     <div
-      class="flex flex-col md:flex-row mx-auto gap-2 md:gap-12 xl:gap-20 md:w-full"
+      class="flex flex-col md:flex-row mx-auto gap-2 md:gap-12 xl:gap-20 md:w-full p-4"
     >
-      <div class="flex w-8/12 lg:w-6/12">
+      <div class="flex w-[225px] md:w-[300px] lg:w-[400px] xl:w-6/12">
         <img src="../assets/kade-genie-cheat-logo.png" alt="kade genie" />
       </div>
 
