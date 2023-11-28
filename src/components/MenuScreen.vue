@@ -144,14 +144,14 @@ export default {
         class="flex flex-col w-full max-w-screen-lg mx-auto text-center text-shadow2"
       >
         <h3
-          class="flex-1 text-3xl lg:text-5xl xl:text-7xl font-holtwood-one-sc"
+          class="flex-1 text-3xl md:text-4xl lg:text-7xl font-holtwood-one-sc"
         >
-          Play for Kade
+          Play&nbsp;for&nbsp;Kade
         </h3>
-        <p class="font-rowdies texl-lg lg:text-2xl lg:py-2">
+        <p class="font-rowdies texl-lg md:text-2xl lg:text-4xl lg:py-2">
           Compete in Kade-prize contests.
         </p>
-        <p class="font-rowdies texl-lg lg:text-2xl lg:pb-4">
+        <p class="font-rowdies texl-lg md:text-2xl lg:text-4xl lg:pb-4">
           Only available during Alpha.
         </p>
         <div class="flex flex-row z-[1000]">
