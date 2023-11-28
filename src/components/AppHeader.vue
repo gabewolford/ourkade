@@ -60,7 +60,7 @@ watchEffect(() => {
 
     <div
       v-if="mobileMenuOpen"
-      class="fixed top-0 left-0 w-full h-screen bg-[#112e48] bg-opacity-90 flex flex-col items-center justify-center z-50"
+      class="fixed top-0 left-0 w-full h-screen bg-[#112e48] bg-opacity-90 flex flex-col items-center justify-center z-[9999]"
     >
       <button
         class="absolute top-4 left-4 text-white font-holtwood-one-sc text-xl"
