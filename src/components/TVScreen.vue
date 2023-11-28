@@ -61,7 +61,7 @@ import "animate.css";
     rgba(255, 255, 255, 0.1) 4px,
     rgba(48, 48, 48, 0.1) 1px
   );
-  animation: scanlines 3s linear infinite;
+  animation: scanlines 5s linear infinite;
   width: 100%;
   height: 100%;
   position: absolute;
