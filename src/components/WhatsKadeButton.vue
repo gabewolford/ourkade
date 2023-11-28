@@ -44,12 +44,14 @@ const $route = useRoute();
 
 <style scoped>
 .rainbow {
-  background-image: url("../assets/whats-kade-bg-image.png");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  filter: contrast(-80%);
-  z-index: 20;
+  background: linear-gradient(
+    113deg,
+    #7d3a26 1.18%,
+    #806b1f 19.48%,
+    #1d835f 39.33%,
+    #1f3c86 58.37%,
+    #3b1885 74.84%,
+    #870a82 90.28%
+  );
 }
 </style>
