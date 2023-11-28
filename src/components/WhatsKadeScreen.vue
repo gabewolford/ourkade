@@ -51,7 +51,6 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: brightness(70%);
   filter: contrast(-80%);
 }
 
