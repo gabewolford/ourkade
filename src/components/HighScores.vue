@@ -23,7 +23,7 @@ onBeforeMount(async () => {
 <template>
   <div
     v-if="authStore.isLoggedIn()"
-    class="flex flex-col gap-6 w-full lg:w-1/3 bg-[#0F0F0F]/60 px-4 py-4 lg:py-6 rounded-[20px] max-h-fit"
+    class="flex flex-col gap-6 w-full lg:w-1/3 transparent-dark-bg px-4 py-4 lg:py-6 rounded-[20px] max-h-fit"
   >
     <div class="flex flex-row gap-4 items-center">
       <svg
@@ -78,7 +78,7 @@ onBeforeMount(async () => {
 
   <div
     v-else
-    class="flex flex-col lg:hidden gap-6 w-full lg:w-1/3 bg-[#0F0F0F]/60 px-4 py-4 lg:py-6 rounded-[20px] max-h-fit"
+    class="flex flex-col lg:hidden gap-6 w-full lg:w-1/3 transparent-dark-bg px-4 py-4 lg:py-6 rounded-[20px] max-h-fit"
   >
     <div class="flex flex-row gap-4 items-center">
       <svg

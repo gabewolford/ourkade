@@ -101,11 +101,11 @@ const handleSubmit = async () => {
             Edit
           </button>
         </div>
-        <div v-if="errorMessage.value" class="text-red-500 mt-2">
+        <div v-if="errorMessage.value" class="text-errorRed mt-2">
           {{ errorMessage.value }}
         </div>
         <div
-          class="bg-red-500 hover:bg-red-400 px-5 py-2 text-xl font-nano-pix w-fit rounded-xl"
+          class="bg-errorRed hover:bg-red-400 px-5 py-2 text-xl font-nano-pix w-fit rounded-xl"
         >
           <router-link :to="{ name: 'Logout' }">Logout</router-link>
         </div>

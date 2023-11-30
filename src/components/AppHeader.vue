@@ -226,51 +226,8 @@ watchEffect(() => {
 </template>
 
 <style scoped>
+/* Logo shadow */
 .text-shadow {
   text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.35);
-}
-
-.active-link::before {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background-image: linear-gradient(
-    to right,
-    #ff7246,
-    #ffd646,
-    #46ffbc,
-    #467aff,
-    #9e71ff,
-    #fc54ff
-  );
-  border-radius: 5px;
-}
-
-.rainbow-underline {
-  position: relative;
-  display: inline-block;
-}
-
-.rainbow-underline::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 3px;
-  background-image: linear-gradient(
-    to right,
-    #ff7246,
-    #ffd646,
-    #46ffbc,
-    #467aff,
-    #9e71ff,
-    #fc54ff
-  );
-  border-radius: 5px;
 }
 </style>

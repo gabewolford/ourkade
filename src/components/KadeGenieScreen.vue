@@ -28,6 +28,7 @@ const handleInput = (index, event) => {
 
 const handleSubmit = () => {
   const userWord = data.userInput.join("");
+  // Replace with actual cheat code
   const desiredWord = "ticket";
 
   if (userWord === desiredWord) {
@@ -100,10 +101,10 @@ const resetForm = () => {
           </form>
 
           <!-- Display success or error message -->
-          <div v-if="data.successMessage" class="text-[#46FFBC]">
+          <div v-if="data.successMessage" class="text-successGreen">
             {{ data.successMessage }}
           </div>
-          <div v-else-if="data.errorMessage" class="text-[#FF7246]">
+          <div v-else-if="data.errorMessage" class="text-errorRed">
             {{ data.errorMessage }}
           </div>
           <div v-else class="h-[24px]"></div>

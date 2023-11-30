@@ -87,7 +87,7 @@ const authStore = useAuthStore();
       <router-link
         :to="{ name: 'PastCompetitions3' }"
         v-if="authStore.isLoggedIn()"
-        class="uppercase text-xs text-[#C5AAFF] hover:text-[#8578A0] w-fit"
+        class="uppercase text-xs text-lightPurple hover:text-darkPurple w-fit"
       >
         View Past Contests ➜
       </router-link>

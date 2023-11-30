@@ -132,13 +132,13 @@ defineProps({
           <div class="flex flex-row px-4 space-x-1 justify-center">
             <div v-if="winOrLoss === 'win'" class="">
               <div class="center-this">
-                <p class="text-[#46FFBC] leading-none mt-1">W</p>
+                <p class="text-successGreen leading-none mt-1">W</p>
               </div>
             </div>
 
             <div v-else-if="winOrLoss === 'loss'" class="">
               <div class="center-this">
-                <p class="text-[#FF7246] leading-none mt-1">L</p>
+                <p class="text-errorRed leading-none mt-1">L</p>
               </div>
             </div>
           </div>

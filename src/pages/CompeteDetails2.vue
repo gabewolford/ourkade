@@ -54,17 +54,17 @@ import CompeteTable1 from "@/components/CompeteTables/CompeteTable1.vue";
       <div class="w-full flex flex-row gap-10">
         <div class="flex flex-col gap-2">
           <h3 class="uppercase text-sm lg:text-lg">Standings</h3>
-          <ul class="">
+          <ul>
             <li>
-              <span class="text-[#E3BA24] text-sm lg:text-lg">1st:&nbsp;</span
+              <span class="text-gold text-sm lg:text-lg">1st:&nbsp;</span
               >25002pts
             </li>
             <li>
-              <span class="text-[#A5A0A0] text-sm lg:text-lg">2nd:&nbsp;</span
+              <span class="text-silver text-sm lg:text-lg">2nd:&nbsp;</span
               >24992pts
             </li>
             <li>
-              <span class="text-[#AA7918] text-sm lg:text-lg">3rd:&nbsp;</span
+              <span class="text-bronze text-sm lg:text-lg">3rd:&nbsp;</span
               >24221pts
             </li>
           </ul>
@@ -81,18 +81,6 @@ import CompeteTable1 from "@/components/CompeteTables/CompeteTable1.vue";
 </template>
 
 <style scoped>
-.rainbow-gradient {
-  background: linear-gradient(
-    90deg,
-    #ff7246 -0.08%,
-    #ffd646 13.9%,
-    #46ffbc 30.03%,
-    #467aff 48.23%,
-    #9e71ff 67.99%,
-    #fc54ff 83.6%
-  );
-}
-
 .container::-webkit-scrollbar {
   width: 5px;
 }

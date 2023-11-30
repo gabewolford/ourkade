@@ -29,7 +29,7 @@ const handleLogin = async (provider) => {
 
 <template>
   <section
-    class="flex flex-col w-full bg-[#603961]/60 rounded-[20px] lg:h-[450px] p-4 lg:p-8 text-white gap-6"
+    class="flex flex-col w-full bg-formDarkPurple/60 rounded-[20px] lg:h-[450px] p-4 lg:p-8 text-white gap-6"
   >
     <div
       class="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-12 font-nano-pix"
@@ -42,11 +42,11 @@ const handleLogin = async (provider) => {
       <div class="flex flex-row text-xl">
         <router-link
           to="/register"
-          class="border-2 border-[#bda1f9] px-10 py-1 rounded-l-xl text-[#757575]"
+          class="border-2 border-lightPurple px-10 py-1 rounded-l-xl text-[#757575]"
         >
           Sign Up
         </router-link>
-        <p class="bg-[#bda1f9] px-10 py-1 rounded-r-xl">Log In</p>
+        <p class="bg-lightPurple px-10 py-1 rounded-r-xl">Log In</p>
       </div>
     </div>
 
@@ -60,7 +60,7 @@ const handleLogin = async (provider) => {
           v-model="form.email"
           type="email"
           id="email"
-          class="!bg-[#C5AAFF] px-6 py-4 lg:py-5 lg:text-lg rounded-2xl text-[#603961]"
+          class="!bg-lightPurple px-6 py-4 lg:py-5 lg:text-lg rounded-2xl text-[#603961]"
         />
       </div>
 
@@ -70,7 +70,7 @@ const handleLogin = async (provider) => {
           v-model="form.password"
           type="password"
           id="password"
-          class="!bg-[#C5AAFF] px-6 py-4 lg:py-5 lg:text-lg rounded-2xl text-[#603961]"
+          class="!bg-lightPurple px-6 py-4 lg:py-5 lg:text-lg rounded-2xl text-[#603961]"
         />
       </div>
 
@@ -89,17 +89,3 @@ const handleLogin = async (provider) => {
     </form>
   </section>
 </template>
-
-<style scoped>
-.rainbow {
-  background: linear-gradient(
-    90deg,
-    #ff7246 -0.08%,
-    #ffd646 13.9%,
-    #46ffbc 30.03%,
-    #467aff 48.23%,
-    #9e71ff 67.99%,
-    #fc54ff 83.6%
-  );
-}
-</style>

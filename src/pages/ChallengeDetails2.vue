@@ -69,18 +69,6 @@ const authStore = useAuthStore();
 </template>
 
 <style scoped>
-.rainbow-gradient {
-  background: linear-gradient(
-    90deg,
-    #ff7246 -0.08%,
-    #ffd646 13.9%,
-    #46ffbc 30.03%,
-    #467aff 48.23%,
-    #9e71ff 67.99%,
-    #fc54ff 83.6%
-  );
-}
-
 .container::-webkit-scrollbar {
   width: 5px;
 }

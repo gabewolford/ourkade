@@ -14,12 +14,12 @@ const $route = useRoute();
     }"
   >
     <div
-      class="flex flex-col rainbow rounded-[20px] h-fit py-8 gap-4 justify-between"
+      class="flex flex-col rainbow-gradient rounded-[20px] h-fit py-8 gap-4 justify-between"
     >
       <h4 class="text-2xl font-nano-pix">What's&nbsp;Kade?</h4>
 
       <div
-        class="rainbow h-fit w-fit py-4 px-12 border rounded-full mx-auto flex justify-center items-center shadow-custom2"
+        class="rainbow-gradient h-fit w-fit py-4 px-12 border rounded-full mx-auto flex justify-center items-center shadow-custom2"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -41,17 +41,3 @@ const $route = useRoute();
     </div>
   </router-link>
 </template>
-
-<style scoped>
-.rainbow {
-  background: linear-gradient(
-    113deg,
-    #7d3a26 1.18%,
-    #806b1f 19.48%,
-    #1d835f 39.33%,
-    #1f3c86 58.37%,
-    #3b1885 74.84%,
-    #870a82 90.28%
-  );
-}
-</style>

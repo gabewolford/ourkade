@@ -57,3 +57,34 @@ body {
 body.mobile-menu-open {
   overflow: hidden;
 }
+
+/* Whats Kade button background */
+.rainbow-gradient {
+  background: linear-gradient(
+    113deg,
+    #7d3a26 1.18%,
+    #806b1f 19.48%,
+    #1d835f 39.33%,
+    #1f3c86 58.37%,
+    #3b1885 74.84%,
+    #870a82 90.28%
+  );
+}
+
+/* Button rainbow gradient */
+.rainbow {
+  background: linear-gradient(
+    90deg,
+    #ff7246 -0.08%,
+    #ffd646 13.9%,
+    #46ffbc 30.03%,
+    #467aff 48.23%,
+    #9e71ff 67.99%,
+    #fc54ff 83.6%
+  );
+}
+
+/* High Score / Game Log background */
+.transparent-dark-bg {
+  background-color: rgb(15 15 15 / 0.6);
+}

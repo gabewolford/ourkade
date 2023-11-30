@@ -64,13 +64,13 @@ const handleSubmit = async () => {
 
       <div class="flex flex-row text-xl">
         <p
-          class="bg-[#bda1f9] px-10 py-1 border-2 border-[#bda1f9] rounded-l-xl"
+          class="bg-lightPurple px-10 py-1 border-2 border-lightPurple rounded-l-xl"
         >
           Sign Up
         </p>
         <router-link
           to="/login"
-          class="px-10 py-1 border-2 border-[#bda1f9] rounded-r-xl text-[#757575]"
+          class="px-10 py-1 border-2 border-lightPurple rounded-r-xl text-[#757575]"
         >
           Log In
         </router-link>
@@ -88,7 +88,7 @@ const handleSubmit = async () => {
             v-model="form.email"
             type="email"
             id="email"
-            class="!bg-[#C5AAFF] px-6 py-4 lg:py-5 lg:text-lg rounded-2xl text-[#603961]"
+            class="!bg-lightPurple px-6 py-4 lg:py-5 lg:text-lg rounded-2xl text-[#603961]"
             required
           />
         </div>
@@ -99,7 +99,7 @@ const handleSubmit = async () => {
             v-model="form.username"
             type="string"
             id="username"
-            class="!bg-[#C5AAFF] px-6 py-4 lg:py-5 lg:text-lg rounded-2xl text-[#603961]"
+            class="!bg-lightPurple px-6 py-4 lg:py-5 lg:text-lg rounded-2xl text-[#603961]"
             required
           />
         </div>
@@ -133,7 +133,7 @@ const handleSubmit = async () => {
             v-model="form.password"
             type="password"
             id="password"
-            class="!bg-[#C5AAFF] px-6 py-4 lg:py-5 lg:text-lg rounded-2xl text-[#603961]"
+            class="!bg-lightPurple px-6 py-4 lg:py-5 lg:text-lg rounded-2xl text-[#603961]"
             required
           />
         </div>
@@ -143,7 +143,7 @@ const handleSubmit = async () => {
             v-model="form.passwordConfirmation"
             type="password"
             id="passwordConfirmation"
-            class="!bg-[#C5AAFF] px-6 py-4 lg:py-5 lg:text-lg rounded-2xl text-[#603961]"
+            class="!bg-lightPurple px-6 py-4 lg:py-5 lg:text-lg rounded-2xl text-[#603961]"
             required
           />
         </div>
@@ -180,24 +180,10 @@ const handleSubmit = async () => {
             >Already have an account?</router-link
           >
         </div>
-        <div v-if="errorMessage.value" class="text-red-500 mt-2">
+        <div v-if="errorMessage.value" class="text-errorRed mt-2">
           {{ errorMessage.value }}
         </div>
       </div>
     </form>
   </section>
 </template>
-
-<style scoped>
-.rainbow {
-  background: linear-gradient(
-    90deg,
-    #ff7246 -0.08%,
-    #ffd646 13.9%,
-    #46ffbc 30.03%,
-    #467aff 48.23%,
-    #9e71ff 67.99%,
-    #fc54ff 83.6%
-  );
-}
-</style>
